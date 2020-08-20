@@ -1,4 +1,4 @@
-package org.se2.ai.control.exception;
+package org.se2.ai.control.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

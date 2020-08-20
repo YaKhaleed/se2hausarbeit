@@ -1,7 +1,7 @@
 package org.se2.services.db;
 
 import org.postgresql.Driver;
-import org.se2.ai.control.exception.DatabaseException;
+import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.services.util.Password;
 
 
