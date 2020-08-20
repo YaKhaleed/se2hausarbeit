@@ -30,16 +30,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AbstractDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/hausarbeit_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_atmosphere_atmosphere_runtime_2_4_24_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_flute_flute_1_3_0_gg2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_gentyref_1_2_0_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_slf4j_vaadin_slf4j_jdk14_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_client_compiled_8_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_push_8_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_sass_compiler_0_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_server_8_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_shared_8_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_themes_8_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerCarlookMA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerKunde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/registerseite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597923201604</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="exceptions + dbverbindung 2">
+      <created>1597923686821</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597923686821</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,14 +180,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1597919416836" />
-    <state x="389" y="242" key="MultipleFileMergeDialog" timestamp="1597923078530">
+    <state x="144" y="80" key="MergeDialog" timestamp="1597923785178">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="389" y="242" key="MultipleFileMergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923078530" />
-    <state x="256" y="153" key="SettingsEditor" timestamp="1597922679135">
+    <state x="144" y="80" key="MergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923785178" />
+    <state x="389" y="242" key="MultipleFileMergeDialog" timestamp="1597923785189">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597922679135" />
+    <state x="389" y="242" key="MultipleFileMergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923785189" />
+    <state x="256" y="153" key="SettingsEditor" timestamp="1597923930155">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
     <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1597923242607">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
