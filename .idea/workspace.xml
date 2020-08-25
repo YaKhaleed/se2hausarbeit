@@ -30,11 +30,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="NEU">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/AutoanzeigeAnfrage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/AutoanzeigeRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -248,10 +247,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog/0.0.1500.960@0.0.1500.960" timestamp="1597803387879" />
-    <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597923019738">
+    <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598356494318">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923019738" />
+    <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1500.960@0.0.1500.960" timestamp="1598356494318" />
     <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598351277233">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -264,10 +263,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="543" y="379" key="git4idea.ui.GitStashDialog/0.0.1500.960@0.0.1500.960" timestamp="1598351227428" />
-    <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1598317118127">
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1598357405280">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="451" y="228" key="refactoring.ChangeSignatureDialog/0.0.1500.960@0.0.1500.960" timestamp="1598317118127" />
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog/0.0.1500.960@0.0.1500.960" timestamp="1598357405280" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

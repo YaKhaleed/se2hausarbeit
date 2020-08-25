@@ -5,6 +5,7 @@ public class CarlookMA extends Benutzer {
     private byte profilbild;
     private int carlookMAID;
 
+
     public byte getProfilbild() {
         return profilbild;
     }
