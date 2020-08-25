@@ -29,15 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="659d435a-4e34-4bcf-9bb6-9d1cbb4e4020" name="Default Changelist" comment="neu">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/hausarbeit_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/LoginControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/LoginControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Stellenanzeige.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Stellenanzeige.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +67,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/se2/ai/model" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -85,25 +75,21 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
+    </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="659d435a-4e34-4bcf-9bb6-9d1cbb4e4020" name="Default Changelist" comment="neu" />
+      <changelist id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="keine ahnung" />
       <created>1597801933988</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597801933988</updated>
-      <workItem from="1598352337041" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="exceptions + dbverbindung">
       <created>1597922134121</created>
@@ -154,11 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1598318428221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="exceptions + dbverbindung 2">
+      <created>1598350611848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598350611848</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -178,6 +168,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -226,10 +231,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598318484613">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598350790839">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598318484613" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598350790839" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -238,18 +243,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923019738" />
-    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597923449540">
+    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598351277233">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1597923449540" />
+    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1598351277233" />
     <state x="481" y="241" key="extract.method.dialog" timestamp="1598317829329">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="241" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1598317829329" />
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog" timestamp="1598352092950">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="543" y="379" key="git4idea.ui.GitStashDialog" timestamp="1598351227428">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1598352092950" />
+    <state x="543" y="379" key="git4idea.ui.GitStashDialog/0.0.1500.960@0.0.1500.960" timestamp="1598351227428" />
     <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1598317118127">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
