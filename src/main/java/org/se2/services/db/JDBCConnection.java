@@ -1,9 +1,9 @@
 package org.se2.services.db;
 
-import org.postgresql.Driver;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.services.util.Password;
 
+import postgresql.postgresql.Driver;
 
 import java.sql.*;
 import java.util.Properties;

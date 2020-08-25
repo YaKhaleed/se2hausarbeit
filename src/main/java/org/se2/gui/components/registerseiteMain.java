@@ -6,7 +6,7 @@ import com.vaadin.data.validator.StringLengthValidator;
 import com.vaadin.ui.PasswordField;
 import com.vaadin.ui.RadioButtonGroup;
 import com.vaadin.ui.TextField;
-import org.se2.ai.model.entities.User;
+import org.se2.ai.model.entities.Benutzer;
 
 public class registerseiteMain {
     // FEHLT NOCH VIEL !!! unten
@@ -19,7 +19,7 @@ public class registerseiteMain {
     public registerseiteMain(RadioButtonGroup<String> xxx) {
         this.xxx = xxx;
         // validation experiment
-        Binder<User> binder = new Binder<>();
+        Binder<Benutzer> binder = new Binder<>();
 
         // end validation experiment
 
@@ -33,12 +33,12 @@ public class registerseiteMain {
 
         binder.forField(userRegister).asRequired("Sie müssen eine Email Adresse eingeben")
                 .withValidator(new EmailValidator("Ungültige Email Adresse"))
-                .bind(User::getEmail, User::setEmail);
+                .bind(Benutzer::getEmail, Benutzer::setEmail);
 
         // password too $hort ;)
         binder.forField(passwordRegister).asRequired("Sie müssen ein Passwort eingeben")
                 .withValidator(new StringLengthValidator("Passwort muss zwischen 6 und 20 Zeichen lang sein", 6, 20))
-                .bind(User::getPasswort, User::setPasswort);
+                .bind(Benutzer::getPasswort, Benutzer::setPasswort);
 
     }
 }

@@ -1,7 +1,7 @@
 package org.se2.ai.model.entities;
 
 
-public class Kunde extends User{
+public class Kunde extends Benutzer {
 
     private String nachname;
     private String vorname;

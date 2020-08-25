@@ -5,8 +5,9 @@ import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.se2.ai.model.entities.User;
-import org.se2.gui.view.RegisterseitefuerCarlookMA;
+import org.se2.ai.model.entities.Benutzer;
+import org.se2.services.util.Roles;
+import org.se2.services.util.Views;
 
 import java.io.File;
 
@@ -18,7 +19,7 @@ public class PanelStartseite extends HorizontalLayout {
     public PanelStartseite() {
 
         this.setSizeFull();
-        User user = (User) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
+        Benutzer user = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
         String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
         FileResource resource = new FileResource(new File(basepath +
                 "/Image/stealthyalda.png"));
@@ -34,7 +35,7 @@ public class PanelStartseite extends HorizontalLayout {
 
         buttonFuerKunden.addStyleName(ValoTheme.BUTTON_LINK);
 
-        buttonFuerKunden.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(view.REGISTERFUERSTUDENT));
+        buttonFuerKunden.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.REGISTERFUERKUNDE));
         gridTop.addComponent(buttonFuerKunden, 5, 0);
 
         Button buttonFuerVertriebler = new Button("Für Vertriebler");

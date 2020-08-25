@@ -2,15 +2,24 @@ package org.se2.ai.model.entities;
 
 import org.se2.ai.model.DTO.Adresse;
 
-public class User {
+public class Benutzer {
 
     private int adressID;
     private String email;
     private String passwort;
     private String telefonnummer = null;
-    private int UserID;
+    private int Id;
     private String anrede;
     private Adresse adresse;
+    private String rolle;
+
+    public String getRolle() {
+        return rolle;
+    }
+
+    public void setRolle(String rolle) {
+        this.rolle = rolle;
+    }
 
     public Adresse getAdresse() {
         return adresse;
@@ -43,6 +52,7 @@ public class User {
     public void setPasswort(String passwort) {
         this.passwort = passwort;
     }
+
     public String getAnrede(){
         return anrede;
     }
@@ -50,6 +60,7 @@ public class User {
     public void setAnrede(String anrede) {
         this.anrede = anrede;
     }
+
     public String getTelefonnummer(){
         return telefonnummer;
     }
@@ -57,11 +68,12 @@ public class User {
     public void setTelefonnummer(String telefonnummer) {
         this.telefonnummer = telefonnummer;
     }
-    public int getUserID(){
-        return UserID;
+
+    public int getId(){
+        return Id;
     }
 
-    public void setUserID(int UserID) {
-        this.UserID = UserID;
+    public void setId(int UserID) {
+        this.Id = UserID;
     }
 }

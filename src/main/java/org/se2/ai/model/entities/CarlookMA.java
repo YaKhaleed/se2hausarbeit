@@ -1,6 +1,6 @@
 package org.se2.ai.model.entities;
 
-public class CarlookMA extends User{
+public class CarlookMA extends Benutzer {
 
     private byte profilbild;
     private int carlookMAID;
