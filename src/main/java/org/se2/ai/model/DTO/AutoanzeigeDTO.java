@@ -1,9 +1,9 @@
 package org.se2.ai.model.DTO;
 
-import org.se2.ai.model.entities.Stellenanzeige;
+import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.model.entities.CarlookMA;
 
-public class StellenanzeigeDTO extends Stellenanzeige {
+public class AutoanzeigeDTO extends Autoanzeige {
     private String arbeitgeber;
     private String ort;
     private CarlookMA mitarbeiter;

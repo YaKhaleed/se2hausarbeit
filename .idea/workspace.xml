@@ -29,10 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
+    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="NEU">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/AutoanzeigeAnfrage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/VertrieblerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/VertrieblerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/AutoanzeigeRequest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,10 @@
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="keine ahnung" />
@@ -149,14 +154,7 @@
       <option name="project" value="LOCAL" />
       <updated>1598350611848</updated>
     </task>
-    <task id="LOCAL-00009" summary="exceptions + dbverbindung 2">
-      <created>1598352779063</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1598352779063</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +199,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="exceptions + dbverbindung" />
     <MESSAGE value="exceptions + dbverbindung 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="exceptions + dbverbindung 2" />
+    <MESSAGE value="NEU" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEU" />
   </component>
   <component name="WindowStateProjectService">
     <state x="231" y="55" key="#Project_Structure" timestamp="1598234880946">
@@ -240,10 +239,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598352788094">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2" timestamp="1598353270358">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598352788094" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598350790839" />
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598353270358" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

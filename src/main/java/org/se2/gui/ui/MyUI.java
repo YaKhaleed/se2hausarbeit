@@ -11,6 +11,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import org.se2.ai.model.entities.Benutzer;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -21,6 +22,9 @@ import com.vaadin.ui.VerticalLayout;
  */
 @Theme("mytheme")
 public class MyUI extends UI {
+
+    private transient Benutzer benutzer = null;
+
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
@@ -38,6 +42,15 @@ public class MyUI extends UI {
         layout.addComponents(name, button);
         
         setContent(layout);
+    }
+
+    public void setBenutzer(Benutzer benutzer) {
+        this.benutzer = benutzer;
+
+    }
+
+    public Benutzer getBenutzer() {
+        return benutzer;
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

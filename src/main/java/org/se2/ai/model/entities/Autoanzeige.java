@@ -2,22 +2,22 @@ package org.se2.ai.model.entities;
 
 import java.time.LocalDate;
 
-public class Stellenanzeige {
+public class Autoanzeige {
 
-    private int stellenanzeigenID;
-    private String titel;
+    private int autoanzeigenID;
+    private  String titel;
     private String beschreibung;
     private int baujahr;
     private String status;
     private LocalDate datum;
     private String ort;
 
-    public void setStellenanzeigenID(int stellenanzeigenID) {
-        this.stellenanzeigenID = stellenanzeigenID;
+    public void setAutoanzeigenID(int stellenanzeigenID) {
+        this.autoanzeigenID = stellenanzeigenID;
     }
 
-    public int getStellenanzeigenID() {
-        return stellenanzeigenID;
+    public int getAutoanzeigenID() {
+        return autoanzeigenID;
     }
 
     public void setTitel(String titel) {
