@@ -1,35 +1,37 @@
 package org.se2.ai.model.DTO;
 
 import org.se2.ai.model.entities.Autoanzeige;
-import org.se2.ai.model.entities.CarlookMA;
 
 public class AutoanzeigeDTO extends Autoanzeige {
-    private String arbeitgeber;
+    private String Vertriebler;
     private String ort;
-    private CarlookMA mitarbeiter;
+    private org.se2.ai.model.entities.Vertriebler v;
 
-    public CarlookMA getMitarbeiter(){
-        return mitarbeiter;
+    public org.se2.ai.model.entities.Vertriebler getV() {
+        return v;
     }
 
-    public void setMitarbeiter (CarlookMA mitarbeiter){
-        this.mitarbeiter=mitarbeiter;
+    public void setV (org.se2.ai.model.entities.Vertriebler v) {
+        this.v = v;
     }
 
-   /* public String getCarlookMA (){
-        return carlookMA;
+
+    public String getVertriebler() {
+        return Vertriebler;
     }
 
-    public void setCarlookMA (String carlookMA){
-        this.carlookMA=carlookMA;
-    } */
+    public void setVertriebler(String Vertriebler) {
+        this.Vertriebler = Vertriebler;
+    }
+
     @Override
-    public String getOrt (){
+    public String getOrt() {
         return ort;
     }
+
     @Override
-    public void setOrt (String ort){
-        this.ort=ort;
+    public void setOrt(String ort) {
+        this.ort = ort;
     }
 
 }

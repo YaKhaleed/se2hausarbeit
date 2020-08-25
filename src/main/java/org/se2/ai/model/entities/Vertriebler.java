@@ -1,9 +1,9 @@
 package org.se2.ai.model.entities;
 
-public class CarlookMA extends Benutzer {
+public class Vertriebler extends Benutzer {
 
     private byte profilbild;
-    private int carlookMAID;
+    private int vertrieberID;
 
 
     public byte getProfilbild() {
@@ -14,12 +14,12 @@ public class CarlookMA extends Benutzer {
         this.profilbild = profilbild;
     }
 
-    public int getCarlookMAID() {
-        return carlookMAID;
+    public int getVertrieberID() {
+        return vertrieberID;
     }
 
-    public void setCarlookMAID(int carlookMAID) {
-        this.carlookMAID = carlookMAID;
+    public void setVertrieberID(int vertrieberID) {
+        this.vertrieberID = vertrieberID;
     }
 
 
