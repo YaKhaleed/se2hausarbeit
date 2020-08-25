@@ -30,22 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hausarbeit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hausarbeit.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Kunde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Kunde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Benutzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/MyUI$MyUIServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/MyUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/services/util/Views.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/services/util/Views.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -136,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597924088763</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="exceptions + dbverbindung 2">
+      <created>1598318378822</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598318378822</updated>
+    </task>
+    <task id="LOCAL-00007" summary="exceptions + dbverbindung 2">
+      <created>1598318428221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598318428221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,10 +210,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1597923242607">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598318484613">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1597923242607" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598318484613" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

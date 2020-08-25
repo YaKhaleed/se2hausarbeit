@@ -12,7 +12,7 @@ public class Views {
     public static final String REGWEITERA = "richtenkontovertriebler";
     public static final String DASHBOARDA = "vertriebler/dashboard";
     public static final String DASHBOARDS = "kunde/dashboard";
-    public static final String AUTOANZEIGE = "suche/autoanzeige/jobtitel/";
+    public static final String AUTOANZEIGE = "suche/autoanzeige/anzeigentitel/";
     public static final String AUTOANZEIGEERSTELLEN = "vertriebler/autoanzeige";
 
     private Views() {
