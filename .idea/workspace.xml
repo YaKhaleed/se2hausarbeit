@@ -31,7 +31,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/services/util/Views.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/services/util/Views.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598318428221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="exceptions + dbverbindung 2">
+      <created>1598350611848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598350611848</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +168,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -210,10 +231,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598318484613">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1598350790839">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598318484613" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598350790839" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -222,14 +243,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="93" y="93" width="1313" height="773" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923019738" />
-    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597923449540">
+    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598351277233">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1597923449540" />
+    <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1598351277233" />
     <state x="481" y="241" key="extract.method.dialog" timestamp="1598317829329">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="241" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1598317829329" />
+    <state x="543" y="379" key="git4idea.ui.GitStashDialog" timestamp="1598351227428">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="543" y="379" key="git4idea.ui.GitStashDialog/0.0.1500.960@0.0.1500.960" timestamp="1598351227428" />
     <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1598317118127">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
