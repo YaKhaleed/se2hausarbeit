@@ -30,35 +30,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/hausarbeit_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_atmosphere_atmosphere_runtime_2_4_24_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_flute_flute_1_3_0_gg2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_gentyref_1_2_0_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_slf4j_vaadin_slf4j_jdk14_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_client_compiled_8_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_push_8_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_sass_compiler_0_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_server_8_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_shared_8_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_vaadin_themes_8_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerCarlookMA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerKunde.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/registerseite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hausarbeit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hausarbeit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/CarlookMA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Kunde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Kunde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/entities/Benutzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/registerseiteMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/services/db/JDBCConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/MyUI$MyUIServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/MyUI.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,10 +77,17 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/se2/ai/model" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
     </key>
@@ -135,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597923686821</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="exceptions + dbverbindung 2">
+      <created>1597924088763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597924088763</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,18 +169,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="exceptions + dbverbindung 2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="231" y="55" key="#Project_Structure" timestamp="1598234880946">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="231" y="55" key="#Project_Structure/0.0.1500.960@0.0.1500.960" timestamp="1598234880946" />
     <state x="206" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597801848034">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="206" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1597801848034" />
+    <state x="556" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1598317537113">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="556" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1598317537113" />
+    <state x="233" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598315447187">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="233" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1598315447187" />
     <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1597803593126">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1597803593126" />
-    <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1597919416836">
+    <state x="281" y="135" key="Maven.ArtifactSearchDialog" timestamp="1598235830843">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1597919416836" />
+    <state x="281" y="135" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1598235830843" />
     <state x="144" y="80" key="MergeDialog" timestamp="1597923785178">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -208,6 +221,14 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="568" y="394" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960@0.0.1500.960" timestamp="1597923449540" />
+    <state x="481" y="241" key="extract.method.dialog" timestamp="1598317829329">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="481" y="241" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1598317829329" />
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1598317118127">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog/0.0.1500.960@0.0.1500.960" timestamp="1598317118127" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
