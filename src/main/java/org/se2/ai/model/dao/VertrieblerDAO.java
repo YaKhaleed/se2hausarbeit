@@ -43,7 +43,7 @@ public class VertrieblerDAO extends AbstractDAO {
         String newVertriebler = "INSERT INTO mmuel72s.vertriebler(unternehmen,benutzer_id) VALUES(?,?);";
         PreparedStatement stmt = this.getPreparedStatement(newVertriebler);
         try {
-            stmt.setString(1, v.getUnternehmen());
+            stmt.setString(1, v.getCarlookID());
             stmt.setInt(2, userId);
             stmt.executeUpdate();
         } catch (SQLException ex) {
