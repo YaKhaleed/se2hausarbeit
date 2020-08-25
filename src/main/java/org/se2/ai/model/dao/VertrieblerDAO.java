@@ -8,6 +8,7 @@ import com.stealthyalda.gui.ui.MyUI;
 import com.stealthyalda.services.db.JDBCConnection;
 import com.vaadin.ui.UI;
 import org.se2.ai.model.DTO.VertrieblerDTO;
+import org.se2.ai.model.entities.Benutzer;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
