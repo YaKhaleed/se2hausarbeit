@@ -5,6 +5,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.RadioButtonGroup;
 import com.vaadin.ui.themes.ValoTheme;
+import org.se2.gui.components.PanelStartseite;
 import org.se2.gui.components.registerseiteMain;
 
 public class RegisterseitefuerKunde extends register {
@@ -17,7 +18,7 @@ public class RegisterseitefuerKunde extends register {
         single.setItemEnabledProvider(role -> !CarlookMA.equals(role));
         single.setValue(Kunde);
         single.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
-        Panel panel = new registerseiteMain(xxx);
+        Panel panel = new registerseiteMain(panel);
         setMargin(true);
         this.addComponent(panel);
         this.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);

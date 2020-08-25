@@ -5,6 +5,7 @@ import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
+import org.se2.ai.control.LoginControl;
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.services.util.Roles;
 import org.se2.services.util.Views;
@@ -41,7 +42,7 @@ public class PanelStartseite extends HorizontalLayout {
         Button buttonFuerVertriebler = new Button("Für Vertriebler");
         buttonFuerVertriebler.addStyleName(TOPPANELBUTTON);
         buttonFuerVertriebler.addStyleName(ValoTheme.BUTTON_LINK);
-        buttonFuerVertriebler.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo());
+        buttonFuerVertriebler.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.));
         gridTop.addComponent(buttonFuerVertriebler, 6, 0);
 
 
@@ -51,7 +52,7 @@ public class PanelStartseite extends HorizontalLayout {
 
         buttonAnmelden.addClickListener(event -> {
             if (user != null) {
-                LoginControl.logoutUser();
+                LoginControl.logoutbenutzer();
             } else {
                 UI.getCurrent().getNavigator().navigateTo(Views.LOGIN);
             }
