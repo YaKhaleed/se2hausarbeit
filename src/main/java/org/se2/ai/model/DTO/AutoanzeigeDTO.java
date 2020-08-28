@@ -3,6 +3,7 @@ package org.se2.ai.model.DTO;
 import org.se2.ai.model.entities.Autoanzeige;
 
 public class AutoanzeigeDTO extends Autoanzeige {
+
     private String Vertriebler;
     private String ort;
     private org.se2.ai.model.entities.Vertriebler v;
