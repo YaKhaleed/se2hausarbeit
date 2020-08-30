@@ -8,7 +8,7 @@ import org.se2.ai.model.DTO.AnforderungAutoanzeige;
 public class Autoanzeige {
 
     private int autoanzeigenID;
-    private  String titel;
+    private String titel;
     private String beschreibung;
     private int baujahr;
     private String status;
@@ -16,6 +16,7 @@ public class Autoanzeige {
     private String ort;
     private int vertrieblerID;
     private List<AnforderungAutoanzeige> Autoanforderung;
+
 
 
     public void setAutoanzeigenID(int stellenanzeigenID) {
@@ -74,8 +75,8 @@ public class Autoanzeige {
         this.ort = ort;
     }
 
-    public void setVertrieberID(int vertrieberID) {
-        this.vertrieblerID=vertrieberID;
+    public void setVertrieblerID(int vertrieblerID) {
+        this.vertrieblerID=vertrieblerID;
     }
 
     public int getVertrieblerID(){

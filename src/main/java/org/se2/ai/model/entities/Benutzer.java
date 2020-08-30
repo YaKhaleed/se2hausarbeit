@@ -8,7 +8,7 @@ public class Benutzer {
     private String email;
     private String passwort;
     private String telefonnummer = null;
-    private int Id;
+    private String Id;
     private String anrede;
     private Adresse adresse;
     private String rolle;
@@ -69,11 +69,14 @@ public class Benutzer {
         this.telefonnummer = telefonnummer;
     }
 
-    public int getId(){
+    //Benutzerid = email
+    public String getId(){
         return Id;
     }
 
-    public void setId(int UserID) {
-        this.Id = UserID;
+    public void setId(String userID) {
+        this.Id = userID;
     }
+
+
 }

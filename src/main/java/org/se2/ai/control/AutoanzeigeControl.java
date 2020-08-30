@@ -5,14 +5,14 @@ import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.dao.AutoanzeigeDAO;
 import org.se2.ai.model.entities.Autoanzeige;
 
-public class AutoanzeigeControll {
+public class AutoanzeigeControl {
 
     public void erstellen(Autoanzeige s) {
         AutoanzeigeDAO.getInstance().createAutoanzeige(s);
     }
 
-    public AutoanzeigeDTO get(int stellenanzeigeid) {
-        return AutoanzeigeDAO.getInstance().getJobangebot(stellenanzeigeid);
+    public AutoanzeigeDTO get(int autoanzeigeid) {
+        return AutoanzeigeDAO.getInstance().getAutoanzeigeByID(autoanzeigeid);
     }
 
     public boolean updatestatus(AutoanzeigeDTO s) {
@@ -20,6 +20,6 @@ public class AutoanzeigeControll {
     }
 
     public boolean löscheautoanzeige(AutoanzeigeDTO s) {
-        return AutoanzeigeDAO.getInstance().löscheautonanzeige(s);
+        return AutoanzeigeDAO.getInstance().deleteAutoanzeige(s);
     }
 }

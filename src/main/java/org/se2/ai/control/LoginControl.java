@@ -8,6 +8,8 @@ import org.se2.ai.control.exceptions.NoSuchUserOrPassword;
 import org.se2.ai.model.DTO.Adresse;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.DTO.VertrieblerDTO;
+import org.se2.ai.model.dao.AdresseDAO;
+import org.se2.ai.model.dao.AutoanzeigeDAO;
 import org.se2.ai.model.dao.BenutzerDAO;
 import org.se2.ai.model.dao.VertrieblerDAO;
 import org.se2.ai.model.entities.Benutzer;
@@ -54,7 +56,7 @@ public class LoginControl {
         }
 
         public boolean updateVertrieblerprofil(VertrieblerDTO v) {
-            boolean ergebnis = VertrieblerDAO.getInstance().updateArbeitgeber(v);
+            boolean ergebnis = VertrieblerDAO.getInstance().updateVertriebler(v);
             boolean ergebnis2 = AdresseDAO.getInstance().updateAdresse(v.getAdresse());
             boolean ergebnis3 = BenutzerDAO.getInstance().updateStammdaten(v, benutzer.getAnrede(), benutzer);
             return ergebnis && ergebnis2 && ergebnis3;

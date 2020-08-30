@@ -4,7 +4,7 @@ import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.model.entities.Benutzer;
-import org.se2.ai.model.entities.CarlookMA;
+import org.se2.ai.model.entities.Vertriebler;
 import org.se2.services.db.JDBCConnection;
 import org.se2.services.util.Roles;
 import com.vaadin.ui.UI;
@@ -56,25 +56,25 @@ public class AutoanzeigeDAO extends AbstractDAO {
     //Auskommentierte Zeilen drübergehen
     private void fillStellenanzeige(ResultSet rs, AutoanzeigeDTO autoanzeige, int i) throws SQLException {
         while (rs.next()) {
-            CarlookMA a;
+            Vertriebler a;
             autoanzeige.setAutoanzeigenID(rs.getInt(1));
             autoanzeige.setTitel(rs.getString(2));
             autoanzeige.setBeschreibung(rs.getString(3));
             autoanzeige.setStatus(rs.getString(4));
             autoanzeige.setDatum(rs.getDate(5).toLocalDate());
             autoanzeige.setOrt(rs.getString(7));
-            a = VertrieblerDAO.getInstance().getArbeitgeberFromArbeitgeberid(rs.getInt(i));
-            autoanzeige.setMitarbeiter(a);
+            a = VertrieblerDAO.getInstance().getVertrieblerFromVertrieblerid(rs.getInt(i));
+            autoanzeige.setVertriebler(a);
         }
     }
 
-    public boolean createStellenanzeige(Autoanzeige s) {
+    public boolean createAutoanzeige(Autoanzeige s) {
 
         String sql = "insert into mmuel72s.autoanzeige values(default,?,?,?,?,?,?);";
         PreparedStatement statement = this.getPreparedStatement(sql);
         Benutzer user = (Benutzer) UI.getCurrent().getSession().getAttribute(Roles.CURRENTUSER);
         String email = user.getEmail();
-        Autoanzeige a = AutoanzeigeDAO.getInstance().getCarlookMAID(email);
+        Autoanzeige a = AutoanzeigeDAO.getInstance().getVerID(email);
 
         //Zeilenweise Abbildung der Daten auf die Spalten der erzeugten Zeile
         try {
@@ -82,12 +82,12 @@ public class AutoanzeigeDAO extends AbstractDAO {
             statement.setString(2, s.getBeschreibung());
             statement.setString(3, s.getStatus());
             statement.setDate(4, Date.valueOf(s.getDatum()));
-            statement.setInt(5, a.getArbeitgeberId());
+            statement.setInt(5, a.getVertrieblerID());
             statement.setString(6, s.getOrt());
             statement.executeUpdate();
 
             //Nachtragliches Setzen der BuchungsID
-            setStellenanzeigesID(s);
+            setAutoanzeigeID(s);
             List<Anforderung> list = s.getAnforderungs();
             for (int i = 0; i < list.size(); i++) {
                 AnforderungDAO.getInstance().createAnforderung(s.getStellenanzeigeID(), list.get(i).getAnforderung());
@@ -99,13 +99,13 @@ public class AutoanzeigeDAO extends AbstractDAO {
         }
     }
 
-    private void setStellenanzeigesID(Stellenanzeige s) throws SQLException {
+    private void setAutoanzeigeID(Autoanzeige a) throws SQLException {
         Statement statement = this.getStatement();
         ResultSet rs = null;
 
         int currentValue = 0;
         try {
-            rs = statement.executeQuery("SELECT max(stealthyalda.stellenanzeige.stellenanzeige_id) FROM stealthyalda.stellenanzeige");
+            rs = statement.executeQuery("SELECT max(mmuel72s.autoanzeige.autoanzeige_id) FROM mmuel72s.autoanzeige");
 
             assert rs != null;
             rs.next();
@@ -113,28 +113,28 @@ public class AutoanzeigeDAO extends AbstractDAO {
         } catch (SQLException ex) {
             Logger.getLogger(AutoanzeigeDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            com.stealthyalda.ai.model.dao.AbstractDAO.closeResultset(rs);
+            AbstractDAO.closeResultset(rs);
         }
 
-        s.setStellenanzeigeID(currentValue);
+        a.setAutoanzeigenID(currentValue);
     }
 
-    public List<StellenanzeigeDTO> getStellenanzeigeByArbeitgeber(String arbeitgeber) {
+    public List<AutoanzeigeDTO> getAutoanzeigeByVertriebler(String vertriebler) {
         ResultSet set = null;
-        List<StellenanzeigeDTO> liste = new ArrayList<>();
+        List<AutoanzeigeDTO> liste = new ArrayList<>();
         String sql = "select *\n" +
-                "from stealthyalda.stellenanzeige s\n" +
-                "join stealthyalda.arbeitgeber a\n" +
-                "on s.arbeitgeber_id = a.arbeitgeber_id\n" +
+                "from mmuel72s.autoanzeige s\n" +
+                "join mmuel72s.vertriebler a\n" +
+                "on s.vertriebler_id = a.vertriebler_id\n" +
                 "where a.unternehmen = ? order by s.stellenanzeige_id";
         try {
             PreparedStatement statement = this.getPreparedStatement(sql);
-            statement.setString(1, arbeitgeber);
+            statement.setString(1, vertriebler);
             set = statement.executeQuery();
             assert (set != null);
             while (set.next()) {
-                StellenanzeigeDTO s = new StellenanzeigeDTO();
-                s.setStellenanzeigeID(set.getInt(1));
+                AutoanzeigeDTO s = new AutoanzeigeDTO();
+                s.setAutoanzeigenID(set.getInt(1));
                 s.setTitel(set.getString(2));
                 s.setBeschreibung(set.getString(3));
                 s.setStatus(set.getString(4));
@@ -146,12 +146,12 @@ public class AutoanzeigeDAO extends AbstractDAO {
         } catch (SQLException ex) {
             Logger.getLogger(AutoanzeigeDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            com.stealthyalda.ai.model.dao.AbstractDAO.closeResultset(set);
+            org.se2.ai.model.dao.AbstractDAO.closeResultset(set);
         }
         return liste;
     }
 
-
+/*
     public List<StellenanzeigeDTO> getStellenanzeigeByLocation(String ort) {
         String getStellenanzeigen = "SELECT s.titel,s.beschreibung, s.status,s.datum,a.unternehmen, s.ort \n" +
                 "FROM stealthyalda.stellenanzeige s\n" +
@@ -160,11 +160,11 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
         return hilfe(getStellenanzeigen);
     }
-
-    private List<StellenanzeigeDTO> hilfe(String sql) {
+*/
+    private List<AutoanzeigeDTO> hilfe(String sql) {
         ResultSet rs = null;
-        List<StellenanzeigeDTO> liste = new ArrayList<>();
-        StellenanzeigeDTO stellenanzeige = null;
+        List<AutoanzeigeDTO> liste = new ArrayList<>();
+        AutoanzeigeDTO autoanzeige = null;
         try {
             // use prepared stmt
             PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement(sql);
@@ -172,25 +172,25 @@ public class AutoanzeigeDAO extends AbstractDAO {
             rs = preparedStatement.executeQuery();
             assert (rs != null);
             while (rs.next()) {
-                stellenanzeige = new StellenanzeigeDTO();
-                stellenanzeige.setTitel(rs.getString(1));
-                stellenanzeige.setBeschreibung(rs.getString(2));
-                stellenanzeige.setStatus(rs.getString(3));
-                stellenanzeige.setDatum(rs.getDate(4).toLocalDate());
-                stellenanzeige.setArbeitgeber(rs.getString(5));
-                stellenanzeige.setOrt(rs.getString(6));
-                liste.add(stellenanzeige);
+                autoanzeige = new AutoanzeigeDTO();
+                autoanzeige.setTitel(rs.getString(1));
+                autoanzeige.setBeschreibung(rs.getString(2));
+                autoanzeige.setStatus(rs.getString(3));
+                autoanzeige.setDatum(rs.getDate(4).toLocalDate());
+                autoanzeige.setVertrieblerName(rs.getString(5));
+                autoanzeige.setOrt(rs.getString(6));
+                liste.add(autoanzeige);
             }
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.INFO, null, rs);
         } catch (SQLException | DatabaseException e) {
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, null, e);
         } finally {
-            com.stealthyalda.ai.model.dao.AbstractDAO.closeResultset(rs);
+            org.se2.ai.model.dao.AbstractDAO.closeResultset(rs);
         }
 
         return liste;
     }
-
+    /*
     public List<StellenanzeigeDTO> getStellenanzeigeByJobTitelOrUnternehmen(String titelorunternehmen) {
         String getStellenanzeigen = "SELECT s.titel,s.beschreibung, s.status,s.datum,a.unternehmen, s.ort \n" +
                 "FROM stealthyalda.stellenanzeige s\n" +
@@ -213,37 +213,38 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
         return hilfe(getStellenanzeigen);
     }
+     */
 
-    public StellenanzeigeDTO getJobangebot(int stellenanzeigeId) {
+    public AutoanzeigeDTO getAutoanzeigeByID(int autoanzeigeID) {
         String sql = "SELECT * \n" +
-                "FROM stealthyalda.stellenanzeige s\n" +
-                "JOIN stealthyalda.arbeitgeber a\n" +
-                "ON s.arbeitgeber_id = a.arbeitgeber_id\n" +
-                "WHERE s.stellenanzeige_id = '" + stellenanzeigeId + "';";
+                "FROM mmuel72s.autoanzeige s\n" +
+                "JOIN mmuel72s.vertriebler a\n" +
+                "ON s.vertriebler_id = a.vertriebler_id\n" +
+                "WHERE s.autoanzeige_id = '" + autoanzeigeID + "';";
         ResultSet rs = null;
-        StellenanzeigeDTO stellenanzeige = new StellenanzeigeDTO();
+        AutoanzeigeDTO autoanzeige = new AutoanzeigeDTO();
         try {
             // use prepared stmt
             PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement(sql);
             rs = preparedStatement.executeQuery();
             assert (rs != null);
-            fillStellenanzeige(rs, stellenanzeige, 8);
+            fillStellenanzeige(rs, autoanzeige, 8);
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.INFO, null, rs);
         } catch (SQLException | DatabaseException e) {
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, null, e);
         } finally {
-            com.stealthyalda.ai.model.dao.AbstractDAO.closeResultset(rs);
+            org.se2.ai.model.dao.AbstractDAO.closeResultset(rs);
         }
-        return stellenanzeige;
+        return autoanzeige;
     }
 
-    public boolean updateStatusStellenanzeige(StellenanzeigeDTO s) {
-        String sqlArbeitgeber = "UPDATE stealthyalda.stellenanzeige " +
+    public boolean updateStatusAutoanzeige(AutoanzeigeDTO s) {
+        String sqlArbeitgeber = "UPDATE mmuel72s.autoanzeige " +
                 "SET status = ? " +
-                "WHERE stellenanzeige_id = ?";
+                "WHERE autoanzeige_id = ?";
         try (PreparedStatement stmt = this.getPreparedStatement(sqlArbeitgeber)) {
             stmt.setString(1, s.getStatus());
-            stmt.setInt(2, s.getStellenanzeigeID());
+            stmt.setInt(2, s.getAutoanzeigenID());
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -252,15 +253,16 @@ public class AutoanzeigeDAO extends AbstractDAO {
         }
     }
 
-    public boolean deleteStellenanzeige(StellenanzeigeDTO s) {
-        String sqlArbeitgeber = "DELETE FROM stealthyalda.anforderung WHERE stellenanzeige_id = ?;" +
-                "DELETE FROM stealthyalda.bewerbung WHERE stellenanzeige_id = ?;" +
-                "DELETE FROM stealthyalda.stellenanzeige " +
-                "WHERE stellenanzeige_id = ?;";
+    public boolean deleteAutoanzeige(AutoanzeigeDTO s) {
+        String sqlArbeitgeber = "DELETE FROM mmuel72s.autoanzeige WHERE autoanzeige_id = ?;"
+               // "DELETE FROM stealthyalda.bewerbung WHERE stellenanzeige_id = ?;" +
+              //  "DELETE FROM stealthyalda.stellenanzeige " +
+               // "WHERE stellenanzeige_id = ?;"
+        ;
         try (PreparedStatement stmt = this.getPreparedStatement(sqlArbeitgeber)) {
-            stmt.setInt(1, s.getStellenanzeigeID());
-            stmt.setInt(2, s.getStellenanzeigeID());
-            stmt.setInt(3, s.getStellenanzeigeID());
+            stmt.setInt(1, s.getAutoanzeigenID());
+            //stmt.setInt(2, s.getStellenanzeigeID());
+            //stmt.setInt(3, s.getStellenanzeigeID());
 
             stmt.executeUpdate();
             return true;

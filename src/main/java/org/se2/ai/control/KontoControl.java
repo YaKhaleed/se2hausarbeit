@@ -8,12 +8,12 @@ import java.util.logging.Logger;
 
 public class KontoControl {
 
-    public void löschekonto(String email, String password) throws DatabaseException {
+    public void deleteKonto(String email, String password) throws DatabaseException {
         BenutzerDAO.getInstance().deleteUser(email, password);
 
     }
 
-    public boolean änderekonto(String email, String altpassword, String neupassword) {
+    public boolean updateKonto(String email, String altpassword, String neupassword) {
         boolean check = false;
         if (altpassword.equals(neupassword)) {
             return check; // ;)
