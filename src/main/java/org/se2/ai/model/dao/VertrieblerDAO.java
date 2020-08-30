@@ -3,7 +3,7 @@ package org.se2.ai.model.dao;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.DTO.VertrieblerDTO;
 import org.se2.ai.model.entities.Benutzer;
-import org.se2.ai.model.entities.CarlookMA;
+import org.se2.ai.model.entities.Vertriebler;
 import org.se2.gui.ui.MyUI;
 import org.se2.services.db.JDBCConnection;
 import com.vaadin.ui.UI;
@@ -35,16 +35,17 @@ public class VertrieblerDAO extends AbstractDAO {
     }
 
     public void insertVertriebler(VertrieblerDTO vertriebler) {
-        int userid = user.getId();
+        String userid = user.getId();
         newVertriebler(vertriebler, userid);
     }
 
-    private void newVertriebler(VertrieblerDTO v, int userId) {
-        String newVertriebler = "INSERT INTO mmuel72s.vertriebler(unternehmen,benutzer_id) VALUES(?,?);";
+    private void newVertriebler(VertrieblerDTO v, String userId) {
+        String newVertriebler = "INSERT INTO mmuel72s.vertriebler(vorname,name,benutzer_id) VALUES(?,?,?);";
         PreparedStatement stmt = this.getPreparedStatement(newVertriebler);
         try {
-            stmt.setInt(1, v.getCarlookID());
-            stmt.setInt(2, userId);
+            stmt.setString(1, v.getVorname());
+            stmt.setString(2, v.getName());
+            stmt.setString(3, userId);
             stmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(VertrieblerDAO.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
@@ -54,18 +55,18 @@ public class VertrieblerDAO extends AbstractDAO {
 
     //Methode bearbeiten! Datenbankkonform sein
 
-    public CarlookMA getVertriebler(int benutzerid) {
+    public Vertriebler getVertriebler(String benutzerid) {
         ResultSet set = null;
         String vertrieblerQuery = "SELECT * "
                 + "FROM mmuel72s.vertriebler "
                 + "WHERE mmuel72s.vertriebler.benutzer_id = ?";
         try (PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(vertrieblerQuery)) {
-            statement.setInt(1, benutzerid);
+            statement.setString(1, benutzerid);
             set = statement.executeQuery();
 
             if (set.next()) {
-                CarlookMA a = new CarlookMA();
-                a.setCarlookMAID(set.getInt(1));
+                Vertriebler a = new Vertriebler();
+                a.setVertrieblerID(set.getInt(1));
                 //a.setUnternehmen(set.getString(2));
                 a.setId(benutzerid);
                 //a.setLogo(set.getByte(4));
@@ -112,22 +113,22 @@ public class VertrieblerDAO extends AbstractDAO {
         return null;
     }*/
 
-    /*
-    public Arbeitgeber getArbeitgeberFromArbeitgeberid(int arbeitgeberId) {
+
+    public Vertriebler getVertrieblerFromVertrieblerid(int vertrieblerId) {
         ResultSet set = null;
-        String arbeitgeberQuery = "SELECT * \n" +
-                "FROM stealthyalda.arbeitgeber \n" +
-                "WHERE arbeitgeber_id = ?;";
-        try (PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(arbeitgeberQuery)) {
-            statement.setInt(1, arbeitgeberId);
+        String vertrieblerQuery = "SELECT * \n" +
+                "FROM mmuel72s.vertriebler \n" +
+                "WHERE vertriebler_id = ?;";
+        try (PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(vertrieblerQuery)) {
+            statement.setInt(1, vertrieblerId);
             set = statement.executeQuery();
 
             if (set.next()) {
-                Arbeitgeber a = new Arbeitgeber();
-                a.setArbeitgeberId(set.getInt(1));
-                a.setUnternehmen(set.getString(2));
-                a.setId(set.getInt(3));
-                a.setBeschreibung(set.getString(5));
+                Vertriebler a = new Vertriebler();
+                a.setVertrieblerID(set.getInt(1));
+                a.setName(set.getString(2));
+                a.setId(set.getString(3));
+                a.setVorname(set.getString(4));
                 return a;
             }
         } catch (SQLException | DatabaseException ex) {
@@ -137,17 +138,17 @@ public class VertrieblerDAO extends AbstractDAO {
         }
 
         return null;
-    }*/
+    }
 
     public boolean updateVertriebler(VertrieblerDTO vertriebler) {
-        String sqlArbeitgeber = "UPDATE stealthyalda.arbeitgeber " +
-                "SET unternehmen = ? " +
-                ", beschreibung = ? " +
+        String sqlVertriebler = "UPDATE mmuel72s.vertriebler " +
+                "SET name = ? " +
+                ", vorname = ? " +
                 "WHERE arbeitgeber_id = ?";
-        try (PreparedStatement stmt = this.getPreparedStatement(sqlArbeitgeber)) {
-            stmt.setString(1, vertriebler.getUnternehmen());
-            stmt.setString(2, vertriebler.getBeschreibung());
-            stmt.setInt(3, vertriebler.getArbeitgeberId());
+        try (PreparedStatement stmt = this.getPreparedStatement(sqlVertriebler)) {
+            stmt.setString(1, vertriebler.getName());
+            stmt.setString(2, vertriebler.getVorname());
+            stmt.setInt(3, vertriebler.getVertrieblerID());
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {

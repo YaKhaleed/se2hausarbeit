@@ -1,19 +1,19 @@
 package org.se2.ai.model.DTO;
 
-import org.se2.ai.model.entities.CarlookMA;
+import org.se2.ai.model.entities.Vertriebler;
 
 
-public class VertrieblerDTO extends CarlookMA {
+public class VertrieblerDTO extends Vertriebler {
 
-    private int carlookID;
+    private int VertrieblerID;
 
-    public void setCarlookID(int carlookID) {
+    public void setVertrieblerID(int vertrieblerID) {
 
-        this.carlookID = carlookID;
+        this.VertrieblerID = vertrieblerID;
     }
 
-    public int getCarlookID (){
+    public int getVertrieblerID(){
 
-        return carlookID;
+        return VertrieblerID;
     }
 }

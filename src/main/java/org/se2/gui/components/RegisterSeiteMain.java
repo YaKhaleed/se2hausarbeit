@@ -8,22 +8,28 @@ import com.vaadin.server.VaadinSession;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
+import com.vaadin.ui.Panel;
+
+import org.se2.ai.control.RegisterControl;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.entities.Benutzer;
+import org.se2.gui.ui.MyUI;
 import org.se2.services.db.JDBCConnection;
 import org.se2.services.util.Views;
+import static org.se2.services.util.Roles.KUNDE;
+import static org.se2.gui.view.Register.FEHLER;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class registerseiteMain {
+public class RegisterSeiteMain extends Panel{
     public static final String CLASSNAME = "Registerseite";
     private String register;
     private String password;
     private RadioButtonGroup<String> single = new RadioButtonGroup<>();
 
 
-    public RegisterseiteMainComponent(RadioButtonGroup<String> single) {
+    public RegisterSeiteMain(RadioButtonGroup<String> single) {
         this.single = single;
         // validation experiment
         Binder<Benutzer> binder = new Binder<>();
@@ -38,8 +44,8 @@ public class registerseiteMain {
         passwordRegister.setPlaceholder("Passwort");
 
 
-        binder.forField(userRegister).asRequired("Sie müssen eine Email Adresse eingeben")
-                .withValidator(new EmailValidator("Ungültige Email Adresse"))
+        binder.forField(userRegister).asRequired("Sie müssen eine E-Mail Adresse eingeben")
+                .withValidator(new EmailValidator("Ungültige E-Mail Adresse"))
                 .bind(Benutzer::getEmail, Benutzer::setEmail);
 
         // password too $hort ;)
@@ -65,7 +71,7 @@ public class registerseiteMain {
         holayout.setWidth(widthPixels);
         holayout.setHeight("50px");
         layout.addComponent(holayout);
-        Label e = new Label("Erstellen sie ihr Stealthy_Alda Konto: ");
+        Label e = new Label("Erstellen Sie ihr CarLook Konto: ");
         layout.addComponent(e);
         Label label = new Label("&nbsp;", ContentMode.HTML);
         layout.addComponent(label);
@@ -108,7 +114,7 @@ public class registerseiteMain {
             } catch (DatabaseException ex) {
                 Notification.show("Fehler", "Registrierung konnte nicht abgeschlossen werden", Notification.Type.ERROR_MESSAGE);
 
-                Logger.getLogger(RegisterseiteMainComponent.class.getName()).log(Level.SEVERE, null, "Failed on : " + ex);
+                Logger.getLogger(RegisterSeiteMain.class.getName()).log(Level.SEVERE, null, "Failed on : " + ex);
                 // kinda irritating to have to input your email address again
                 userRegister.setValue(register);
                 passwordRegister.setValue("");
@@ -131,10 +137,10 @@ public class registerseiteMain {
                 Benutzer current = new Benutzer();
                 current.setEmail(register);
                 current.setPasswort(password);
-                current.setRole(role);
-                current.setId(new Integer(VaadinSession.getCurrent().getAttribute("userId").toString()));
+                current.setRolle(role);
+                current.setId(new String(VaadinSession.getCurrent().getAttribute("userId").toString()));
                 ((MyUI) UI.getCurrent()).setBenutzer(current);
-                if (role.equals(STUDENT)) {
+                if (role.equals(KUNDE)) {
                     ConfirmReg window = new ConfirmReg("Richten Sie Ihr Konto ein!", Views.REGWEITERS);
                     UI.getCurrent().addWindow(window);
                 } else {

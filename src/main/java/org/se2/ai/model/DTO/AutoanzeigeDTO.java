@@ -1,27 +1,31 @@
 package org.se2.ai.model.DTO;
 
 import org.se2.ai.model.entities.Autoanzeige;
+import org.se2.ai.model.entities.Vertriebler;
 
 public class AutoanzeigeDTO extends Autoanzeige {
 
     private String Vertriebler;
     private String ort;
-    private org.se2.ai.model.entities.Vertriebler v;
+    private Vertriebler vertriebler;
 
-    public org.se2.ai.model.entities.Vertriebler getV() {
-        return v;
+    public Vertriebler getVertriebler() {
+
+        return vertriebler;
     }
 
-    public void setV (org.se2.ai.model.entities.Vertriebler v) {
-        this.v = v;
+    public void setVertriebler(Vertriebler vertriebler) {
+
+        this.vertriebler = vertriebler;
     }
 
 
-    public String getVertriebler() {
+    public String getVertrieblerName() {
+
         return Vertriebler;
     }
-
-    public void setVertriebler(String Vertriebler) {
+//nochmal drübergehen
+    public void setVertrieblerName(String Vertriebler) {
         this.Vertriebler = Vertriebler;
     }
 

@@ -42,7 +42,7 @@ public class PanelStartseite extends HorizontalLayout {
         Button buttonFuerVertriebler = new Button("Für Vertriebler");
         buttonFuerVertriebler.addStyleName(TOPPANELBUTTON);
         buttonFuerVertriebler.addStyleName(ValoTheme.BUTTON_LINK);
-        buttonFuerVertriebler.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.));
+        buttonFuerVertriebler.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.REGISTERFUERVERTRIEBLER));
         gridTop.addComponent(buttonFuerVertriebler, 6, 0);
 
 

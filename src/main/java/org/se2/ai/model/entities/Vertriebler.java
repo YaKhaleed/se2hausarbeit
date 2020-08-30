@@ -3,7 +3,9 @@ package org.se2.ai.model.entities;
 public class Vertriebler extends Benutzer {
 
     private byte profilbild;
-    private int vertrieberID;
+    private int vertrieblerID;
+    private String name;
+    private String vorname;
 
 
     public byte getProfilbild() {
@@ -14,12 +16,28 @@ public class Vertriebler extends Benutzer {
         this.profilbild = profilbild;
     }
 
-    public int getVertrieberID() {
-        return vertrieberID;
+    public int getVertrieblerID() {
+        return vertrieblerID;
     }
 
-    public void setVertrieberID(int vertrieberID) {
-        this.vertrieberID = vertrieberID;
+    public void setVertrieblerID(int vertrieblerID) {
+        this.vertrieblerID = vertrieblerID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
     }
 
 

@@ -6,19 +6,19 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.RadioButtonGroup;
 import com.vaadin.ui.themes.ValoTheme;
 import org.se2.gui.components.PanelStartseite;
-import org.se2.gui.components.registerseiteMain;
+import org.se2.gui.components.RegisterSeiteMain;
 
-public class registerseite extends register {
+public class RegisterSeite extends Register {
     public static final String CLASSNAME = "Registerseite";
 
     public void setUp() {
 
         this.addComponent(new PanelStartseite());
         RadioButtonGroup<String> single = new RadioButtonGroup<>();
-        single.setItems(CarlookMA, Kunde);
+        single.setItems(Vertriebler, Kunde);
         single.setValue(Kunde);
         single.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
-        Panel panel = new registerseiteMain(panel);
+        Panel panel = new RegisterSeiteMain(single);
         setMargin(true);
         this.addComponent(panel);
         this.setComponentAlignment(panel, Alignment.MIDDLE_CENTER);

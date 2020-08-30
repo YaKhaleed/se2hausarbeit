@@ -35,7 +35,7 @@ public class KundeDAO extends AbstractDAO {
         try (PreparedStatement stmt = this.getPreparedStatement(sql)) {
             stmt.setString(1, studi.getVorname());
             stmt.setString(2, studi.getNachname());
-            stmt.setInt(3, user.getId());
+            stmt.setString(3, user.getId());
 
             int rowsChanged = stmt.executeUpdate();
             if (rowsChanged == 0) {
@@ -58,12 +58,12 @@ public class KundeDAO extends AbstractDAO {
     }
 
     //Kunde über ID bekommen
-    public Kunde getKunde(int benutzerid) {
+    public Kunde getKunde(String benutzerid) {
         ResultSet set = null;
         try (PreparedStatement stmt = this.getPreparedStatement("SELECT * "
                 + "FROM mmuel72s.kunde "
                 + "WHERE mmuel72s.kunde.benutzer_id = ?")) {
-            stmt.setInt(1, benutzerid);
+            stmt.setString(1, benutzerid);
             set = stmt.executeQuery();
 
             if (set.next()) {

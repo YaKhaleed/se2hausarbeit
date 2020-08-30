@@ -10,15 +10,15 @@ public class AutoanzeigeFactory {
     private AutoanzeigeFactory (){
 
     }
-    public static Autoanzeige createStellenanzeige(AutoanzeigeAnfrage Anfrage, Vertriebler v) {
+    public static Autoanzeige createStellenanzeige(AutoanzeigeAnfrage anfrage, Vertriebler v) {
         Autoanzeige a = new Autoanzeige();
 
-        a.setVertrieberID(v.getVertrieberID());
-        a.setBeschreibung(Anfrage.getBeschreibung());
-        a.setDatum(Anfrage.getDatum());
-        a.setOrt(Anfrage.getOrt());
-        a.setTitel(Anfrage.getTitel());
-        a.setStatus(Anfrage.getStatus());
+        a.setVertrieblerID(v.getVertrieblerID());
+        a.setBeschreibung(anfrage.getBeschreibung());
+        a.setDatum(anfrage.getDatum());
+        a.setOrt(anfrage.getOrt());
+        a.setTitel(anfrage.getTitel());
+        a.setStatus(anfrage.getStatus());
         return a;
     }
 
