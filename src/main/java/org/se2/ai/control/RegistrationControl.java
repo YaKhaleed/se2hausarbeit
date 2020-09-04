@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class RegisterControl {
+public class RegistrationControl {
     Benutzer user = ((MyUI) UI.getCurrent()).getBenutzer();
 
     public boolean checkUserExists(String email) throws DatabaseException {
@@ -54,7 +54,7 @@ public class RegisterControl {
             AdresseDAO.getInstance().addAdresse(kunde.getAdresse(), user.getId());
             BenutzerDAO.getInstance().updateStammdaten(kunde, kunde.getAnrede(), user);
         } catch (Exception e) {
-            Logger.getLogger(RegisterControl.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
     }
 
@@ -73,7 +73,7 @@ public class RegisterControl {
             mail.setHtmlMsg("Hallo! Sie haben Ihr Konto erfolgreich erstellt!<br>Ab jetzt steht Ihnen das Portal zur VerfÃ¼gung.");
             mail.send();
         } catch (EmailException e) {
-            Logger.getLogger(RegisterControl.class.getName()).log(Level.SEVERE, "Failed to send an email", e);
+            Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, "Failed to send an email", e);
         }
     }
 }

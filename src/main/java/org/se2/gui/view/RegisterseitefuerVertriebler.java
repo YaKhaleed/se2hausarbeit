@@ -8,7 +8,7 @@ import com.vaadin.ui.themes.ValoTheme;
 import org.se2.gui.components.PanelStartseite;
 import org.se2.gui.components.RegisterSeiteMain;
 
-public class RegisterseitefuerCarlookMA extends Register {
+public class RegisterseitefuerVertriebler extends Register {
 
     public void setUp() {
         this.addComponent(new PanelStartseite());

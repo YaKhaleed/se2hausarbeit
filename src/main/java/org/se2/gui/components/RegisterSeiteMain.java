@@ -10,7 +10,7 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.ui.Panel;
 
-import org.se2.ai.control.RegisterControl;
+import org.se2.ai.control.RegistrationControl;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.gui.ui.MyUI;
@@ -106,7 +106,7 @@ public class RegisterSeiteMain extends Panel{
             String role = single.getValue();
 
             // instance of control
-            RegisterControl r = new RegisterControl();
+            RegistrationControl r = new RegistrationControl();
 
             boolean allChecksOkay = false;
             try {

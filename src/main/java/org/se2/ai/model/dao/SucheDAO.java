@@ -16,7 +16,7 @@ public class SucheDAO extends AbstractDAO {
     private static SucheDAO dao;
 
     private SucheDAO() {
-
+        System.out.println("Gib bei der Suche nach einem Auto die Automarke Deiner Wahl ein.");
     }
 
     public static SucheDAO getInstance() {
@@ -26,6 +26,7 @@ public class SucheDAO extends AbstractDAO {
         return dao;
     }
 
+    /*
     private List<String> hilfe2(String sql1, String sql2) {
         ResultSet set = null;
         ResultSet set2 = null;
@@ -72,11 +73,12 @@ public class SucheDAO extends AbstractDAO {
 
         return hilfe2(sql1, sql2);
 
-    }
+    }*/
 
-    public List<String> getOrt() {
+    public List<String> getMarkeInTitel(String marke) {
 
-        String sql = "SELECT ort FROM stealthyalda.stellenanzeige order by ort";
+        String sql = "SELECT titel FROM mmuel72s.autoanzeige " +
+                "WHERE LOWER(titel) LIKE LOWER('%" + marke + "%');";
 
         return hilfe(sql);
     }

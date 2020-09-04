@@ -1,6 +1,6 @@
 package org.se2.ai.model.factories;
 
-import org.se2.ai.model.DTO.BenötigteDTO;
+import org.se2.ai.model.DTO.BenoetigteDTO;
 import org.se2.ai.model.DTO.ReservierungDTO;
 import org.se2.ai.model.entities.Kunde;
 import org.se2.ai.model.entities.Vertriebler;
@@ -20,8 +20,8 @@ public class ReservierungsFactory implements BenötigeFactory{
     }
 
     @Override
-    public BenötigteDTO create() {
-        return (BenötigteDTO) new ReservierungDTO();
+    public BenoetigteDTO create() {
+        return (BenoetigteDTO) new ReservierungDTO();
     }
 
     public List<ReservierungDTO> getListBewerbungStudent(Kunde k) {

@@ -2,14 +2,12 @@ package org.se2.ai.model.DTO;
 
 import org.se2.ai.model.entities.Kunde;
 import org.se2.ai.model.entities.Vertriebler;
-import org.se2.ai.model.factories.BenötigeFactory;
-import org.se2.ai.model.DTO.BenötigteDTO;
 
 import java.time.LocalDate;
 
 import java.util.Objects;
 
-public class ReservierungDTO implements BenötigteDTO, Cloneable {
+public class ReservierungDTO implements BenoetigteDTO, Cloneable {
 
 
     private int id;
@@ -91,11 +89,11 @@ public class ReservierungDTO implements BenötigteDTO, Cloneable {
         this.kunde = kunde;
     }
 
-    public AutoanzeigeDTO getAutoanzeigeDTO() {
+    public AutoanzeigeDTO getAutoanzeige() {
         return autoanzeige;
     }
 
-    public void setAutoanzeigeDTO(AutoanzeigeDTO autoanzeige) {
+    public void setAutoanzeige(AutoanzeigeDTO autoanzeige) {
         this.autoanzeige = autoanzeige;
     }
 

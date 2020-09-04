@@ -1,6 +1,7 @@
 package org.se2.ai.model.dao;
 
 import org.se2.ai.control.exceptions.DatabaseException;
+import org.se2.ai.model.DTO.AnforderungAutoanzeige;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.model.entities.Benutzer;
@@ -27,7 +28,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
     }
 
     public AutoanzeigeDTO getAutoanzeige(String jobtitel, String beschreibung, String ort, String status) {
-        String sql = "select * from stealthyalda.autoanzeige where titel = ?" +
+        String sql = "select * from mmuel72s.autoanzeige where titel = ?" +
                 "and beschreibung = ?" +
                 "and ort = ?" +
                 "and status = ?;";
@@ -68,7 +69,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
         }
     }
 
-    public boolean createAutoanzeige(Autoanzeige s) {
+    public boolean createAutoanzeige(Autoanzeige a) {
 
         String sql = "insert into mmuel72s.autoanzeige values(default,?,?,?,?,?,?);";
         PreparedStatement statement = this.getPreparedStatement(sql);
@@ -78,19 +79,19 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
         //Zeilenweise Abbildung der Daten auf die Spalten der erzeugten Zeile
         try {
-            statement.setString(1, s.getTitel());
-            statement.setString(2, s.getBeschreibung());
-            statement.setString(3, s.getStatus());
-            statement.setDate(4, Date.valueOf(s.getDatum()));
+            statement.setString(1, a.getTitel());
+            statement.setString(2, a.getBeschreibung());
+            statement.setString(3, a.getStatus());
+            statement.setDate(4, Date.valueOf(a.getDatum()));
             statement.setInt(5, a.getVertrieblerID());
-            statement.setString(6, s.getOrt());
+            statement.setString(6, a.getOrt());
             statement.executeUpdate();
 
             //Nachtragliches Setzen der BuchungsID
-            setAutoanzeigeID(s);
-            List<Anforderung> list = s.getAnforderungs();
+            setAutoanzeigeID(a);
+            List<AnforderungAutoanzeige> list = a.getAutoanforderung();
             for (int i = 0; i < list.size(); i++) {
-                AnforderungDAO.getInstance().createAnforderung(s.getStellenanzeigeID(), list.get(i).getAnforderung());
+                AnforderungDAO.getInstance().createAnforderung(a.getAutoanzeigenID(), list.get(i).getAutoAnforderung());
             }
             return true;
         } catch (SQLException ex) {
@@ -151,16 +152,8 @@ public class AutoanzeigeDAO extends AbstractDAO {
         return liste;
     }
 
-/*
-    public List<StellenanzeigeDTO> getStellenanzeigeByLocation(String ort) {
-        String getStellenanzeigen = "SELECT s.titel,s.beschreibung, s.status,s.datum,a.unternehmen, s.ort \n" +
-                "FROM stealthyalda.stellenanzeige s\n" +
-                "JOIN stealthyalda.arbeitgeber a ON s.arbeitgeber_id = a.arbeitgeber_id \n" +
-                "WHERE s.ort LIKE '%" + ort + "%'\n";
 
-        return hilfe(getStellenanzeigen);
-    }
-*/
+    //Prüfen, ob nötig ist
     private List<AutoanzeigeDTO> hilfe(String sql) {
         ResultSet rs = null;
         List<AutoanzeigeDTO> liste = new ArrayList<>();
@@ -190,30 +183,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
         return liste;
     }
-    /*
-    public List<StellenanzeigeDTO> getStellenanzeigeByJobTitelOrUnternehmen(String titelorunternehmen) {
-        String getStellenanzeigen = "SELECT s.titel,s.beschreibung, s.status,s.datum,a.unternehmen, s.ort \n" +
-                "FROM stealthyalda.stellenanzeige s\n" +
-                "JOIN stealthyalda.arbeitgeber a ON s.arbeitgeber_id = a.arbeitgeber_id \n" +
-                "WHERE a.unternehmen LIKE '%" + titelorunternehmen + "%' \n" +
-                "OR s.titel LIKE '%" + titelorunternehmen + "%'";
 
-        return hilfe(getStellenanzeigen);
-    }
-
-    public List<StellenanzeigeDTO> getStellenanzeigeByLocationAndJobTitelOrUnternehmen(String titelorunternehmen, String ort) {
-
-        String getStellenanzeigen = "SELECT s.titel,s.beschreibung, s.status,s.datum,a.unternehmen, s.ort \n" +
-                "FROM stealthyalda.stellenanzeige s\n" +
-                "JOIN stealthyalda.arbeitgeber a ON s.arbeitgeber_id = a.arbeitgeber_id \n" +
-                "WHERE s.ort LIKE '%" + ort + "%'\n" +
-                "OR a.unternehmen LIKE '%" + titelorunternehmen + "%' \n" +
-                "OR s.titel LIKE '%" + titelorunternehmen + "%'";
-
-
-        return hilfe(getStellenanzeigen);
-    }
-     */
 
     public AutoanzeigeDTO getAutoanzeigeByID(int autoanzeigeID) {
         String sql = "SELECT * \n" +
