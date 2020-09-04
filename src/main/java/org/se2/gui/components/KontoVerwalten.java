@@ -2,8 +2,8 @@ package org.se2.gui.components;
 
 import org.se2.ai.control.KontoControl;
 import org.se2.ai.model.entities.Benutzer;
-import org.se2.gui.windows.ConfirmationWindow;
-import org.se2.gui.windows.KontoDeleteWindow;
+import org.se2.gui.windows.BestaetigungWindows;
+import org.se2.gui.windows.KontoLoeschenWindow;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 
@@ -48,7 +48,7 @@ public class KontoVerwalten extends VerticalLayout {
 
         Button delete = new Button("LÃ¶schen");
         delete.addClickListener(clickEvent -> {
-            KontoDeleteWindow deleteWindow = new KontoDeleteWindow(mail.getValue(), passwort.getValue());
+            KontoLoeschenWindow deleteWindow = new KontoLoeschenWindow(mail.getValue(), passwort.getValue());
             UI.getCurrent().addWindow(deleteWindow);
         });
         deletekonto.addComponent(delete);
@@ -82,7 +82,7 @@ public class KontoVerwalten extends VerticalLayout {
             String neupasswort = neu.getValue();
             boolean check = kc.updateKonto(email, altpasswort, neupasswort);
             if (check) {
-                ConfirmationWindow confirm = new ConfirmationWindow("Erfolgreich");
+                BestaetigungWindows confirm = new BestaetigungWindows("Erfolgreich");
                 UI.getCurrent().addWindow(confirm);
             }
         });

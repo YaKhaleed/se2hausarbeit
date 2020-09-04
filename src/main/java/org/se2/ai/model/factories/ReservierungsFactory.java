@@ -2,6 +2,7 @@ package org.se2.ai.model.factories;
 
 import org.se2.ai.model.DTO.BenoetigteDTO;
 import org.se2.ai.model.DTO.ReservierungDTO;
+import org.se2.ai.model.dao.ReservierungDAO;
 import org.se2.ai.model.entities.Kunde;
 import org.se2.ai.model.entities.Vertriebler;
 
@@ -24,15 +25,18 @@ public class ReservierungsFactory implements BenötigeFactory{
         return (BenoetigteDTO) new ReservierungDTO();
     }
 
-    public List<ReservierungDTO> getListBewerbungStudent(Kunde k) {
-        liste = ReservierungsDAO.getInstance().getReservierungvonKunde(k);
+    public List<ReservierungDTO> getListReservierungKunde(Kunde k) {
+        liste = ReservierungDAO.getInstance().getReservierungFromKunde(k);
         return liste;
     }
 
+    /*
     public List<ReservierungDTO> getListBewerbungForArbeitgeber(Vertriebler v) {
-        liste = ReservierungsDAO.getInstance().getReservierungvonVertriebler(v);
+        liste = ReservierungDAO.getInstance().getReservierungFromKunde(v);
         return liste;
     }
+
+     */
 }
 
 

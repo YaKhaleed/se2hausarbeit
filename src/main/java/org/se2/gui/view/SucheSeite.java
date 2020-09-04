@@ -42,7 +42,7 @@ public class SucheSeite extends VerticalLayout implements View {
         ComboBox<String> search = new ComboBox<>();
         search.setPlaceholder("Jobtitel, Unternehmen, ... ");
         search.setWidth("500px");
-       / SearchService service = new SearchService();
+       /* SearchService service = new SearchService();
         search.setDataProvider(service::fetch, service::count);
 
         ComboBox<String> searchort = new ComboBox<>();
@@ -51,8 +51,10 @@ public class SucheSeite extends VerticalLayout implements View {
         OrtService ortService = new OrtService();
         searchort.setDataProvider(ortService::fetch, ortService::count);
 
+        */
 
-        horizon.addComponents(search, searchort, button);
+
+        horizon.addComponents(search, button);
         addComponent(horizon);
 
 
@@ -63,7 +65,7 @@ public class SucheSeite extends VerticalLayout implements View {
         // Event Listener fÃ¼r den Suchen Button
         button.addClickListener(e -> {
             Panel sucheLayout = new Panel();
-            String ort = searchort.getValue();
+            //String ort = searchort.getValue();
             String titel = search.getValue();
             if (titel != null) {
 
