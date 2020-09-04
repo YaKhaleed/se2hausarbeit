@@ -8,6 +8,7 @@ import org.se2.ai.control.ToogleRouter;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Autoanzeige;
+import org.se2.gui.components.ComponentJobAusschreibung;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

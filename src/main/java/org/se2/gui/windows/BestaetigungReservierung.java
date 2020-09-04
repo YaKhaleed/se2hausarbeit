@@ -1,6 +1,7 @@
 package org.se2.gui.windows;
 
 import com.vaadin.ui.*;
+import org.se2.ai.control.ReservierungControl;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.DTO.ReservierungDTO;
 import org.se2.ai.model.entities.Kunde;
@@ -30,7 +31,7 @@ public class BestaetigungReservierung extends Window {
         com.vaadin.ui.Button ja = new com.vaadin.ui.Button("Ja");
         janein.addComponent(ja);
         ja.addClickListener(clickEvent -> {
-            new Reservierungscontroll().createbewerbung(a, r, k);
+            new ReservierungControl().createReservierung(a, r, k);
             com.vaadin.ui.Window confirm = new com.vaadin.ui.Window();
             confirm.setContent(new Label("Super! Die Reservierung wurde verschickt."));
             confirm.center();

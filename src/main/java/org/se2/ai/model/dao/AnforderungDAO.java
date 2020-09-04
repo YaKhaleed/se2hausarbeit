@@ -31,6 +31,7 @@ public class AnforderungDAO extends AbstractDAO {
      * @return list of Stellenanzeigen
      * @throws DatabaseException if something goes horribly wrong
      */
+    /*
     public List<Anforderung> getAnforderungForStellenanzeige(int stellenanzeigeid) throws DatabaseException {
         ResultSet rs = null;
         List<Anforderung> liste = new ArrayList<>();
@@ -55,8 +56,10 @@ public class AnforderungDAO extends AbstractDAO {
         return liste;
     }
 
+     */
+
     public boolean createAnforderung(int arbeitgeberId, String anforderung) {
-        String sql = "insert into stealthyalda.anforderung values(?,?);";
+        String sql = "insert into mmuel72s.anforderung values(?,?);";
         PreparedStatement statement = this.getPreparedStatement(sql);
 
         //Zeilenweise Abbildung der Daten auf die Spalten der erzeugten Zeile
