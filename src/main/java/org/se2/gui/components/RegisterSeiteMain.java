@@ -14,6 +14,7 @@ import org.se2.ai.control.RegisterControl;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.gui.ui.MyUI;
+import org.se2.gui.windows.BestaetigenReg;
 import org.se2.services.db.JDBCConnection;
 import org.se2.services.util.Views;
 import static org.se2.services.util.Roles.KUNDE;
@@ -141,11 +142,11 @@ public class RegisterSeiteMain extends Panel{
                 current.setId(new String(VaadinSession.getCurrent().getAttribute("userId").toString()));
                 ((MyUI) UI.getCurrent()).setBenutzer(current);
                 if (role.equals(KUNDE)) {
-                    ConfirmReg window = new ConfirmReg("Richten Sie Ihr Konto ein!", Views.REGWEITERS);
+                    BestaetigenReg window = new BestaetigenReg("Richten Sie Ihr Konto ein!", Views.REGWEITERS);
                     UI.getCurrent().addWindow(window);
                 } else {
-                    ConfirmReg windowa = new ConfirmReg("Richten Sie Ihr Konto ein!", Views.REGWEITERA);
-                    UI.getCurrent().addWindow(windowa);
+                    BestaetigenReg windows = new BestaetigenReg("Richten Sie Ihr Konto ein!", Views.REGWEITERA);
+                    UI.getCurrent().addWindow(windows);
                 }
 
             } else {
