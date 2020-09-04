@@ -30,40 +30,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="neue Auflage">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/ToogleRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/ToogleFeatureDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/BestaetigenReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/BestaetigungAutoanzeige.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/BestaetigungReservierung.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/BestaetigungWindows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/InfoReservierung.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/KontoLoeschenWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/ReservierungsWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/Reservierungsanzeige.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/FeatureToogleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/KontoControllTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/LoginControllTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/RegisterControllTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dto/AdresseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/entities/AutoAnzeigeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/entities/BenutzerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/entities/KundeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/entities/VertrieblerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hausarbeit_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hausarbeit_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hausarbeit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hausarbeit.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/RegisterSeiteMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/RegisterSeiteMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/ProfilKundeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/ProfilKundeControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ProfilKundeVerwalten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ProfilKundeVerwalten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/ReservierungsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/ReservierungsWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +149,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -337,10 +310,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="551" y="307" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1598605793363" />
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598778300174">
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599210874876">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1598778300174" />
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1599210874876" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598355276735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -407,7 +380,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/ReservierungDTO.java</url>
           <line>35</line>
-          <properties class="org.se2.ai.model.DTO.ReservierungDTO" method="equals">
+          <properties class="org.se2.ai.model.DTO.ReservierungDTO">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />

@@ -53,7 +53,7 @@ public class ReservierungsWindow extends Window {
             Kunde k = KundeDAO.getInstance().getKunde(user.getEmail());
             ReservierungDTO reservieren = (ReservierungDTO) new ReservierungsFactory().create();
             reservieren.setKunde(k);
-            reservieren.setAutoanzeigeDTO((AutoanzeigeDTO) a);
+            reservieren.setAutoanzeige((AutoanzeigeDTO) a);
             reservieren.setStatus(reservierungsstatus.getValue());
             reservieren.setDatum(LocalDate.now());
             BestaetigungReservierung window = new BestaetigungReservierung((AutoanzeigeDTO) a, reservieren, k);

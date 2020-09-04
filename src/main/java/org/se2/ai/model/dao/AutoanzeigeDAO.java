@@ -69,29 +69,29 @@ public class AutoanzeigeDAO extends AbstractDAO {
         }
     }
 
-    public boolean createAutoanzeige(Autoanzeige a) {
+    public boolean createAutoanzeige(Autoanzeige v) {
 
         String sql = "insert into mmuel72s.autoanzeige values(default,?,?,?,?,?,?);";
         PreparedStatement statement = this.getPreparedStatement(sql);
         Benutzer user = (Benutzer) UI.getCurrent().getSession().getAttribute(Roles.CURRENTUSER);
         String email = user.getEmail();
-        Autoanzeige a = AutoanzeigeDAO.getInstance().getVerID(email);
+        Vertriebler a = VertrieblerDAO.getInstance().getVertriebler(email);
 
         //Zeilenweise Abbildung der Daten auf die Spalten der erzeugten Zeile
         try {
-            statement.setString(1, a.getTitel());
-            statement.setString(2, a.getBeschreibung());
-            statement.setString(3, a.getStatus());
-            statement.setDate(4, Date.valueOf(a.getDatum()));
-            statement.setInt(5, a.getVertrieblerID());
-            statement.setString(6, a.getOrt());
+            statement.setString(1, v.getTitel());
+            statement.setString(2, v.getBeschreibung());
+            statement.setString(3, v.getStatus());
+            statement.setDate(4, Date.valueOf(v.getDatum()));
+            statement.setInt(5, v.getVertrieblerID());
+            statement.setString(6, v.getOrt());
             statement.executeUpdate();
 
             //Nachtragliches Setzen der BuchungsID
-            setAutoanzeigeID(a);
-            List<AnforderungAutoanzeige> list = a.getAutoanforderung();
+            setAutoanzeigeID(v);
+            List<AnforderungAutoanzeige> list = v.getAutoanforderung();
             for (int i = 0; i < list.size(); i++) {
-                AnforderungDAO.getInstance().createAnforderung(a.getAutoanzeigenID(), list.get(i).getAutoAnforderung());
+                AnforderungDAO.getInstance().createAnforderung(v.getAutoanzeigenID(), list.get(i).getAutoAnforderung());
             }
             return true;
         } catch (SQLException ex) {

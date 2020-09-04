@@ -6,7 +6,8 @@ import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.gui.components.TopPanel;
 import org.se2.gui.ui.MyUI;
-import org.se2.gui.windows.StellenanzeigeK;
+import org.se2.gui.windows.Reservierungsanzeige;
+//import org.se2.gui.windows.StellenanzeigeK;
 //import org.se2.services.util.OrtService;
 import org.se2.services.util.Roles;
 import org.se2.services.util.Views;
@@ -41,7 +42,7 @@ public class SucheSeite extends VerticalLayout implements View {
         ComboBox<String> search = new ComboBox<>();
         search.setPlaceholder("Jobtitel, Unternehmen, ... ");
         search.setWidth("500px");
-        SearchService service = new SearchService();
+       / SearchService service = new SearchService();
         search.setDataProvider(service::fetch, service::count);
 
         ComboBox<String> searchort = new ComboBox<>();
@@ -135,7 +136,7 @@ public class SucheSeite extends VerticalLayout implements View {
                 scrollableLayout.addComponent(article);
                 AutoanzeigeDTO s = AutoanzeigeDAO.getInstance().getAutoanzeige(suche.getTitel(), suche.getBeschreibung(), suche.getOrt(), suche.getStatus());
                 article.addLayoutClickListener(event -> {
-                    StellenanzeigeK window = new StellenanzeigeK(s);
+                    Reservierungsanzeige window = new Reservierungsanzeige(s);
                     UI.getCurrent().addWindow(window);
                 });
 

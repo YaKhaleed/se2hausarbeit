@@ -7,12 +7,9 @@ import org.se2.ai.model.DTO.Adresse;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.DTO.ReservierungDTO;
 import org.se2.ai.model.dao.*;
-import org.se2.ai.model.DTO.HardskillDTO;
-import org.se2.ai.model.DTO.HobbyDTO;
-import org.se2.ai.model.dtos.JoberfahrungDTO;
-import org.se2.ai.model.dtos.SoftskillDTO;
+
 import org.se2.ai.model.entities.*;
-import org.se2.gui.components.ProfilVerwaltenStudent;
+import org.se2.gui.components.ProfilKundeVerwalten;
 import org.se2.services.util.Roles;
 
 import java.util.ArrayList;

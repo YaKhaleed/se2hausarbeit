@@ -81,6 +81,7 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         vertical2.setHeight("525px");
 
 
+        /*
         // Create the upload with a caption and set receiver later
         String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
         FileResource resource = new FileResource(new File(basepath +
@@ -93,8 +94,11 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         upload.addSucceededListener(receiver);
 
         upload.setButtonCaption("Profilbild hochladen");
+
+         */
         ///---------////
 
+        /*
         upload.setImmediateMode(true);
         vertical2.addComponent(upload);
         vertical2.setComponentAlignment(upload, Alignment.MIDDLE_RIGHT);
@@ -104,6 +108,8 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         softskill.setValue(c.printSoftskill(user));
         vertical2.addComponent(softskill);
         vertical2.setComponentAlignment(softskill, Alignment.BOTTOM_RIGHT);
+
+         */
 
         horizon1.addComponent(vertical2);
         horizon1.setComponentAlignment(vertical2, Alignment.TOP_RIGHT);
@@ -115,9 +121,9 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         speichern.addClickListener(clickEvent -> {
         });
         speichern.addClickListener(event -> {
-            ProfilStudentControl psc = new ProfilStudentControl();
+            ProfilKundeControl psc = new ProfilKundeControl();
             String studentName = name.getValue(); // split into vor/nachname
-            String jobExp = jobExperience.getValue();
+        /*    String jobExp = jobExperience.getValue();
             String hardSkills = hardskill.getValue();
             String softSkills = softskill.getValue();
 
@@ -133,6 +139,8 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
             hskill.setHardSkillName(hardSkills);
             skill.setSetSoftSkillName(softSkills);
             psc.updateStudentProfile(hskill, skill, hbby, jobE, user);
+
+         */
         });
         this.addComponent(speichern);
         this.setComponentAlignment(speichern, Alignment.BOTTOM_CENTER);
