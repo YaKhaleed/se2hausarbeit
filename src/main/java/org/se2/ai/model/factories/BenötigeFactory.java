@@ -1,8 +1,8 @@
 package org.se2.ai.model.factories;
 
-import org.se2.ai.model.DTO.BenötigteDTO;
+import org.se2.ai.model.DTO.BenoetigteDTO;
 
 public interface BenötigeFactory {
 
-    BenötigteDTO create ();
+    BenoetigteDTO create ();
 }

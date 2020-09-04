@@ -1,6 +1,6 @@
 package org.se2.ai.model.DTO;
 
-public interface BenötigteDTO {
+public interface BenoetigteDTO {
 
     String toString();
 

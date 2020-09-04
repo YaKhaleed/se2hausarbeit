@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface SuchFunktion {
 
-    List<AutoanzeigeDTO> getAutoanzeige(String titel, String ort);
+    List<AutoanzeigeDTO> getAutoanzeige(String titel);
 
 
 }

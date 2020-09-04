@@ -30,7 +30,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="neue Auflage">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/ProfilKundeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/ProfilKundeControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ProfilKundeVerwalten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ProfilKundeVerwalten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/ReservierungsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/ReservierungsWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +149,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -160,7 +166,6 @@
       <workItem from="1599055355655" duration="5664000" />
       <workItem from="1599061745988" duration="536000" />
       <workItem from="1599149027091" duration="1606000" />
-      <workItem from="1599209909026" duration="711000" />
     </task>
     <task id="LOCAL-00001" summary="exceptions + dbverbindung">
       <created>1597922134121</created>
@@ -232,14 +237,7 @@
       <option name="project" value="LOCAL" />
       <updated>1598357530424</updated>
     </task>
-    <task id="LOCAL-00011" summary="neue Auflage">
-      <created>1599209946835</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1599209946835</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,8 +286,7 @@
     <MESSAGE value="exceptions + dbverbindung" />
     <MESSAGE value="exceptions + dbverbindung 2" />
     <MESSAGE value="NEU" />
-    <MESSAGE value="neue Auflage" />
-    <option name="LAST_COMMIT_MESSAGE" value="neue Auflage" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEU" />
   </component>
   <component name="WindowStateProjectService">
     <state x="231" y="55" key="#Project_Structure" timestamp="1598234880946">
@@ -313,10 +310,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="551" y="307" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1598605793363" />
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598778300174">
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599210874876">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1598778300174" />
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1599210874876" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598355276735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -341,11 +338,11 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="256" y="153" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1597923930155" />
-    <state x="351" y="183" key="Vcs.Push.Dialog.v2" timestamp="1599210026395">
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2" timestamp="1598357540885">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1598350790839" />
-    <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599210026395" />
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598357540885" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -364,10 +361,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="241" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1598317829329" />
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog" timestamp="1599209970094">
+    <state x="483" y="201" key="git4idea.merge.GitPullDialog" timestamp="1598357689681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1599209970094" />
+    <state x="483" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1598357689681" />
     <state x="543" y="379" key="git4idea.ui.GitStashDialog" timestamp="1598351227428">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -383,7 +380,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/ReservierungDTO.java</url>
           <line>35</line>
-          <properties class="org.se2.ai.model.DTO.ReservierungDTO" method="equals">
+          <properties class="org.se2.ai.model.DTO.ReservierungDTO">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />

@@ -19,7 +19,7 @@ public class AutoanzeigeControl {
         return AutoanzeigeDAO.getInstance().updateStatusAutoanzeige(s);
     }
 
-    public boolean löscheautoanzeige(AutoanzeigeDTO s) {
+    public boolean loescheautoanzeige(AutoanzeigeDTO s) {
         return AutoanzeigeDAO.getInstance().deleteAutoanzeige(s);
     }
 }

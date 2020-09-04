@@ -25,7 +25,7 @@ public class MyUI extends UI {
 
     private transient Benutzer benutzer = null;
 
-
+    
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout layout = new VerticalLayout();
