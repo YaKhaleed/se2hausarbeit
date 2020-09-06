@@ -139,7 +139,7 @@ public class RegisterSeiteMain extends Panel{
                 current.setEmail(register);
                 current.setPasswort(password);
                 current.setRolle(role);
-                current.setId(new String(VaadinSession.getCurrent().getAttribute("userId").toString()));
+                current.setId(Integer.valueOf(VaadinSession.getCurrent().getAttribute("userId").toString()));
                 ((MyUI) UI.getCurrent()).setBenutzer(current);
                 if (role.equals(KUNDE)) {
                     BestaetigenReg window = new BestaetigenReg("Richten Sie Ihr Konto ein!", Views.REGWEITERS);

@@ -29,13 +29,13 @@ public class KundeDAO extends AbstractDAO {
         return dao;
     }
 
-    public void newKunde(KundeDTO studi) {
+    public void newKunde(KundeDTO kunde) {
         ResultSet nextKey = null;
-        String sql = "INSERT INTO mmuel72s.kunde(vorname, nachname ,benutzer_id) VALUES(?,?,?);";
+        String sql = "INSERT INTO mmuel72s.kunde(vorname, nachname, benutzer_id) VALUES(?,?,?);";
         try (PreparedStatement stmt = this.getPreparedStatement(sql)) {
-            stmt.setString(1, studi.getVorname());
-            stmt.setString(2, studi.getNachname());
-            stmt.setString(3, user.getId());
+            stmt.setString(1, kunde.getVorname());
+            stmt.setString(2, kunde.getNachname());
+            stmt.setInt(3, user.getId());
 
             int rowsChanged = stmt.executeUpdate();
             if (rowsChanged == 0) {
@@ -45,8 +45,8 @@ public class KundeDAO extends AbstractDAO {
 
             if (nextKey.next()) {
                 int kundenId = nextKey.getInt(1);
-                studi.setKundenID(kundenId);
-                logEntry("BenutzerDAO", Level.INFO, "Found kundenid: " + kundenId);
+                kunde.setKundenID(kundenId);
+                logEntry("BenutzerDAO", Level.INFO, "Found kunde_id: " + kundenId);
             } else {
                 throw new SQLException("Creating user failed, no ID obtained.");
             }
@@ -58,12 +58,12 @@ public class KundeDAO extends AbstractDAO {
     }
 
     //Kunde über ID bekommen
-    public Kunde getKunde(String benutzerid) {
+    public Kunde getKunde(int benutzerid) {
         ResultSet set = null;
         try (PreparedStatement stmt = this.getPreparedStatement("SELECT * "
                 + "FROM mmuel72s.kunde "
                 + "WHERE mmuel72s.kunde.benutzer_id = ?")) {
-            stmt.setString(1, benutzerid);
+            stmt.setInt(1, benutzerid);
             set = stmt.executeQuery();
 
             if (set.next()) {
@@ -82,26 +82,26 @@ public class KundeDAO extends AbstractDAO {
         return null;
     }
 
-    //Brauchen wir nicht, da benutzerid == email?
-   /* public Student getStudent(String email) {
+
+    public Kunde getKunde(String email) {
         ResultSet set = null;
         try {
             PreparedStatement stmt = this.getPreparedStatement("SELECT * \n" +
-                    "FROM stealthyalda.student s\n" +
-                    "JOIN stealthyalda.benutzer b ON  s.benutzer_id = b.benutzer_id\n" +
+                    "FROM mmuel72s.kunde s\n" +
+                    "JOIN mmuel72s.benutzer b ON  s.benutzer_id = b.benutzer_id\n" +
                     "WHERE b.email = ?;");
             stmt.setString(1, email);
             set = stmt.executeQuery();
 
             if (set.next()) {
-                Student s = new Student();
-                s.setStudentId(set.getInt(1));
-                s.setNachname(set.getString(2));
-                s.setId(set.getInt(3));
-                s.setVorname(set.getString(4));
-                s.setEmail(email);
-                s.setRole(set.getString(11));
-                return s;
+                Kunde k = new Kunde();
+                k.setKundenID(set.getInt(1));
+                k.setNachname(set.getString(2));
+                k.setId(set.getInt(3));
+                k.setVorname(set.getString(4));
+                k.setEmail(email);
+                k.setRolle(set.getString(11));
+                return k;
             }
         } catch (SQLException ex) {
             Logger.getLogger(VertrieblerDAO.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
@@ -109,7 +109,7 @@ public class KundeDAO extends AbstractDAO {
             closeResultset(set);
         }
         return null;
-    }*/
+    }
 
 }
 

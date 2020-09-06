@@ -34,11 +34,11 @@ public class AdresseDAO extends AbstractDAO {
      * @param adr    - Adresse object
      * @param userId - userID of current user
      */
-    public void addAdresse(Adresse adr, String userId) {
+    public void addAdresse(Adresse adr, int userId) {
         String sql = "INSERT INTO mmuel72s.adresse (benutzer_id, strasse, hausnummer, plz, ort) values(?,?,?,?,?);";
 
         try (PreparedStatement statement = this.getPreparedStatement(sql)) {
-            statement.setString(1, userId);
+            statement.setInt(1, userId);
             statement.setString(2, adr.getStrasse());
             statement.setString(3, adr.getHausnummer());
             statement.setInt(4, adr.getPlz());

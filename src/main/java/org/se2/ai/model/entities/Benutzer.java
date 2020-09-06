@@ -8,7 +8,7 @@ public class Benutzer {
     private String email;
     private String passwort;
     private String telefonnummer = null;
-    private String Id;
+    private int Id;
     private String anrede;
     private Adresse adresse;
     private String rolle;
@@ -70,11 +70,11 @@ public class Benutzer {
     }
 
     //Benutzerid = email
-    public String getId(){
+    public int getId(){
         return Id;
     }
 
-    public void setId(String userID) {
+    public void setId(int userID) {
         this.Id = userID;
     }
 
