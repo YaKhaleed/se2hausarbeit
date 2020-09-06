@@ -26,6 +26,7 @@ public class LoginControl {
 
     }
 
+
     public static void authentification (String email, String password) throws NoSuchUserOrPassword, DatabaseException {
 
         Benutzer benutzer = BenutzerDAO.getBenutzer (email, password);
