@@ -1,7 +1,7 @@
 package se2hausarbeit.ai.controll;
 
 import org.junit.Test;
-import org.se2.ai.control.RegisterControl;
+import org.se2.ai.control.RegistrationControl;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.control.exceptions.UserExistsException;
 import org.se2.ai.model.dao.BenutzerDAO;
@@ -15,7 +15,7 @@ public class KontoControllTest {
     @Test
     public void loescheKonto() throws DatabaseException, UserExistsException {
 
-        RegisterControl rc = mock(RegisterControl.class);
+        RegistrationControl rc = mock(RegistrationControl.class);
         String email = "deletekonto@test.de";
         String pw = "test123";
         rc.registerUser(email, pw, "student");
