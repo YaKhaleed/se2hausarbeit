@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 public class JDBCConnection {
     private static JDBCConnection connection = null;
+    //:5432
     private final String url = "jdbc:postgresql://dumbo.inf.h-brs.de:5432/qthi2s";
     private Connection conn;
 
