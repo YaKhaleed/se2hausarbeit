@@ -39,8 +39,8 @@ public class JDBCConnection {
     public void openConnection() throws DatabaseException{
         try{
             Properties props = new Properties();
-            props.setProperty("benutzer", "qthi2s");
-            props.setProperty("passwort", Password.getPasswort());
+            props.setProperty("user", "qthi2s");
+            props.setProperty("password", Password.getPasswort());
 
             this.conn = DriverManager.getConnection(this.url, props);
         } catch(SQLException ex){

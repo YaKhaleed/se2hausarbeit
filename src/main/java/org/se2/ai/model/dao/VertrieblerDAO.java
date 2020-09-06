@@ -35,17 +35,17 @@ public class VertrieblerDAO extends AbstractDAO {
     }
 
     public void insertVertriebler(VertrieblerDTO vertriebler) {
-        String userid = user.getId();
+        int userid = user.getId();
         newVertriebler(vertriebler, userid);
     }
 
-    private void newVertriebler(VertrieblerDTO v, String userId) {
+    private void newVertriebler(VertrieblerDTO v, int userId) {
         String newVertriebler = "INSERT INTO mmuel72s.vertriebler(vorname,name,benutzer_id) VALUES(?,?,?);";
         PreparedStatement stmt = this.getPreparedStatement(newVertriebler);
         try {
             stmt.setString(1, v.getVorname());
             stmt.setString(2, v.getName());
-            stmt.setString(3, userId);
+            stmt.setInt(3, userId);
             stmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(VertrieblerDAO.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
@@ -55,13 +55,13 @@ public class VertrieblerDAO extends AbstractDAO {
 
     //Methode bearbeiten! Datenbankkonform sein
 
-    public Vertriebler getVertriebler(String benutzerid) {
+    public Vertriebler getVertriebler(int benutzerid) {
         ResultSet set = null;
         String vertrieblerQuery = "SELECT * "
                 + "FROM mmuel72s.vertriebler "
                 + "WHERE mmuel72s.vertriebler.benutzer_id = ?";
         try (PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(vertrieblerQuery)) {
-            statement.setString(1, benutzerid);
+            statement.setInt(1, benutzerid);
             set = statement.executeQuery();
 
             if (set.next()) {
@@ -81,27 +81,27 @@ public class VertrieblerDAO extends AbstractDAO {
 
         return null;
     }
-    //Vermutlich nicht zu gebrauchen
-    /*public Arbeitgeber getArbeitgeber(String email) {
+
+    public Vertriebler getVertriebler(String email) {
         ResultSet set = null;
         String arbeitgeberQuery = "SELECT * \n" +
-                "FROM stealthyalda.arbeitgeber a\n" +
-                "JOIN stealthyalda.benutzer b ON  a.benutzer_id = b.benutzer_id\n" +
+                "FROM mmuel72s.vertriebler a\n" +
+                "JOIN mmuel72s.benutzer b ON  a.benutzer_id = b.benutzer_id\n" +
                 "WHERE b.email = ?;";
         try (PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(arbeitgeberQuery)) {
             statement.setString(1, email);
             set = statement.executeQuery();
 
             if (set.next()) {
-                Arbeitgeber a = new Arbeitgeber();
-                a.setArbeitgeberId(set.getInt(1));
-                a.setUnternehmen(set.getString(2));
+                Vertriebler a = new Vertriebler();
+                a.setVertrieblerID(set.getInt(1));
+                a.setName(set.getString(2));
                 a.setId(set.getInt(3));
-                a.setBeschreibung(set.getString(5));
+                //a.setBeschreibung(set.getString(5));
                 a.setTelefonnummer(set.getString(7));
                 a.setAnrede(set.getString(8));
                 a.setEmail(email);
-                a.setRole(set.getString(11));
+                a.setRolle(set.getString(11));
                 return a;
             }
         } catch (SQLException | DatabaseException ex) {
@@ -111,7 +111,7 @@ public class VertrieblerDAO extends AbstractDAO {
         }
 
         return null;
-    }*/
+    }
 
 
     public Vertriebler getVertrieblerFromVertrieblerid(int vertrieblerId) {
@@ -127,7 +127,7 @@ public class VertrieblerDAO extends AbstractDAO {
                 Vertriebler a = new Vertriebler();
                 a.setVertrieblerID(set.getInt(1));
                 a.setName(set.getString(2));
-                a.setId(set.getString(3));
+                a.setId(set.getInt(3));
                 a.setVorname(set.getString(4));
                 return a;
             }
@@ -144,7 +144,7 @@ public class VertrieblerDAO extends AbstractDAO {
         String sqlVertriebler = "UPDATE mmuel72s.vertriebler " +
                 "SET name = ? " +
                 ", vorname = ? " +
-                "WHERE arbeitgeber_id = ?";
+                "WHERE vertriebler_id = ?";
         try (PreparedStatement stmt = this.getPreparedStatement(sqlVertriebler)) {
             stmt.setString(1, vertriebler.getName());
             stmt.setString(2, vertriebler.getVorname());

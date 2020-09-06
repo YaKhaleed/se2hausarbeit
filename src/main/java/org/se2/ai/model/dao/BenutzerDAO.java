@@ -43,7 +43,7 @@ public class BenutzerDAO extends AbstractDAO {
             set = statement.executeQuery();
             while (set.next()) {
                 benutzer = new Benutzer();
-                benutzer.setId(set.getString(1));
+                benutzer.setId(set.getInt(1));
                 benutzer.setTelefonnummer(set.getString(2));
                 benutzer.setAnrede(set.getString(3));
                 benutzer.setEmail(set.getString(4));
@@ -87,7 +87,7 @@ public class BenutzerDAO extends AbstractDAO {
 
     public static Benutzer getBenutzer(String email, String password) throws DatabaseException, NoSuchUserOrPassword {
         ResultSet set;
-        final String USER_LOGIN_STATEMENT = "SELECT email, passwort, role, anrede, telefonnummer, benutzer_id FROM mmuel72s.benutzer WHERE email = ?";
+        final String USER_LOGIN_STATEMENT = "SELECT email, passwort, rolle, anrede, telefonnummer, benutzer_id FROM mmuel72s.benutzer WHERE email = ?";
 
         try {
             // use prepared statements to mitigate sql injection
@@ -133,7 +133,7 @@ public class BenutzerDAO extends AbstractDAO {
                 benutzer.setRolle(set.getString(3));
                 benutzer.setAnrede(set.getString(4));
                 benutzer.setTelefonnummer(set.getString(5));
-                benutzer.setId(set.getString(6));
+                benutzer.setId(set.getInt(6));
                 return benutzer;
             } else {
                 throw new NoSuchUserOrPassword();
@@ -235,7 +235,7 @@ public class BenutzerDAO extends AbstractDAO {
         try {
             statement.setString(1, anrede);
             statement.setString(2, u.getTelefonnummer());
-            statement.setString(3, user.getId());
+            statement.setInt(3, user.getId());
             statement.executeUpdate();
             return true;
 
