@@ -1,4 +1,4 @@
-/*package se2hausarbeit.ai.controll;
+package se2hausarbeit.ai.controll;
 
 import org.junit.Test;
 import org.se2.ai.control.ToogleRouter;
@@ -12,4 +12,4 @@ public class FeatureToogleTest {
     }
 }
 
- */
+
