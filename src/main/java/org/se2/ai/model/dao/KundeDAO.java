@@ -70,8 +70,8 @@ public class KundeDAO extends AbstractDAO {
                 Kunde s = new Kunde();
                 s.setKundenID(set.getInt(1));
                 s.setNachname(set.getString(2));
-                s.setId(benutzerid);
                 s.setVorname(set.getString(4));
+                s.setId(benutzerid);
                 return s;
             }
         } catch (SQLException ex) {

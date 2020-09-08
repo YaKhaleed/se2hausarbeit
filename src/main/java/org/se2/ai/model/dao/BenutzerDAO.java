@@ -68,8 +68,8 @@ public class BenutzerDAO extends AbstractDAO {
         ResultSet set = null;
         try {
             PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement("SELECT role "
-                    + "FROM stealthyalda.benutzer "
-                    + "WHERE stealthyalda.benutzer.email = ?");
+                    + "FROM mmuel72s.benutzer "
+                    + "WHERE mmuel72s.benutzer.email = ?");
             statement.setString(1, email);
             set = statement.executeQuery();
 
@@ -167,7 +167,7 @@ public class BenutzerDAO extends AbstractDAO {
         try {
 
             PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement("SELECT  COUNT(*) AS rowcount FROM mmuel72s.benutzer " +
-                    " WHERE mmuel72s.benutzer.email = ?;");
+                    " WHERE mmuel72s.benutzer.email = ?");
 
             preparedStatement.setString(1, email);
 
@@ -186,9 +186,10 @@ public class BenutzerDAO extends AbstractDAO {
 
     }
 
-    public boolean createBenutzer(String email, String passwort, String role) {
+    public boolean createBenutzer(String email, String passwort, String rolle) {
 
-        String sql = "INSERT INTO mmuel72s.benutzer(email, passwort, role) VALUES (?,?,?)";
+
+        String sql = "INSERT INTO mmuel72s.benutzer(email, passwort, rolle) VALUES (?,?,?)";
         PreparedStatement statement = this.getPreparedStatement(sql);
         PasswordAuthentication hasher = new PasswordAuthentication();
 
@@ -200,7 +201,7 @@ public class BenutzerDAO extends AbstractDAO {
         try {
             statement.setString(1, email);
             statement.setString(2, passwordHash);
-            statement.setString(3, role);
+            statement.setString(3, rolle);
             int rowsChanged = statement.executeUpdate();
             if (rowsChanged == 0) {
                 throw new SQLException("Creating user failed, no rows affected.");
