@@ -28,6 +28,7 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\K
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\exceptions\UserExistsException.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\VertrieblerDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\KontoLoeschenWindow.java
+C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\RolleDao.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util\Password.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\exceptions\DatabaseException.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\SucheProxy.java
@@ -48,6 +49,7 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\Profi
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\ProfilKundeVerwalten.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\RegisterSeiteMain.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\LoginSeite.java
+C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\RolleDTO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\ui\MyUI.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\factories\ReservierungsFactory.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\BenutzerDAO.java
@@ -65,6 +67,7 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\Aut
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\BestaetigungWindows.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\Register.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util\PasswordAuthentication.java
+C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\RegWeiterKunde.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\exceptions\SQLException.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\AutoanzeigeDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\factories\BenötigeFactory.java

@@ -55,7 +55,7 @@ public class BenutzerDAO extends AbstractDAO {
 
             throw new DatabaseException("Fehler im SQL Befehl! Bitte den Programmierer benachrichtigen.");
         } finally {
-            AbstractDAO.closeResultset(set);
+            org.se2.ai.model.dao.AbstractDAO.closeResultset(set);
             JDBCConnection.getInstance().closeConnection();
         }
 
@@ -67,7 +67,7 @@ public class BenutzerDAO extends AbstractDAO {
     public static String getBenutzerrolle(String email) {
         ResultSet set = null;
         try {
-            PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement("SELECT role "
+            PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement("SELECT rolle "
                     + "FROM mmuel72s.benutzer "
                     + "WHERE mmuel72s.benutzer.email = ?");
             statement.setString(1, email);
@@ -164,10 +164,12 @@ public class BenutzerDAO extends AbstractDAO {
 
     public boolean checkUserExists(String email) throws DatabaseException {
         ResultSet set = null;
+
+        String sql = "SELECT  COUNT(*) AS rowcount FROM mmuel72s.benutzer " +
+                " WHERE mmuel72s.benutzer.email = ?";
         try {
 
-            PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement("SELECT  COUNT(*) AS rowcount FROM mmuel72s.benutzer " +
-                    " WHERE mmuel72s.benutzer.email = ?");
+            PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement(sql);
 
             preparedStatement.setString(1, email);
 
@@ -179,6 +181,7 @@ public class BenutzerDAO extends AbstractDAO {
         } catch (SQLException e) {
             Logger.getLogger(AbstractDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
             throw new DatabaseException(EXCEPTION);
+
         } finally {
             closeResultset(set);
             JDBCConnection.getInstance().closeConnection();

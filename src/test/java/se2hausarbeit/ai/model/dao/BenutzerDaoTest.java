@@ -14,7 +14,7 @@ public class BenutzerDaoTest {
     @Test
     public void getUser() throws DatabaseException {
         BenutzerDAO benutzerdao = BenutzerDAO.getInstance();
-        Benutzer ben = BenutzerDAO.getBenutzer("tu@test.de");
+        Benutzer ben = benutzerdao.getBenutzer("tu@test.de");
         System.out.println(ben.getEmail());
 
         // Benutzer scheint nicht richtig ersellt zu werden
@@ -47,7 +47,7 @@ public class BenutzerDaoTest {
         BenutzerDAO benutzerdao = BenutzerDAO.getInstance();
         boolean b = benutzerdao.checkUserExists("ingoooo");
         // ingoooo gibt es nicht.
-        assertEquals(true, benutzerdao.checkUserExists("ingoooo"));
+        assertEquals(false, benutzerdao.checkUserExists("ingoooo"));
         // testet man mit adressen die registriert sind komm eine Exception
         // assertEquals(false,benutzerdao.checkUserExists("ingo"));
 
