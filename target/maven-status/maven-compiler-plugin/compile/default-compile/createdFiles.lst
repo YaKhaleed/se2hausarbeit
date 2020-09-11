@@ -40,7 +40,6 @@ org\se2\gui\windows\BestaetigungWindows.class
 org\se2\ai\model\entities\Autoanzeige.class
 org\se2\ai\model\dao\AutoanzeigeDAO.class
 org\se2\ai\model\DTO\ReservierungDTO.class
-org\se2\ai\control\LoginControl$ProfilVertrielblerControll.class
 org\se2\services\db\JDBCConnection.class
 org\se2\gui\components\KontoVerwalten.class
 org\se2\gui\components\TopPanel.class

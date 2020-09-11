@@ -9,7 +9,7 @@ public class LoginControllTest {
 
 
     @Test(expected = NoSuchUserOrPassword.class)
-    public void checkAuthenticationNeg2() throws NoSuchUserOrPassword, DatabaseException {
+    public void authentification() throws NoSuchUserOrPassword, DatabaseException {
         //unregistered user should fail
         LoginControl.authentification("nicht null", "nicht null");
     }

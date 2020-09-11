@@ -19,23 +19,30 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="neu">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/DTO/RolleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/RolleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/BenutzerDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/KundeDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dto/RollenDtoTest.java" afterDir="false" />
+    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="Rollen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/FeatureToogleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/FeatureToogleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/RegisterControllTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/RegisterControllTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/LoginControl$ProfilVertrielblerControll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/LoginControl$ProfilVertrielblerControll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/LoginControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/LoginControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/LoginControllTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/controll/LoginControllTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/BenutzerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/BenutzerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/LoginControl$ProfilVertrielblerControll.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/LoginControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/LoginControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/services/db/JDBCConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/services/db/JDBCConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/KontoControllTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/KontoControllTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/RegisterControllTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/RegisterControllTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/BenutzerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/BenutzerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/LoginControllTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/controll/LoginControllTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/model/dao/BenutzerDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/model/dao/BenutzerDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +68,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -81,7 +88,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="tasks.servers" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,7 +101,7 @@
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KundeDaoTest">
+  <component name="RunManager" selected="JUnit.BenutzerDaoTest">
     <configuration name="BenutzerDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hausarbeit" />
       <extension name="coverage">
@@ -110,22 +117,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KundeDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginControllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hausarbeit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="se2hausarbeit.ai.model.dao.*" />
+          <option name="PATTERN" value="se2hausarbeit.ai.controll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="se2hausarbeit.ai.model.dao" />
-      <option name="MAIN_CLASS_NAME" value="se2hausarbeit.ai.model.dao.KundeDaoTest" />
+      <option name="PACKAGE_NAME" value="se2hausarbeit.ai.controll" />
+      <option name="MAIN_CLASS_NAME" value="se2hausarbeit.ai.controll.LoginControllTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterControllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginControllTest.authentification" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hausarbeit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se2hausarbeit.ai.controll.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se2hausarbeit.ai.controll" />
+      <option name="MAIN_CLASS_NAME" value="se2hausarbeit.ai.controll.LoginControllTest" />
+      <option name="METHOD_NAME" value="authentification" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterControllTest.registerUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hausarbeit" />
       <extension name="coverage">
         <pattern>
@@ -135,22 +158,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="se2hausarbeit.ai.controll" />
       <option name="MAIN_CLASS_NAME" value="se2hausarbeit.ai.controll.RegisterControllTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterControllTest.checkUserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hausarbeit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se2hausarbeit.ai.controll.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="se2hausarbeit.ai.controll" />
-      <option name="MAIN_CLASS_NAME" value="se2hausarbeit.ai.controll.RegisterControllTest" />
-      <option name="METHOD_NAME" value="checkUserExists" />
+      <option name="METHOD_NAME" value="registerUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,21 +232,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.RegisterControllTest" />
-      <item itemvalue="JUnit.RegisterControllTest.checkUserExists" />
+      <item itemvalue="JUnit.LoginControllTest" />
+      <item itemvalue="JUnit.RegisterControllTest.registerUser" />
       <item itemvalue="JUnit.RegisterControllTest.testRegistration" />
+      <item itemvalue="JUnit.LoginControllTest.authentification" />
       <item itemvalue="JUnit.BenutzerDaoTest" />
-      <item itemvalue="JUnit.KundeDaoTest" />
       <item itemvalue="Maven.clean install" />
       <item itemvalue="Maven.run webapp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KundeDaoTest" />
-        <item itemvalue="JUnit.RegisterControllTest" />
         <item itemvalue="JUnit.BenutzerDaoTest" />
+        <item itemvalue="JUnit.LoginControllTest" />
+        <item itemvalue="JUnit.LoginControllTest.authentification" />
+        <item itemvalue="JUnit.RegisterControllTest.registerUser" />
         <item itemvalue="JUnit.RegisterControllTest.testRegistration" />
-        <item itemvalue="JUnit.RegisterControllTest.checkUserExists" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +268,14 @@
       <workItem from="1599061745988" duration="536000" />
       <workItem from="1599149027091" duration="1606000" />
       <workItem from="1599486115621" duration="2903000" />
-      <workItem from="1599489081750" duration="11000" />
+      <workItem from="1599489081750" duration="148000" />
+      <workItem from="1599489252277" duration="3004000" />
+      <workItem from="1599492435389" duration="563000" />
+      <workItem from="1599495872752" duration="47000" />
+      <workItem from="1599579708723" duration="4630000" />
+      <workItem from="1599586112799" duration="25000" />
+      <workItem from="1599656506326" duration="12000" />
+      <workItem from="1599657122682" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="exceptions + dbverbindung">
       <created>1597922134121</created>
@@ -353,7 +368,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599388394490</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Rollen">
+      <created>1599489129953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599489129954</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Rollen">
+      <created>1599489139588</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599489139588</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +432,8 @@
     <MESSAGE value="NEU" />
     <MESSAGE value="exceptions + dbverbindung 2" />
     <MESSAGE value="neu" />
-    <option name="LAST_COMMIT_MESSAGE" value="neu" />
+    <MESSAGE value="Rollen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rollen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="231" y="55" key="#Project_Structure" timestamp="1598234880946">
@@ -443,26 +473,26 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1597803593126" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1599489021896">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1599493002197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1179" height="256" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1599408445243" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1599489021896">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599493002197" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1599493002197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1179" height="256" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1599408445243" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1599489021896">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599493002197" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1599493002197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1179" height="256" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1599408445243" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1599489021896">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599493002197" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1599493002197">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1179" height="256" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1599408445243" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599493002197" />
     <state x="460" y="155" key="Maven.ArtifactSearchDialog" timestamp="1599407715148">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -475,15 +505,16 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="389" y="242" key="MultipleFileMergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923785189" />
-    <state x="460" y="4" key="SettingsEditor" timestamp="1599215037628">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="471" y="3" key="SettingsEditor" timestamp="1599490270418">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="460" y="4" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1599215037628" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1599388403436">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="471" y="3" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599490270418" />
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2" timestamp="1599489150805">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1599388403436" />
-    <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598357540885" />
+    <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1599489150805" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -506,10 +537,14 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="481" y="241" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1598317829329" />
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog" timestamp="1598357689681">
+    <state x="566" y="201" key="git4idea.merge.GitMergeDialog" timestamp="1599489789433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="483" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1598357689681" />
+    <state x="566" y="201" key="git4idea.merge.GitMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599489789433" />
+    <state x="483" y="201" key="git4idea.merge.GitPullDialog" timestamp="1599489462663">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="483" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1599489462663" />
     <state x="543" y="379" key="git4idea.ui.GitStashDialog" timestamp="1598351227428">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

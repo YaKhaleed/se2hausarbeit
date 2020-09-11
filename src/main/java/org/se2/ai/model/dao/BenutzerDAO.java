@@ -67,9 +67,9 @@ public class BenutzerDAO extends AbstractDAO {
     public static String getBenutzerrolle(String email) {
         ResultSet set = null;
         try {
-            PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement("SELECT role "
-                    + "FROM stealthyalda.benutzer "
-                    + "WHERE stealthyalda.benutzer.email = ?");
+            PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement("SELECT rolle "
+                    + "FROM mmuel72s.benutzer "
+                    + "WHERE mmuel72s.benutzer.email = ?");
             statement.setString(1, email);
             set = statement.executeQuery();
 
