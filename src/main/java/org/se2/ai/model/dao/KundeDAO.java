@@ -29,6 +29,8 @@ public class KundeDAO extends AbstractDAO {
         return dao;
     }
 
+
+
     public void newKunde(KundeDTO kunde) {
         ResultSet nextKey = null;
         String sql = "INSERT INTO mmuel72s.kunde(vorname, nachname, benutzer_id) VALUES(?,?,?);";
@@ -70,8 +72,8 @@ public class KundeDAO extends AbstractDAO {
                 Kunde s = new Kunde();
                 s.setKundenID(set.getInt(1));
                 s.setNachname(set.getString(2));
-                s.setId(benutzerid);
                 s.setVorname(set.getString(4));
+                s.setId(benutzerid);
                 return s;
             }
         } catch (SQLException ex) {

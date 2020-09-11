@@ -31,6 +31,7 @@ public class RegisterControllTest {
 
         BenutzerDAO myDAO = BenutzerDAO.getInstance();
         myDAO.createBenutzer("abc@test.de", "one12345", "Kunde");
+        //muss nicht bei "ben" als email das angegeben werden, was in Zeile 33 eingetippt wurde?
         Benutzer ben = BenutzerDAO.getBenutzer("one", "one");
         System.out.println(ben.getEmail());
 

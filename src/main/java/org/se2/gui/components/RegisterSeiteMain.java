@@ -111,7 +111,8 @@ public class RegisterSeiteMain extends Panel{
 
             boolean allChecksOkay = false;
             try {
-                allChecksOkay = r.checkUserExists(register);
+                allChecksOkay =
+                        r.checkUserExists(register);
             } catch (DatabaseException ex) {
                 Notification.show("Fehler", "Registrierung konnte nicht abgeschlossen werden", Notification.Type.ERROR_MESSAGE);
 
@@ -123,7 +124,8 @@ public class RegisterSeiteMain extends Panel{
             if (allChecksOkay) {
                 allChecksOkay = false;
                 try {
-                    allChecksOkay = r.registerUser(register, password, role);
+                    allChecksOkay =
+                            r.registerUser(register, password, role);
                 } catch (DatabaseException ex) {
                     Notification.show(FEHLER, "Registrierung konnte nicht abgeschlossen werden" + ex.getReason(), Notification.Type.ERROR_MESSAGE);
                     Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, null, "Failed on : " + ex);
@@ -139,7 +141,7 @@ public class RegisterSeiteMain extends Panel{
                 current.setEmail(register);
                 current.setPasswort(password);
                 current.setRolle(role);
-                current.setId(Integer.valueOf(VaadinSession.getCurrent().getAttribute("userId").toString()));
+                current.setId(new Integer(VaadinSession.getCurrent().getAttribute("userId").toString()));
                 ((MyUI) UI.getCurrent()).setBenutzer(current);
                 if (role.equals(KUNDE)) {
                     BestaetigenReg window = new BestaetigenReg("Richten Sie Ihr Konto ein!", Views.REGWEITERS);
