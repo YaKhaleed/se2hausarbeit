@@ -45,8 +45,8 @@ public class RegWeiterVertriebler extends Register{
         titel.addStyleName("mytitle");
         titel.addStyleName(ValoTheme.LABEL_H1);
         main.addComponent(titel);
-        final AnredeField userAnrede = new AnredeField();
-        main.addComponent(userAnrede);
+        //final AnredeField userAnrede = new AnredeField();
+        //main.addComponent(userAnrede);
 
         final TextFieldForRegWeiter name = new TextFieldForRegWeiter("Unternehmensname mit Rechtsform", WIDTH);
         main.addComponent(name);
@@ -126,7 +126,7 @@ public class RegWeiterVertriebler extends Register{
             binder.validate();
 
             if (binder.validate().isOk()) {
-                String anrede = userAnrede.getValue().toString();
+                //String anrede = userAnrede.getValue().toString();
                 String nameVertriebler = name.getValue();
                 //String userstrasse = strasse.getValue();
                 //String hausnummer = nummer.getValue();
@@ -142,7 +142,7 @@ public class RegWeiterVertriebler extends Register{
                     //ag.setTelefonnummer(usertelefon);
                     ag.setName(nameVertriebler);
 
-                    r.registerVertriebler(ag, anrede);
+                    //r.registerVertriebler(ag, anrede);
 
                     user = null;
                     BestaetigenReg window = new BestaetigenReg("Registrierung abgeschlossen!", Views.STARTSEITE);

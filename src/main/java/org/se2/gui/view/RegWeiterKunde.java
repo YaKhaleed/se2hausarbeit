@@ -45,8 +45,8 @@ public class RegWeiterKunde extends Register {
         label.addStyleName(ValoTheme.LABEL_H1);
         haupt.addComponent(label);
         haupt.setComponentAlignment(label, Alignment.MIDDLE_CENTER);
-        final ComboBox<String> userAnrede = new AnredeField();
-        haupt.addComponent(userAnrede);
+        //final ComboBox<String> userAnrede = new AnredeField();
+        //haupt.addComponent(userAnrede);
 
         HorizontalLayout hl1 = new HorizontalLayout();
         hl1.setWidth(WIDTH_515_PX);
@@ -142,7 +142,7 @@ public class RegWeiterKunde extends Register {
             if (binder.validate().isOk()) {
 
 
-                String anrede = userAnrede.getValue();
+                //String anrede = userAnrede.getValue();
                 String uservorname = vorname.getValue();
                 String username = nachname.getValue();
                 //String userstrasse = strasse.getValue();
@@ -154,7 +154,7 @@ public class RegWeiterKunde extends Register {
                 RegistrationControl r = new RegistrationControl();
                 KundeDTO kunde = new KundeDTO();
                 try {
-                    kunde.setAnrede(anrede);
+                    //kunde.setAnrede(anrede);
                     kunde.setVorname(uservorname);
                     kunde.setNachname(username);
                     //kunde.setTelefonnummer(usertelefon);
