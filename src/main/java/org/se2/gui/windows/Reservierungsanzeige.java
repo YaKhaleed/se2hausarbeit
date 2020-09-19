@@ -8,7 +8,7 @@ import org.se2.ai.control.ToogleRouter;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Autoanzeige;
-import org.se2.gui.components.ComponentJobAusschreibung;
+import org.se2.gui.components.ComponentAutoanzeige;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +19,7 @@ public class Reservierungsanzeige extends Window {
         center();
         AutoanzeigeDTO jobangebot = new AutoanzeigeControl().get(Autoanzeige.getAutoanzeigenID());
 
-        VerticalLayout content = new ComponentJobAusschreibung().getJobAusschreibung(jobangebot);
+        VerticalLayout content = new ComponentAutoanzeige().getAutoanzeigeComp(jobangebot);
 
 
         HorizontalLayout button = new HorizontalLayout();
@@ -36,10 +36,11 @@ public class Reservierungsanzeige extends Window {
             ReservierungsWindow window = new ReservierungsWindow (Autoanzeige);
             UI.getCurrent().addWindow(window);
         });
+        button.addComponent(reservieren);
+        button.setComponentAlignment(reservieren, Alignment.MIDDLE_RIGHT);
         try {
             if (ToogleRouter.isEnabled("reservieren")) {
-                button.addComponent(reservieren);
-                button.setComponentAlignment(reservieren, Alignment.MIDDLE_RIGHT);
+
             }
         } catch (DatabaseException e) {
             Logger.getLogger(Reservierungsanzeige.class.getName()).log(Level.SEVERE, e.getMessage(), e);

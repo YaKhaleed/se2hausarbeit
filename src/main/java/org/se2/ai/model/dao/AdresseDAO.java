@@ -8,6 +8,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
 
 public class AdresseDAO extends AbstractDAO {
     private static AdresseDAO dao = null;
@@ -34,6 +37,7 @@ public class AdresseDAO extends AbstractDAO {
      * @param adr    - Adresse object
      * @param userId - userID of current user
      */
+
     public void addAdresse(Adresse adr, int userId) {
         String sql = "INSERT INTO mmuel72s.adresse (benutzer_id, strasse, hausnummer, plz, ort) values(?,?,?,?,?);";
 
@@ -49,6 +53,8 @@ public class AdresseDAO extends AbstractDAO {
             Logger.getLogger(AdresseDAO.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
     }
+
+
 
     /**
      * Get adress using benuterId

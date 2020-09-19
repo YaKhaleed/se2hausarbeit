@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class RolleDao extends AbstractDAO{
 
     private static RolleDao dao;

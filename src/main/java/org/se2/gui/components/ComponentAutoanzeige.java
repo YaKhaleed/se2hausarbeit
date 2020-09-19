@@ -14,18 +14,22 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ComponentJobAusschreibung {
+/**
+ * @author zmorin2s
+ */
 
-    public VerticalLayout getJobAusschreibung(AutoanzeigeDTO jobangebot) {
+public class ComponentAutoanzeige {
+
+    public VerticalLayout getAutoanzeigeComp(AutoanzeigeDTO autoanzeige) {
         VerticalLayout content = new VerticalLayout();
         HorizontalLayout top = new HorizontalLayout();
 
         VerticalLayout titel = new VerticalLayout();
-        Label jt = new Label(jobangebot.getTitel());
+        Label jt = new Label(autoanzeige.getTitel());
         jt.setWidth("600px");
         titel.addComponent(jt);
 
-        Label ju = new Label(jobangebot.getVertrieblerName() + " - " + jobangebot.getOrt());
+        Label ju = new Label(autoanzeige.getVertrieblerName() + " - ");// + autoanzeige.getOrt());
         ju.setWidth("600px");
         titel.addComponent(ju);
 
@@ -37,24 +41,24 @@ public class ComponentJobAusschreibung {
         VerticalLayout right = new VerticalLayout();
         right.addComponent(profilbild);
         right.setComponentAlignment(profilbild, Alignment.TOP_CENTER);
-        right.addComponent(new Label(jobangebot.getStatus()));
+        right.addComponent(new Label(autoanzeige.getStatus()));
         right.setComponentAlignment(profilbild, Alignment.TOP_CENTER);
-        right.addComponent(new Label(jobangebot.getDatum().toString()));
-        Button arbeitgeber = new Button(VaadinIcons.HOME);
+        right.addComponent(new Label(autoanzeige.getDatum().toString()));
+        Button vertriebler = new Button(VaadinIcons.HOME);
 
 
         top.addComponent(titel);
         top.addComponent(right);
-        top.addComponent(arbeitgeber);
-        top.setComponentAlignment(arbeitgeber, Alignment.MIDDLE_CENTER);
+        top.addComponent(vertriebler);
+        top.setComponentAlignment(vertriebler, Alignment.MIDDLE_CENTER);
         top.setHeight("175px");
 
         content.addComponent(top);
         content.setComponentAlignment(top, Alignment.TOP_CENTER);
 
 
-        TextArea beschreibung = new TextArea("Jobbeschreibung");
-        beschreibung.setValue(jobangebot.getBeschreibung());
+        TextArea beschreibung = new TextArea("Autoanzeigenbeschreibung");
+        beschreibung.setValue(autoanzeige.getBeschreibung());
         beschreibung.setReadOnly(true);
         beschreibung.setHeight("150px");
         beschreibung.setWidth("700px");
@@ -65,7 +69,7 @@ public class ComponentJobAusschreibung {
         TextArea anforderung = new TextArea("Anforderungen");
         anforderung.setReadOnly(true);
         try {
-            List<Anforderung> a = AnforderungDAO.getInstance().getAnforderungForStellenanzeige(jobangebot.getStellenanzeigeID());
+            List<Anforderung> a = AnforderungDAO.getInstance().getAnforderungForStellenanzeige(autoanzeige.getStellenanzeigeID());
             StringBuilder print = new StringBuilder();
             for (int i = 0; i < a.size(); i++) {
                 print.append(a.get(i).getAnforderung());

@@ -14,6 +14,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class BenutzerDAO extends AbstractDAO {
 
     private static final String EXCEPTION = "Fehler im SQL-Befehl! Bitte den Programmier benachrichtigen";
@@ -252,7 +256,7 @@ public class BenutzerDAO extends AbstractDAO {
 
     //Brauchen wir das?
 
-    public boolean changepassword(String email, String altpasswort, String neupasswort) throws DatabaseException {
+    public boolean changePassword(String email, String altpasswort, String neupasswort) throws DatabaseException {
         String sql = "UPDATE mmuel72s.benutzer SET passwort = ? WHERE mmuel72s.benutzer.email = ? AND mmuel72s.benutzer.passwort = ?;";
 
 

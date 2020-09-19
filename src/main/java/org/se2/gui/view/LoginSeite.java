@@ -18,6 +18,9 @@ import com.vaadin.ui.themes.ValoTheme;
 
 import java.io.File;
 
+import static org.se2.services.util.Roles.KUNDE;
+import static org.se2.services.util.Roles.VERTRIEBLER;
+
 
 public class LoginSeite extends VerticalLayout implements View {
     public static final String CLASSNAME = "LOGINSEITE";
@@ -162,8 +165,13 @@ public class LoginSeite extends VerticalLayout implements View {
     public void enter(ViewChangeListener.ViewChangeEvent event) {
         Benutzer user = ((MyUI) UI.getCurrent()).getBenutzer();
         if (user != null) {
-            UI.getCurrent().getNavigator().navigateTo(Views.MAIN);
-        } else {
+            if(user.getRolle()==KUNDE) {
+                UI.getCurrent().getNavigator().navigateTo(Views.MAIN);
+            }
+            UI.getCurrent().getNavigator().navigateTo(Views.AUTOANZEIGEERSTELLEN);
+        }
+
+                else {
             this.setUp();
         }
     }

@@ -16,8 +16,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author WINDOWS
+ * @author zmorin2s
  */
+
 public class VertrieblerDAO extends AbstractDAO {
     private static VertrieblerDAO dao = null;
 
@@ -96,7 +97,7 @@ public class VertrieblerDAO extends AbstractDAO {
                 Vertriebler a = new Vertriebler();
                 a.setVertrieblerID(set.getInt(1));
                 a.setName(set.getString(2));
-                a.setId(set.getInt(3));
+                a.setId(set.getInt(4));
                 //a.setBeschreibung(set.getString(5));
                 a.setTelefonnummer(set.getString(7));
                 a.setAnrede(set.getString(8));
@@ -127,8 +128,8 @@ public class VertrieblerDAO extends AbstractDAO {
                 Vertriebler a = new Vertriebler();
                 a.setVertrieblerID(set.getInt(1));
                 a.setName(set.getString(2));
-                a.setId(set.getInt(3));
-                a.setVorname(set.getString(4));
+                a.setVorname(set.getString(3));
+                a.setId(set.getInt(4));
                 return a;
             }
         } catch (SQLException | DatabaseException ex) {

@@ -15,10 +15,17 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class ReservierungDAO extends AbstractDAO{
 
     private static ReservierungDAO dao = null;
 
+    private ReservierungDAO(){
+
+    }
 
     public static ReservierungDAO getInstance() {
         if (dao == null) dao = new ReservierungDAO();
@@ -27,18 +34,18 @@ public class ReservierungDAO extends AbstractDAO{
     }
 
     //nochmal überlegen, ob beschreibung nötig ist
-    public boolean createReservierung(Autoanzeige a, ReservierungDTO r, Kunde k) {
+    public boolean createReservierung(AutoanzeigeDTO a, ReservierungDTO r, Kunde k) {
         String sql = "INSERT INTO mmuel72s.reservierung(reservierung_id, kunde_id, autoanzeige_id, titel, datum, beschreibung, status) VALUES (default,?,?,?,?,?,?,?)";
 
 
         try (PreparedStatement statement = this.getPreparedStatement(sql)) {
             statement.setInt(1, a.getAutoanzeigenID());
             statement.setInt(2, k.getKundenID());
-            statement.setInt(3, r.getId());
+            statement.setInt(3, a.getAutoanzeigenID());
             statement.setString(4, a.getTitel());
             statement.setDate(5, Date.valueOf(r.getDatum()));
             statement.setString(6, a.getBeschreibung());
-            statement.setString(7, r.getStatus());
+            statement.setString(7, "reserviert");
 
 
             int rowsChanged = statement.executeUpdate();

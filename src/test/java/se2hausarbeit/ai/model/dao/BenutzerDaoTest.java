@@ -67,11 +67,11 @@ public class BenutzerDaoTest {
     @Test
     public void changepassword() throws DatabaseException, NoSuchUserOrPassword {
         BenutzerDAO benutzerdao = BenutzerDAO.getInstance();
-        boolean bean = benutzerdao.changepassword("ingo", "ingo", "ingoo");
+        boolean bean = benutzerdao.changePassword("ingo", "ingo", "ingoo");
         System.out.println(bean);
         Benutzer ben = BenutzerDAO.getBenutzer("ingo", "ingoo");
         assertEquals(2, ben.getId());
-        bean = benutzerdao.changepassword("ingo", "ingoo", "ingo");
+        bean = benutzerdao.changePassword("ingo", "ingoo", "ingo");
         System.out.println(bean);
         ben = BenutzerDAO.getBenutzer("ingo", "ingo");
         assertEquals(2, ben.getId());

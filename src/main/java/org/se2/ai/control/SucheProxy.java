@@ -21,7 +21,7 @@ public class SucheProxy implements SuchFunktion{
 
 
     @Override
-    public List<AutoanzeigeDTO> getAutoanzeige(String titel) {
-        return suche.getAutoanzeige(titel);
+    public List<AutoanzeigeDTO> getAutoanzeigeListe(String titel) {
+        return suche.getAutoanzeigeListe(titel);
     }
 }

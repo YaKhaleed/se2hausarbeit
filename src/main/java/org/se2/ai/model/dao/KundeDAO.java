@@ -14,6 +14,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class KundeDAO extends AbstractDAO {
     private static KundeDAO dao = null;
     Benutzer user = ((MyUI) UI.getCurrent()).getBenutzer();

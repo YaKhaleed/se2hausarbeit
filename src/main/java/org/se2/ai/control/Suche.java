@@ -1,6 +1,7 @@
 package org.se2.ai.control;
 
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
+import org.se2.ai.model.dao.AutoanzeigeDAO;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Suche implements SuchFunktion {
     }
 
     @Override
-    public List<AutoanzeigeDTO> getAutoanzeige(String titel) {
-        return suche.getAutoanzeige(titel);
+    public List<AutoanzeigeDTO> getAutoanzeigeListe(String titel) {
+        return AutoanzeigeDAO.getInstance().getAutoanzeigeListe(titel);
     }
 }

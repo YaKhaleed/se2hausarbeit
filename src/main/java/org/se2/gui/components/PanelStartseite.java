@@ -21,16 +21,18 @@ public class PanelStartseite extends HorizontalLayout {
 
         this.setSizeFull();
         Benutzer user = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
-        String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        FileResource resource = new FileResource(new File(basepath +
-                "/Image/stealthyalda.png"));
-        Image logo = new Image("", resource);
+        //String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
+        //FileResource resource = new FileResource(new File(basepath +
+        //        "/Image/stealthyalda.png"));
+        //Image logo = new Image("", resource);
         GridLayout gridTop = new GridLayout(8, 1);
         gridTop.setSizeFull();
-        logo.setPrimaryStyleName(CLASSNAME + "-logo");
+       // logo.setPrimaryStyleName(CLASSNAME + "-logo");
 
 
-        gridTop.addComponent(logo, 0, 0);
+        //gridTop.addComponent(logo, 0, 0);
+
+        //Kunde-Anmeldung/Registrierung
         Button buttonFuerKunden = new Button("Für Kunden");
         buttonFuerKunden.addStyleName(TOPPANELBUTTON);
 
@@ -39,6 +41,7 @@ public class PanelStartseite extends HorizontalLayout {
         buttonFuerKunden.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.REGISTERFUERKUNDE));
         gridTop.addComponent(buttonFuerKunden, 5, 0);
 
+        //Vertriebler-Anmeldung/Registrierung
         Button buttonFuerVertriebler = new Button("Für Vertriebler");
         buttonFuerVertriebler.addStyleName(TOPPANELBUTTON);
         buttonFuerVertriebler.addStyleName(ValoTheme.BUTTON_LINK);

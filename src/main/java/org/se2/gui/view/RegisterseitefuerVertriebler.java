@@ -14,9 +14,9 @@ public class RegisterseitefuerVertriebler extends Register {
         this.addComponent(new PanelStartseite());
         RadioButtonGroup<String> single = new RadioButtonGroup<>();
         single.setItems(Vertriebler, Kunde);
-        single.setValue(Kunde);
-        single.setItemEnabledProvider(role -> !Vertriebler.equals(role));
-        single.setValue(Kunde);
+        single.setValue(Vertriebler);
+        single.setItemEnabledProvider(role -> !Kunde.equals(role));
+        single.setValue(Vertriebler);
         single.addStyleName(ValoTheme.OPTIONGROUP_HORIZONTAL);
         Panel panel = new RegisterSeiteMain(single);
         setMargin(true);

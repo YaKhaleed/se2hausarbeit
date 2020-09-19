@@ -3,6 +3,7 @@ package org.se2.gui.view;
 import org.se2.ai.control.Suche;
 import org.se2.ai.model.dao.AutoanzeigeDAO;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
+import org.se2.ai.model.dao.SucheTitel;
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.gui.components.TopPanel;
 import org.se2.gui.ui.MyUI;
@@ -42,16 +43,19 @@ public class SucheSeite extends VerticalLayout implements View {
         ComboBox<String> search = new ComboBox<>();
         search.setPlaceholder("Jobtitel, Unternehmen, ... ");
         search.setWidth("500px");
-       /* SearchService service = new SearchService();
+       SucheTitel service = new SucheTitel();
         search.setDataProvider(service::fetch, service::count);
 
+        /*
         ComboBox<String> searchort = new ComboBox<>();
+
         searchort.setPlaceholder("Ort, Umkreis ");
         searchort.setWidth("500px");
         OrtService ortService = new OrtService();
         searchort.setDataProvider(ortService::fetch, ortService::count);
-
         */
+
+
 
 
         horizon.addComponents(search, button);
@@ -69,7 +73,7 @@ public class SucheSeite extends VerticalLayout implements View {
             String titel = search.getValue();
             if (titel != null) {
 
-                    liste = Suche.getInstance().getAutoanzeige(titel);
+                    liste = Suche.getInstance().getAutoanzeigeListe(titel);
 
                 //else liste = Suche.getInstance().getStellenanzeigeByJob(titel);
             } //else liste = Suche.getInstance().getStellenanzeigeByLocation(ort);
@@ -136,7 +140,7 @@ public class SucheSeite extends VerticalLayout implements View {
                 article.setComponentAlignment(titelbeschreibung, Alignment.TOP_CENTER);
 
                 scrollableLayout.addComponent(article);
-                AutoanzeigeDTO s = AutoanzeigeDAO.getInstance().getAutoanzeige(suche.getTitel(), suche.getBeschreibung(), suche.getOrt(), suche.getStatus());
+                AutoanzeigeDTO s = AutoanzeigeDAO.getInstance().getAutoanzeige(suche.getTitel());
                 article.addLayoutClickListener(event -> {
                     Reservierungsanzeige window = new Reservierungsanzeige(s);
                     UI.getCurrent().addWindow(window);

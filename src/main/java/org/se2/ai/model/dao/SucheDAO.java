@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class SucheDAO extends AbstractDAO {
     private static SucheDAO dao;
 
@@ -75,10 +79,9 @@ public class SucheDAO extends AbstractDAO {
 
     }*/
 
-    public List<String> getMarkeInTitel(String marke) {
+    public List<String> getMarkeInTitel() {
 
-        String sql = "SELECT titel FROM mmuel72s.autoanzeige " +
-                "WHERE LOWER(titel) LIKE LOWER('%" + marke + "%');";
+        String sql = "SELECT titel FROM mmuel72s.autoanzeige ";
 
         return hilfe(sql);
     }

@@ -10,6 +10,10 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class AbstractDAO {
 
     protected static void closeResultset(ResultSet r) {
