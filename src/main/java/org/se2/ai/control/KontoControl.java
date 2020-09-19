@@ -19,7 +19,7 @@ public class KontoControl {
             return check; // ;)
         }
         try {
-            check = BenutzerDAO.getInstance().changepassword(email, altpassword, neupassword);
+            check = BenutzerDAO.getInstance().changePassword(email, altpassword, neupassword);
         } catch (DatabaseException e) {
             Logger.getLogger(KontoControl.class.getName()).log(Level.SEVERE, e.getReason(), e);
             return false;

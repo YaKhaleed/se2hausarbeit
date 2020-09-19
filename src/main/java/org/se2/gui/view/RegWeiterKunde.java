@@ -4,10 +4,10 @@ import org.se2.ai.control.RegistrationControl;
 import org.se2.ai.model.DTO.Adresse;
 import org.se2.ai.model.DTO.KundeDTO;
 import org.se2.ai.model.entities.Benutzer;
-//import org.se2.gui.components.AnredeField;
-//import org.se2.gui.components.EmailPasworrtField;
-//import org.se2.gui.components.TextFieldForRegWeiter;
+import org.se2.gui.components.AnredeField;
+import org.se2.gui.components.EmailPaswortField;
 import org.se2.gui.components.PanelStartseite;
+import org.se2.gui.components.TextFieldForRegWeiter;
 import org.se2.gui.ui.MyUI;
 import org.se2.gui.windows.BestaetigenReg;
 import org.se2.services.util.Roles;
@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author WINDOWS
+ * @author zmorin2s
  */
 public class RegWeiterKunde extends Register {
     private static final String WIDTH = "500px";
@@ -40,17 +40,17 @@ public class RegWeiterKunde extends Register {
         panel.setHeight("50px");
         this.addComponent(panel);
         setMargin(true);
-        Label label = new Label("<b> Richten Sie Ihr Konto ein! </b>", ContentMode.HTML);
+        Label label = new Label("<b> Jetzt können Sie nach Autos suchen und reservieren! </b>", ContentMode.HTML);
         label.addStyleName("mytitle");
         label.addStyleName(ValoTheme.LABEL_H1);
         haupt.addComponent(label);
         haupt.setComponentAlignment(label, Alignment.MIDDLE_CENTER);
-        //final ComboBox<String> userAnrede = new AnredeField();
-        //haupt.addComponent(userAnrede);
+        final ComboBox<String> userAnrede = new AnredeField();
+        haupt.addComponent(userAnrede);
 
         HorizontalLayout hl1 = new HorizontalLayout();
         hl1.setWidth(WIDTH_515_PX);
-        /*
+
         final TextFieldForRegWeiter vorname = new TextFieldForRegWeiter("Vorname", WIDTH_250_PX);
         hl1.addComponent(vorname);
         hl1.setComponentAlignment(vorname, Alignment.MIDDLE_LEFT);
@@ -61,11 +61,12 @@ public class RegWeiterKunde extends Register {
 
         haupt.addComponent(hl1);
 
-        EmailPasworrtField hl2 = new EmailPasworrtField(user);
+        EmailPaswortField hl2 = new EmailPaswortField(user);
 
         haupt.addComponent(hl2);
 
         /// start edits
+        /*
         HorizontalLayout streetNr = new HorizontalLayout();
         streetNr.setSpacing(true);
         streetNr.setWidth(WIDTH_515_PX);
@@ -122,16 +123,19 @@ public class RegWeiterKunde extends Register {
         binder.forField(ort).asRequired("Sie müssen ein Ort eingeben")
                 .withValidator(new StringLengthValidator("Ort ist nicht gültig", 3, 30))
                 .bind(Benutzer::getRole, Benutzer::setRole);
+                */
         binder.forField(vorname).asRequired("Sie müssen Ihre Vorname(n) eingeben")
                 .withValidator(new StringLengthValidator("Vorname(n) zu kurz", 3, 30))
-                .bind(Benutzer::getRole, Benutzer::setRole);
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
         binder.forField(nachname).asRequired("Sie müssen Ihre Nachname(n) eingeben")
                 .withValidator(new StringLengthValidator("Nachname(n) zu kurz", 3, 30))
-                .bind(Benutzer::getRole, Benutzer::setRole);
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
 
+        /*
         binder.forField(telefon).asRequired("Sie müssen eine Telefonnummer eingeben")
                 .withValidator(new RegexpValidator("Telefonnummer darf nur Zahlen enthalten", "^[0-9]*$"))
                 .bind(Benutzer::getRole, Benutzer::setRole);
+                */
 
         ubermitteln.addClickListener(event -> {
             binder.validate();
@@ -141,26 +145,26 @@ public class RegWeiterKunde extends Register {
                 String anrede = userAnrede.getValue();
                 String uservorname = vorname.getValue();
                 String username = nachname.getValue();
-                String userstrasse = strasse.getValue();
-                String hausnummer = nummer.getValue();
-                String userort = ort.getValue();
-                int userplz = Integer.parseInt(plz.getValue());
-                String usertelefon = telefon.getValue();
+                //String userstrasse = strasse.getValue();
+                //String hausnummer = nummer.getValue();
+                //String userort = ort.getValue();
+                //int userplz = Integer.parseInt(plz.getValue());
+                //String usertelefon = telefon.getValue();
                 // instance of control
-                RegisterControl r = new RegisterControl();
-                StudentDTO studi = new StudentDTO();
+                RegistrationControl r = new RegistrationControl();
+                KundeDTO kunde = new KundeDTO();
                 try {
-                    studi.setAnrede(anrede);
-                    studi.setVorname(uservorname);
-                    studi.setNachname(username);
-                    studi.setTelefonnummer(usertelefon);
-                    studi.setAdresse(new Adresse(userstrasse, userplz, hausnummer, userort));
-                    r.registerStudent(studi);
+                    kunde.setAnrede(anrede);
+                    kunde.setVorname(uservorname);
+                    kunde.setNachname(username);
+                    //kunde.setTelefonnummer(usertelefon);
+                    //kunde.setAdresse(new Adresse(userstrasse, userplz, hausnummer, userort));
+                    r.registerKunde(kunde);
                 } catch (Exception e) {
-                    Logger.getLogger(RegWeiterStudent.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+                    Logger.getLogger(RegWeiterKunde.class.getName()).log(Level.SEVERE, e.getMessage(), e);
                 }
                 user = null;
-                ConfirmReg window = new ConfirmReg("Registrierung abgeschlossen!", Views.STARTSEITE);
+                BestaetigenReg window = new BestaetigenReg("Registrierung abgeschlossen!", Views.STARTSEITE);
                 ((MyUI) UI.getCurrent()).setBenutzer(user);
                 VaadinSession.getCurrent().setAttribute(Roles.CURRENTUSER, null);
                 UI.getCurrent().addWindow(window);
@@ -170,7 +174,7 @@ public class RegWeiterKunde extends Register {
 
         });
 
-         */
+
         haupt.addComponent(ubermitteln);
         haupt.setComponentAlignment(ubermitteln, Alignment.MIDDLE_CENTER);
         this.addComponent(haupt);

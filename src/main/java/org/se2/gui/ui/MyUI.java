@@ -58,11 +58,11 @@ public class MyUI extends UI {
         navi.addView(Views.STARTSEITE, Startseite.class);
         navi.addView(Views.REGISTERFUERKUNDE, RegisterseitefuerKunde.class);
         navi.addView(Views.REGISTERFUERVERTRIEBLER, RegisterseitefuerVertriebler.class);
-        //navi.addView(Views.REGWEITERS, RegWeiterStudent.class);
-        //navi.addView(Views.REGWEITERA, RegWeiterArbeitgeber.class);
-        //navi.addView(Views.DASHBOARDS, DashboardStudent.class);
-        //navi.addView(Views.DASHBOARDA, DashboardArbeitgeber.class);
-        //navi.addView(Views.AUTOANZEIGEERSTELLEN, StellenanzeigeErstellen.class);
+        navi.addView(Views.REGWEITERS, RegWeiterKunde.class);
+        navi.addView(Views.REGWEITERA, RegWeiterVertriebler.class);
+        navi.addView(Views.DASHBOARDS, DashboardKunde.class);
+        navi.addView(Views.DASHBOARDA, DashboardVertriebler.class);
+        navi.addView(Views.AUTOANZEIGEERSTELLEN, AutoanzeigeErstellen.class);
 
         this.benutzer = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
         UI.getCurrent().getNavigator().navigateTo(Views.STARTSEITE);

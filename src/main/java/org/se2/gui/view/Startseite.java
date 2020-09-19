@@ -28,30 +28,32 @@ public class Startseite extends VerticalLayout implements View {
         layout.setSizeFull();
 
         //PROJEKT-NAME
-        Label label = new Label("<b> Stealthy_Alda </b>", ContentMode.HTML);
+        Label label = new Label("<b> CarLook </b>", ContentMode.HTML);
         label.setPrimaryStyleName(CLASSNAME + "-label");
         label.addStyleName("mytitle");
         label.addStyleName(ValoTheme.LABEL_H1);
         layout.addComponent(label, 0, 0);
-        layout.setComponentAlignment(label, Alignment.MIDDLE_CENTER);
+        layout.setComponentAlignment(label, Alignment.TOP_CENTER);
 
-        Label label2 = new Label("Sie suchen nach einem Job, der zu Ihnen passt? <br>" +
-                "Sie sind ein Unternehmer und suchen nach <br>" + "einem Mitarbeiter?<br>" +
-                "<br>" +
-                "Wir finden!", ContentMode.HTML);
+        Label label2 = new Label("Wir von CarLook sind jetzt auch digital zu erreichen! <br>" +
+                "Mit wenigen Klicks können Sie sich registrieren und <br> Autos für eine Besichtigung reservieren. <br> <br>"
+                + "Viel Spaß beim Stöbern!<br>", ContentMode.HTML);
 
         label2.setPrimaryStyleName(CLASSNAME + "-label2");
 
         label2.setStyleName("startseite");
         layout.addComponent(label2, 1, 0);
-        layout.setComponentAlignment(label2, Alignment.BOTTOM_CENTER);
+        layout.setComponentAlignment(label2, Alignment.MIDDLE_CENTER);
         //BUTTON-LOS
+        /*
         Button button = new Button("Los");
         button.setPrimaryStyleName(CLASSNAME + "-los");
 
         button.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.LOGIN));
         layout.addComponent(button, 1, 1);
         layout.setComponentAlignment(button, Alignment.TOP_CENTER);
+
+         */
 
         this.addComponent(layout);
 

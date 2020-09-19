@@ -16,10 +16,17 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class AutoanzeigeDAO extends AbstractDAO {
 
     private static AutoanzeigeDAO dao = null;
 
+    private AutoanzeigeDAO() {
+
+    }
 
     public static AutoanzeigeDAO getInstance() {
         if (dao == null) dao = new AutoanzeigeDAO();
@@ -27,23 +34,26 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
     }
 
-    public AutoanzeigeDTO getAutoanzeige(String jobtitel, String beschreibung, String ort, String status) {
-        String sql = "select * from mmuel72s.autoanzeige where titel = ?" +
+    public AutoanzeigeDTO getAutoanzeige(String titel) {
+        String sql = "select * from mmuel72s.autoanzeige where titel = ?";
+        /*+
                 "and beschreibung = ?" +
                 "and ort = ?" +
                 "and status = ?;";
+
+         */
         ResultSet rs = null;
         AutoanzeigeDTO autoanzeige = new AutoanzeigeDTO();
         try {
             // use prepared stmt
             PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(sql);
-            statement.setString(1, jobtitel);
-            statement.setString(2, beschreibung);
-            statement.setString(3, ort);
-            statement.setString(4, status);
+            statement.setString(1, titel);
+            //statement.setString(2, beschreibung);
+            //statement.setString(3, ort);
+            //statement.setString(4, status);
             rs = statement.executeQuery();
             assert (rs != null);
-            fillStellenanzeige(rs, autoanzeige, 6);
+            fillAutoanzeige(rs, autoanzeige, 6);
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.INFO, null, rs);
         } catch (SQLException | DatabaseException e) {
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, null, e);
@@ -54,16 +64,47 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
     }
 
+    public List<AutoanzeigeDTO> getAutoanzeigeListe(String titel) {
+        ResultSet set = null;
+        List<AutoanzeigeDTO> liste = new ArrayList<>();
+        String sql = "select *\n" +
+                "from mmuel72s.autoanzeige s\n" +
+
+                "where s.titel = ?";
+        try {
+            PreparedStatement statement = this.getPreparedStatement(sql);
+            statement.setString(1, titel);
+            set = statement.executeQuery();
+            assert (set != null);
+            while (set.next()) {
+                AutoanzeigeDTO s = new AutoanzeigeDTO();
+                s.setAutoanzeigenID(set.getInt(1));
+                s.setTitel(set.getString(2));
+                s.setBeschreibung(set.getString(3));
+                s.setBaujahr(set.getInt(5));
+                s.setStatus(set.getString(6));
+                s.setDatum(set.getDate(7).toLocalDate());
+                liste.add(s);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AutoanzeigeDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            org.se2.ai.model.dao.AbstractDAO.closeResultset(set);
+        }
+        return liste;
+    }
+
     //Auskommentierte Zeilen drübergehen
-    private void fillStellenanzeige(ResultSet rs, AutoanzeigeDTO autoanzeige, int i) throws SQLException {
+    private void fillAutoanzeige(ResultSet rs, AutoanzeigeDTO autoanzeige, int i) throws SQLException {
         while (rs.next()) {
             Vertriebler a;
             autoanzeige.setAutoanzeigenID(rs.getInt(1));
             autoanzeige.setTitel(rs.getString(2));
             autoanzeige.setBeschreibung(rs.getString(3));
-            autoanzeige.setStatus(rs.getString(4));
-            autoanzeige.setDatum(rs.getDate(5).toLocalDate());
-            autoanzeige.setOrt(rs.getString(7));
+            autoanzeige.setBaujahr(rs.getInt(5));
+            autoanzeige.setStatus(rs.getString(6));
+            autoanzeige.setDatum(rs.getDate(7).toLocalDate());
             a = VertrieblerDAO.getInstance().getVertrieblerFromVertrieblerid(rs.getInt(i));
             autoanzeige.setVertriebler(a);
         }
@@ -127,7 +168,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
                 "from mmuel72s.autoanzeige s\n" +
                 "join mmuel72s.vertriebler a\n" +
                 "on s.vertriebler_id = a.vertriebler_id\n" +
-                "where a.unternehmen = ? order by s.stellenanzeige_id";
+                "where a.name = ? order by s.autoanzeige_id";
         try {
             PreparedStatement statement = this.getPreparedStatement(sql);
             statement.setString(1, vertriebler);
@@ -138,9 +179,9 @@ public class AutoanzeigeDAO extends AbstractDAO {
                 s.setAutoanzeigenID(set.getInt(1));
                 s.setTitel(set.getString(2));
                 s.setBeschreibung(set.getString(3));
-                s.setStatus(set.getString(4));
-                s.setDatum(set.getDate(5).toLocalDate());
-                s.setOrt(set.getString(7));
+                s.setBaujahr(set.getInt(5));
+                s.setStatus(set.getString(6));
+                s.setDatum(set.getDate(7).toLocalDate());
                 liste.add(s);
             }
 
@@ -166,12 +207,12 @@ public class AutoanzeigeDAO extends AbstractDAO {
             assert (rs != null);
             while (rs.next()) {
                 autoanzeige = new AutoanzeigeDTO();
-                autoanzeige.setTitel(rs.getString(1));
-                autoanzeige.setBeschreibung(rs.getString(2));
-                autoanzeige.setStatus(rs.getString(3));
-                autoanzeige.setDatum(rs.getDate(4).toLocalDate());
-                autoanzeige.setVertrieblerName(rs.getString(5));
-                autoanzeige.setOrt(rs.getString(6));
+                autoanzeige.setTitel(rs.getString(2));
+                autoanzeige.setBeschreibung(rs.getString(3));
+                autoanzeige.setStatus(rs.getString(6));
+                autoanzeige.setDatum(rs.getDate(7).toLocalDate());
+                autoanzeige.setVertrieblerID(rs.getInt(4));
+                autoanzeige.setBaujahr(rs.getInt(5));
                 liste.add(autoanzeige);
             }
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.INFO, null, rs);
@@ -198,7 +239,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
             PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement(sql);
             rs = preparedStatement.executeQuery();
             assert (rs != null);
-            fillStellenanzeige(rs, autoanzeige, 8);
+            fillAutoanzeige(rs, autoanzeige, 8);
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.INFO, null, rs);
         } catch (SQLException | DatabaseException e) {
             Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, null, e);
@@ -224,15 +265,15 @@ public class AutoanzeigeDAO extends AbstractDAO {
     }
 
     public boolean deleteAutoanzeige(AutoanzeigeDTO s) {
-        String sqlArbeitgeber = "DELETE FROM mmuel72s.autoanzeige WHERE autoanzeige_id = ?;"
-               // "DELETE FROM stealthyalda.bewerbung WHERE stellenanzeige_id = ?;" +
-              //  "DELETE FROM stealthyalda.stellenanzeige " +
-               // "WHERE stellenanzeige_id = ?;"
+        String sqlArbeitgeber = "DELETE FROM mmuel72s.autoanzeige WHERE autoanzeige = ?;" +
+               "DELETE FROM mmuel72s.bewerbung WHERE autoanzeige_id = ?;" +
+              "DELETE FROM mmuel72s.autoanzeige " +
+               "WHERE autoanzeige = ?;"
         ;
         try (PreparedStatement stmt = this.getPreparedStatement(sqlArbeitgeber)) {
             stmt.setInt(1, s.getAutoanzeigenID());
-            //stmt.setInt(2, s.getStellenanzeigeID());
-            //stmt.setInt(3, s.getStellenanzeigeID());
+            stmt.setInt(2, s.getAutoanzeigenID());
+            stmt.setInt(3, s.getAutoanzeigenID());
 
             stmt.executeUpdate();
             return true;

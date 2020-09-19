@@ -16,6 +16,9 @@ import org.apache.commons.mail.HtmlEmail;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
 
 public class RegistrationControl {
     Benutzer user = ((MyUI) UI.getCurrent()).getBenutzer();
@@ -39,7 +42,7 @@ public class RegistrationControl {
     public void registerVertriebler(VertrieblerDTO v, String anrede) {
         VertrieblerDAO.getInstance().insertVertriebler(v);
         BenutzerDAO.getInstance().updateStammdaten(v, anrede, user);
-        AdresseDAO.getInstance().addAdresse(v.getAdresse(), user.getId());
+        //AdresseDAO.getInstance().addAdresse(v.getAdresse(), user.getId());
     }
 
     /**
@@ -51,7 +54,7 @@ public class RegistrationControl {
 
         try {
             KundeDAO.getInstance().newKunde(kunde);
-            AdresseDAO.getInstance().addAdresse(kunde.getAdresse(), user.getId());
+            //AdresseDAO.getInstance().addAdresse(kunde.getAdresse(), user.getId());
             BenutzerDAO.getInstance().updateStammdaten(kunde, kunde.getAnrede(), user);
         } catch (Exception e) {
             Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, e.getMessage(), e);

@@ -7,6 +7,9 @@ import org.se2.gui.windows.KontoLoeschenWindow;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 
+/**
+ * @author zmorin2s
+ */
 
 public class KontoVerwalten extends VerticalLayout {
     static final String PX_300 = "300px";
@@ -21,7 +24,7 @@ public class KontoVerwalten extends VerticalLayout {
         label.addStyleName("mytitle");
         top.addComponent(label);
 
-        Label label2 = new Label("Sie kÃ¶nnen hier Ihr Konto lÃ¶schen oder Ihr Passwort Ã¤ndern.");
+        Label label2 = new Label("Sie können hier Ihr Konto löschen oder Ihr Passwort ändern.");
         top.addComponent(label2);
 
         this.addComponent(top);
@@ -29,7 +32,7 @@ public class KontoVerwalten extends VerticalLayout {
 
         HorizontalLayout main = new HorizontalLayout();
         main.setWidth("1000px");
-        Label loschen = new Label("Konto lÃ¶schen");
+        Label loschen = new Label("Konto löschen");
 
         VerticalLayout deletekonto = new VerticalLayout();
 
@@ -46,7 +49,7 @@ public class KontoVerwalten extends VerticalLayout {
         deletekonto.addComponent(passwort);
 
 
-        Button delete = new Button("LÃ¶schen");
+        Button delete = new Button("Löschen");
         delete.addClickListener(clickEvent -> {
             KontoLoeschenWindow deleteWindow = new KontoLoeschenWindow(mail.getValue(), passwort.getValue());
             UI.getCurrent().addWindow(deleteWindow);
@@ -54,7 +57,7 @@ public class KontoVerwalten extends VerticalLayout {
         deletekonto.addComponent(delete);
 
         VerticalLayout changepassword = new VerticalLayout();
-        Label change = new Label("Passwort Ã¤ndern");
+        Label change = new Label("Passwort ändern");
 
         changepassword.addComponent(change);
 
@@ -74,7 +77,7 @@ public class KontoVerwalten extends VerticalLayout {
         neu.setWidth(PX_300);
         changepassword.addComponent(neu);
 
-        final Button andern = new Button("Ã„ndern");
+        final Button andern = new Button("Ändern");
         changepassword.addComponent(andern);
         andern.addClickListener(clickEvent -> {
             String email = mail2.getValue();

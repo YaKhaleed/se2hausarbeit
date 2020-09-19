@@ -29,8 +29,62 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="Rollen">
+    <list default="true" id="c964bd3d-c936-4664-9522-bf904ca991b4" name="Default Changelist" comment="exceptions + dbverbindung 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/KontoControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/KontoControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/RegistrationControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/RegistrationControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/SuchFunktion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/SuchFunktion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/Suche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/Suche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/SucheProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/control/SucheProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AdresseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AdresseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/AutoanzeigeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/BenutzerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/KundeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/KundeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/ReservierungDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/ReservierungDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/RolleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/RolleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/SucheDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/SucheDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/ai/model/dao/VertrieblerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ComponentJobAusschreibung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/ComponentAutoanzeige.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/KontoVerwalten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/KontoVerwalten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/PanelStartseite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/TopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/components/TopPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/ui/MyUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/LoginSeite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/LoginSeite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegWeiterKunde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegWeiterKunde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerVertriebler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/RegisterseitefuerVertriebler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/Startseite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/Startseite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/view/SucheSeite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/Reservierungsanzeige.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/se2/gui/windows/Reservierungsanzeige.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/BenutzerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se2hausarbeit/ai/model/dao/BenutzerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/KontoControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/KontoControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/RegistrationControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/RegistrationControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/SuchFunktion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/SuchFunktion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/Suche.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/Suche.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/control/SucheProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/control/SucheProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AbstractDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AbstractDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AdresseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AdresseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AutoanzeigeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/AutoanzeigeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/BenutzerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/BenutzerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/KundeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/KundeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/ReservierungDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/ReservierungDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/RolleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/RolleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/SucheDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/SucheDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/VertrieblerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/ai/model/dao/VertrieblerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/components/ComponentJobAusschreibung.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/components/KontoVerwalten.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/components/KontoVerwalten.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/components/PanelStartseite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/components/PanelStartseite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/components/TopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/components/TopPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/ui/MyUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/ui/MyUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/view/LoginSeite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/view/LoginSeite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/view/RegWeiterKunde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/view/RegWeiterKunde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/view/RegisterseitefuerVertriebler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/view/RegisterseitefuerVertriebler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/view/Startseite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/view/Startseite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/view/SucheSeite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/view/SucheSeite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/se2/gui/windows/Reservierungsanzeige.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/se2/gui/windows/Reservierungsanzeige.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/model/dao/BenutzerDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se2hausarbeit/ai/model/dao/BenutzerDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +110,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="D:\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -76,17 +130,18 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="tasks.servers" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src" />
       <recent name="C:\Users\Tu\IdeaProjects\se2hausarbeit\src" />
       <recent name="C:\Users\Tu\IdeaProjects\se2hausarbeit" />
       <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.run webapp">
@@ -219,11 +274,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.BenutzerDaoTest" />
+      <item itemvalue="JUnit.KundeDaoTest" />
       <item itemvalue="JUnit.RegisterControllTest" />
       <item itemvalue="JUnit.RegisterControllTest.checkUserExists" />
       <item itemvalue="JUnit.RegisterControllTest.testRegistration" />
-      <item itemvalue="JUnit.BenutzerDaoTest" />
-      <item itemvalue="JUnit.KundeDaoTest" />
       <item itemvalue="Maven.clean install" />
       <item itemvalue="Maven.run webapp" />
     </list>
@@ -237,7 +292,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -256,9 +311,6 @@
       <workItem from="1599149027091" duration="1606000" />
       <workItem from="1599486115621" duration="2903000" />
       <workItem from="1599489081750" duration="11000" />
-      <workItem from="1600010979762" duration="1161000" />
-      <workItem from="1600015909754" duration="1023000" />
-      <workItem from="1600516555130" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="exceptions + dbverbindung">
       <created>1597922134121</created>
@@ -351,12 +403,12 @@
       <option name="project" value="LOCAL" />
       <updated>1599388394490</updated>
     </task>
-    <task id="LOCAL-00014" summary="Rollen">
-      <created>1600011097839</created>
+    <task id="LOCAL-00014" summary="exceptions + dbverbindung 2">
+      <created>1599735855217</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1600011097839</updated>
+      <updated>1599735855217</updated>
     </task>
     <option name="localTasksCounter" value="15" />
     <servers />
@@ -406,10 +458,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="exceptions + dbverbindung" />
     <MESSAGE value="NEU" />
-    <MESSAGE value="exceptions + dbverbindung 2" />
     <MESSAGE value="neu" />
-    <MESSAGE value="Rollen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rollen" />
+    <MESSAGE value="exceptions + dbverbindung 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions + dbverbindung 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="231" y="55" key="#Project_Structure" timestamp="1598234880946">
@@ -433,42 +484,47 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="689" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1599061431572" />
-    <state x="551" y="307" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1600516584615">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="551" y="307" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1600516584615" />
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599210874876">
+    <state x="538" y="358" width="431" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599736465949">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1599210874876" />
+    <state x="538" y="358" width="431" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1500.960@0.0.1500.960" timestamp="1599736465949" />
+    <state x="551" y="307" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1598605793363" />
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600492189972">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="286" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960@0.0.1500.960" timestamp="1600492189972" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598355276735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598355276735" />
+    <state x="498" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600480868321">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="498" y="325" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1500.960@0.0.1500.960" timestamp="1600480868321" />
     <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1599702514601">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1599702514601" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600019728476">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1162" height="213" key="GridCell.Tab.0.bottom" timestamp="1600517087831">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1115" height="316" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1599713594659" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600019728476" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600019728476">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1162" height="213" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1600517087831" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
+    <state width="1162" height="213" key="GridCell.Tab.0.center" timestamp="1600517087831">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1115" height="316" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1599713594659" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600019728476" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600019728476">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1162" height="213" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1600517087831" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
+    <state width="1162" height="213" key="GridCell.Tab.0.left" timestamp="1600517087831">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1115" height="316" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1599713594659" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600019728476" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600019728476">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1162" height="213" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1600517087831" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
+    <state width="1162" height="213" key="GridCell.Tab.0.right" timestamp="1600517087831">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1115" height="316" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1599713594659" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600019728476" />
+    <state width="1162" height="213" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1600517087831" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599489021896" />
     <state width="1115" height="316" key="GridCell.Tab.1.bottom" timestamp="1599713594659">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -497,15 +553,18 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="389" y="242" key="MultipleFileMergeDialog/0.0.1500.960@0.0.1500.960" timestamp="1597923785189" />
-    <state x="471" y="3" key="SettingsEditor" timestamp="1600011116628">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="460" y="4" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1599215037628" />
-    <state x="471" y="3" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600011116628" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1599388403436">
+    <state x="460" y="4" key="SettingsEditor" timestamp="1599215037628">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1599388403436" />
+    <state x="460" y="4" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1599215037628" />
+    <state x="123" y="197" width="567" height="524" key="StructurePopup" timestamp="1600439442779">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="123" y="197" width="567" height="524" key="StructurePopup/0.0.1500.960@0.0.1500.960" timestamp="1600439442779" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1599735888392">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1599735888392" />
     <state x="351" y="183" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598357540885" />
     <state x="460" y="214" key="VcsDiffUtil.ChangesDialog" timestamp="1597803387879">
       <screen x="0" y="0" width="1500" height="960" />
@@ -537,14 +596,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="543" y="379" key="git4idea.ui.GitStashDialog/0.0.1500.960@0.0.1500.960" timestamp="1598351227428" />
-    <state x="360" y="73" key="new project wizard" timestamp="1599822318076">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="360" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1599822318076" />
-    <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1599386727484">
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1600492282151">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="451" y="228" key="refactoring.ChangeSignatureDialog/0.0.1500.960@0.0.1500.960" timestamp="1599386727484" />
+    <state x="451" y="228" key="refactoring.ChangeSignatureDialog/0.0.1500.960@0.0.1500.960" timestamp="1600492282151" />
     <state x="414" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1599382577439">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
