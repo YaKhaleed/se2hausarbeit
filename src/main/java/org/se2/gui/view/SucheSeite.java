@@ -101,14 +101,6 @@ public class SucheSeite extends VerticalLayout implements View {
                 info.setComponentAlignment(sdatum, Alignment.TOP_CENTER);
                 sdatum.setWidth("100px");
 
-                /*
-                Label sort = new Label(suche.getOrt(), ContentMode.PREFORMATTED);
-                info.addComponent(sort);
-                info.setComponentAlignment(sort, Alignment.TOP_CENTER);
-                sort.setWidth("175px");
-
-                 */
-
                 Label sstatus = new Label(suche.getStatus(), ContentMode.PREFORMATTED);
                 info.addComponent(sstatus);
                 info.setComponentAlignment(sstatus, Alignment.TOP_CENTER);
