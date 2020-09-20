@@ -10,6 +10,10 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author zmorin2s
+ */
+
 public class JDBCConnection {
     private static JDBCConnection connection = null;
     //:5432

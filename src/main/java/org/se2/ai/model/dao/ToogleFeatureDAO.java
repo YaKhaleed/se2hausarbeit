@@ -8,8 +8,9 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//author qthi2s
-
+/**
+ * @author qthis
+ */
 public class ToogleFeatureDAO extends AbstractDAO {
 
     private static ToogleFeatureDAO me;

@@ -67,7 +67,7 @@ public class AbstractDAO {
                 rs.next();
                 currentValue = rs.getInt(1);
             } catch (SQLException ex) {
-                Logger.getLogger(AdresseDAO.class.getName()).log(Level.SEVERE, null, ex);
+                //Logger.getLogger(AdresseDAO.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
                 closeResultset(rs);
             }

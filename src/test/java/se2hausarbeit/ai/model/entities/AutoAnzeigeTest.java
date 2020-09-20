@@ -2,7 +2,7 @@ package se2hausarbeit.ai.model.entities;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.se2.ai.model.DTO.AnforderungAutoanzeige;
+import org.se2.ai.model.dao.AdresseDAO;
 import org.se2.ai.model.entities.Autoanzeige;
 
 import java.time.LocalDate;
@@ -21,7 +21,7 @@ public class AutoAnzeigeTest {
     private LocalDate datum;
     private final int vertrieblerID = 10;
     private final String ort = "Bonn";
-    private List<AnforderungAutoanzeige> autoanforderung;
+    private List<AdresseDAO.AnforderungAutoanzeige> autoanforderung;
 
 
     @Before

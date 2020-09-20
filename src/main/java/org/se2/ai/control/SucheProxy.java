@@ -4,6 +4,10 @@ import org.se2.ai.model.DTO.AutoanzeigeDTO;
 
 import java.util.List;
 
+/**
+ * @author qthi2s
+ */
+
 public class SucheProxy implements SuchFunktion{
     private static SucheProxy suche = null;
 

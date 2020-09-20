@@ -33,7 +33,7 @@ public class ReservierungDAO extends AbstractDAO{
 
     }
 
-    //nochmal überlegen, ob beschreibung nötig ist
+
     public boolean createReservierung(AutoanzeigeDTO a, ReservierungDTO r, Kunde k) {
         String sql = "INSERT INTO mmuel72s.reservierung(reservierung_id, kunde_id, autoanzeige_id, titel, datum, beschreibung, status) VALUES (default,?,?,?,?,?,?,?)";
 
@@ -85,7 +85,7 @@ public class ReservierungDAO extends AbstractDAO{
         r.setId(currentValue);
     }
 
-    //Eventuell ändern. Nach Kunden sortieren ist nicht ganz schlüssig
+
     public List<ReservierungDTO> getReservierungFromKunde(Kunde k) {
         //v.name: vertrieblername
         String sql = "SELECT a.titel, v.name, r.status\n" +

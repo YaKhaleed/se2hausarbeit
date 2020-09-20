@@ -29,20 +29,15 @@ public class ComponentAutoanzeige {
         jt.setWidth("600px");
         titel.addComponent(jt);
 
-        Label ju = new Label(autoanzeige.getVertrieblerName() + " - ");// + autoanzeige.getOrt());
+        Label ju = new Label(autoanzeige.getVertrieblerName() + " - ");
         ju.setWidth("600px");
         titel.addComponent(ju);
 
-        String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        FileResource resource = new FileResource(new File(basepath +
-                "/Image/Unknown_profil.png"));
-        Image profilbild = new Image("", resource);
 
         VerticalLayout right = new VerticalLayout();
-        right.addComponent(profilbild);
-        right.setComponentAlignment(profilbild, Alignment.TOP_CENTER);
+
         right.addComponent(new Label(autoanzeige.getStatus()));
-        right.setComponentAlignment(profilbild, Alignment.TOP_CENTER);
+
         right.addComponent(new Label(autoanzeige.getDatum().toString()));
         Button vertriebler = new Button(VaadinIcons.HOME);
 
@@ -65,27 +60,7 @@ public class ComponentAutoanzeige {
         content.addComponent(beschreibung);
         content.setComponentAlignment(beschreibung, Alignment.TOP_CENTER);
 
-        /*
-        TextArea anforderung = new TextArea("Anforderungen");
-        anforderung.setReadOnly(true);
-        try {
-            List<Anforderung> a = AnforderungDAO.getInstance().getAnforderungForStellenanzeige(autoanzeige.getStellenanzeigeID());
-            StringBuilder print = new StringBuilder();
-            for (int i = 0; i < a.size(); i++) {
-                print.append(a.get(i).getAnforderung());
-                print.append("\n");
-            }
-            anforderung.setValue(String.valueOf(print));
-        } catch (DatabaseException e) {
-            Logger.getLogger(ComponentJobAusschreibung.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        }
 
-        anforderung.setHeight("150px");
-        anforderung.setWidth("700px");
-        content.addComponent(anforderung);
-        content.setComponentAlignment(anforderung, Alignment.TOP_CENTER);
-
-         */
         return content;
     }
 }

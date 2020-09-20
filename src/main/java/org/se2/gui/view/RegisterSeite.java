@@ -8,6 +8,10 @@ import com.vaadin.ui.themes.ValoTheme;
 import org.se2.gui.components.PanelStartseite;
 import org.se2.gui.components.RegisterSeiteMain;
 
+/**
+ * @author qthi2s
+ */
+
 public class RegisterSeite extends Register {
     public static final String CLASSNAME = "Registerseite";
 

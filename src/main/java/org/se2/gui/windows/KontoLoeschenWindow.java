@@ -10,7 +10,9 @@ import org.se2.ai.control.exceptions.DatabaseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 public class KontoLoeschenWindow extends Window {
 
@@ -24,7 +26,7 @@ public class KontoLoeschenWindow extends Window {
         content.addComponent(top);
         content.setComponentAlignment(top, Alignment.TOP_CENTER);
 
-        Label label = new Label("Schade das Sie nicht mehr ein Mitglied sein wollen.");
+        Label label = new Label("Schade, dass Sie nicht mehr ein Mitglied sein wollen.");
         content.addComponent(label);
 
         HorizontalLayout janein = new HorizontalLayout();

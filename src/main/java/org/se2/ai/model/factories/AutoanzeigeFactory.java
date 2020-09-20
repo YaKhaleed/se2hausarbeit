@@ -4,7 +4,9 @@ import org.se2.ai.model.entities.Vertriebler;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.model.DTO.AutoanzeigeAnfrage;
 
-
+/**
+ * @author qthi2s
+ */
 
 public class AutoanzeigeFactory {
     private AutoanzeigeFactory (){

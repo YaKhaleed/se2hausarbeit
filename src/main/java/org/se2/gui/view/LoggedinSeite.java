@@ -7,6 +7,10 @@ import com.vaadin.navigator.View;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
+/**
+ * @author qthi2s
+ */
+
 public class LoggedinSeite extends VerticalLayout implements View {
 
     protected transient Benutzer user = (Benutzer) UI.getCurrent().getSession().getAttribute(Roles.CURRENTUSER);

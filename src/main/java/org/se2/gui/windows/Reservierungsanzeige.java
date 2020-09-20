@@ -1,6 +1,8 @@
 package org.se2.gui.windows;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 import com.vaadin.ui.*;
 import org.se2.ai.control.AutoanzeigeControl;
@@ -17,14 +19,13 @@ public class Reservierungsanzeige extends Window {
 
     public Reservierungsanzeige(Autoanzeige Autoanzeige) {
         center();
-        AutoanzeigeDTO jobangebot = new AutoanzeigeControl().get(Autoanzeige.getAutoanzeigenID());
+        AutoanzeigeDTO autoanzeige = new AutoanzeigeControl().get(Autoanzeige.getAutoanzeigenID());
 
-        VerticalLayout content = new ComponentAutoanzeige().getAutoanzeigeComp(jobangebot);
+        VerticalLayout content = new ComponentAutoanzeige().getAutoanzeigeComp(autoanzeige);
 
 
         HorizontalLayout button = new HorizontalLayout();
         button.setWidth("800px");
-
         Button zuruck = new Button("Zurück");
         zuruck.setWidth("150px");
         zuruck.addClickListener(clickEvent -> close());

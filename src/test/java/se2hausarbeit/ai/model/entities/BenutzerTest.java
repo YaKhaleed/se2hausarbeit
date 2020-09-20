@@ -2,7 +2,7 @@ package se2hausarbeit.ai.model.entities;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.se2.ai.model.DTO.Adresse;
+import org.se2.ai.model.dao.AdresseDAO;
 import org.se2.ai.model.entities.Benutzer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +18,7 @@ public class BenutzerTest {
     private final int Id = 1;
     private final String anrede = "Herr";
     private final String rolle = "Kunde";
-    private Adresse adresse;
+    private AdresseDAO.Adresse adresse;
 
     @Before
     public void setup() {

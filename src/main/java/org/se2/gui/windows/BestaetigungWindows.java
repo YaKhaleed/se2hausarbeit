@@ -2,7 +2,9 @@ package org.se2.gui.windows;
 
 import com.vaadin.ui.*;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 public class BestaetigungWindows extends Window {
 
@@ -16,10 +18,10 @@ public class BestaetigungWindows extends Window {
         content.setMargin(true);
         setContent(content);
 
-        Button buchungsButton = new Button("OK");
-        buchungsButton.addClickListener(newevent -> close());
-        content.addComponent(buchungsButton);
-        content.setComponentAlignment(buchungsButton, Alignment.MIDDLE_CENTER);
+        Button reservierungButton = new Button("OK");
+        reservierungButton.addClickListener(newevent -> close());
+        content.addComponent(reservierungButton);
+        content.setComponentAlignment(reservierungButton, Alignment.MIDDLE_CENTER);
     }
 
 

@@ -9,6 +9,10 @@ import org.se2.ai.model.entities.Vertriebler;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author qthi2s
+ */
+
 public class ReservierungsFactory implements BenötigeFactory{
     private static ReservierungDTO instance = null;
     private List<ReservierungDTO> liste = new ArrayList<>();
@@ -22,7 +26,7 @@ public class ReservierungsFactory implements BenötigeFactory{
 
     @Override
     public BenoetigteDTO create() {
-        return (BenoetigteDTO) new ReservierungDTO();
+        return  new ReservierungDTO();
     }
 
     public List<ReservierungDTO> getListReservierungKunde(Kunde k) {

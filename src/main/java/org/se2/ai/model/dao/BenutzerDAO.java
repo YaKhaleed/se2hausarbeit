@@ -63,10 +63,8 @@ public class BenutzerDAO extends AbstractDAO {
             JDBCConnection.getInstance().closeConnection();
         }
 
-        return null;
+        return benutzer;
     }
-
-    //!!!!Brauchen wir die Benutzerrolle?!!!!!
 
     public static String getBenutzerrolle(String email) {
         ResultSet set = null;
@@ -254,7 +252,6 @@ public class BenutzerDAO extends AbstractDAO {
         }
     }
 
-    //Brauchen wir das?
 
     public boolean changePassword(String email, String altpasswort, String neupasswort) throws DatabaseException {
         String sql = "UPDATE mmuel72s.benutzer SET passwort = ? WHERE mmuel72s.benutzer.email = ? AND mmuel72s.benutzer.passwort = ?;";

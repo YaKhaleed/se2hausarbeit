@@ -8,6 +8,10 @@ import com.vaadin.ui.themes.ValoTheme;
 import org.se2.gui.components.PanelStartseite;
 import org.se2.gui.components.RegisterSeiteMain;
 
+/**
+ * @author zmorin2s
+ */
+
 public class RegisterseitefuerVertriebler extends Register {
 
     public void setUp() {

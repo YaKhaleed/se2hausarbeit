@@ -8,7 +8,7 @@ import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 
 /**
- * @author zmorin2s
+ * @author qthi2s
  */
 
 public class KontoVerwalten extends VerticalLayout {

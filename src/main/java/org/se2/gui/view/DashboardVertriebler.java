@@ -6,6 +6,7 @@ import org.se2.ai.model.dao.VertrieblerDAO;
 import org.se2.ai.model.entities.Vertriebler;
 import org.se2.ai.model.entities.Benutzer;
 //import org.se2.gui.components.BenachrichtigungVertriebler;
+import org.se2.gui.components.BenachrichtigungVertriebler;
 import org.se2.gui.components.KontoVerwalten;
 import org.se2.gui.components.ProfilVertrieblerVerwalten;
 import org.se2.gui.components.TopPanel;
@@ -30,10 +31,12 @@ public class DashboardVertriebler extends VerticalLayout implements View {
         Benutzer user = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
         this.addComponent(new TopPanel(user));
 
-        HorizontalLayout horizon = new HorizontalLayout();
-        Vertriebler a = VertrieblerDAO.getInstance().getVertriebler(user.getEmail());
+        //HorizontalLayout horizon = new HorizontalLayout();
+        //Vertriebler a = VertrieblerDAO.getInstance().getVertriebler(user.getEmail());
         //SearchArbeitgeberServiceOhneBewerbung service = new SearchArbeitgeberServiceOhneBewerbung(a);
-        ComboBox<String> search = new ComboBox<>();
+        //ComboBox<String> search = new ComboBox<>();
+
+        /*
         try {
             if (ToogleRouter.isEnabled("bewerbung")) {
                 search.setPlaceholder("Bewerber ");
@@ -56,25 +59,31 @@ public class DashboardVertriebler extends VerticalLayout implements View {
 
             }
 
+
+
             horizon.setComponentAlignment(search, Alignment.MIDDLE_LEFT);
+
+
 
             final Button buttonsearch = new Button("Suche");
             buttonsearch.setWidth("200px");
             horizon.addComponent(buttonsearch);
             horizon.setComponentAlignment(buttonsearch, Alignment.MIDDLE_RIGHT);
 
-            this.addComponent(horizon);
-            this.setComponentAlignment(horizon, Alignment.MIDDLE_CENTER);
+         */
+
+            //this.addComponent(horizon);
+            //this.setComponentAlignment(horizon, Alignment.MIDDLE_CENTER);
             // Create the accordion
-            final Accordion accordion = new Accordion();
-            final Layout tab1 = new VerticalLayout();
-            final HorizontalLayout top = new HorizontalLayout();
+             Accordion accordion = new Accordion();
+             Layout tab1 = new VerticalLayout();
+             HorizontalLayout top = new HorizontalLayout();
             Label news = new Label("News");
             top.addComponent(news);
             news.setWidth("1100px");
 
 
-            Button add = new Button(VaadinIcons.PLUS);
+            Button add = new Button("Autoanzeige erstellen");
             top.addComponent(add);
             add.addClickListener(clickEvent -> {
                 ((MyUI) UI.getCurrent()).setBenutzer(user);
@@ -82,21 +91,24 @@ public class DashboardVertriebler extends VerticalLayout implements View {
                 UI.getCurrent().getNavigator().navigateTo(Views.AUTOANZEIGEERSTELLEN);
             });
             tab1.addComponent(top);
+           /*
             if (ToogleRouter.isEnabled("bewerbung")) {
 
                 Label n = new Label("Neue Bewerbungen sind eingegangen");
                 tab1.addComponent(n);
 
             }
+*/
+            accordion.addTab(tab1, "Erstellte Autoanzeigen");
 
-            accordion.addTab(tab1, "Dashboard");
+
 
 
             final Layout tab2 = new ProfilVertrieblerVerwalten(user);
             accordion.addTab(tab2, "Profil verwalten");
 
-           // final Layout tab3 = new BenachrichtigungVertriebler(user);
-            //accordion.addTab(tab3, "Benachrichtigungen");
+           final Layout tab3 = new BenachrichtigungVertriebler(user);
+            accordion.addTab(tab3, "Benachrichtigungen");
 
             final Layout tab4 = new KontoVerwalten(user);
             accordion.addTab(tab4, "Konto");
@@ -104,9 +116,9 @@ public class DashboardVertriebler extends VerticalLayout implements View {
             accordion.setWidth("1200px");
             this.addComponent(accordion);
             this.setComponentAlignment(accordion, Alignment.MIDDLE_CENTER);
-        } catch (DatabaseException databaseException) {
-            databaseException.printStackTrace();
-        }
+        //} catch (DatabaseException databaseException) {
+          //  databaseException.printStackTrace();
+        //}
     }
 
     @Override

@@ -48,9 +48,12 @@ public class AutoanzeigeErstellen extends VerticalLayout implements View {
         beschreibung.setWidth(WIDTH);
         mainlayout.addComponent(beschreibung);
 
+        /*
         TextField ort = new TextField("Ort");
         ort.setWidth(WIDTH);
         mainlayout.addComponent(ort);
+
+         */
 
         /*
         TextArea anforderung = new TextArea("Anforderung");
@@ -68,7 +71,7 @@ public class AutoanzeigeErstellen extends VerticalLayout implements View {
         datestatus.addComponent(date);
 
         ComboBox status = new ComboBox("Status");
-        status.setItems("Offen", "Pausiert", "Geschlossen");
+        status.setItems("Offen", "Reserviert", "Geschlossen");
         status.setWidth("350px");
         datestatus.addComponent(status);
         datestatus.setComponentAlignment(status, Alignment.MIDDLE_RIGHT);
@@ -76,7 +79,7 @@ public class AutoanzeigeErstellen extends VerticalLayout implements View {
 
         HorizontalLayout bottom = new HorizontalLayout();
         bottom.setWidth("900px");
-        Button zuruck = new Button("ZurÃ¼ck");
+        Button zuruck = new Button("Zurück");
         zuruck.addClickListener(clickEvent -> UI.getCurrent().getNavigator().navigateTo(Views.DASHBOARDA));
         zuruck.setWidth(WIDTHB);
         bottom.addComponent(zuruck);
@@ -89,20 +92,7 @@ public class AutoanzeigeErstellen extends VerticalLayout implements View {
             a.setBeschreibung(beschreibung.getValue());
             a.setDatum(date.getValue());
             a.setStatus((String) status.getValue());
-            a.setOrt(ort.getValue());
 
-            List<String> listStr = new ArrayList<>();
-            /*
-            List<Anforderung> list = new ArrayList<>();
-            listStr.addAll(Arrays.asList(anforderung.getValue().split("\n")));
-            for (int i = 0; i < listStr.size(); i++) {
-                Anforderung anforderung1 = new Anforderung();
-                anforderung1.setAnforderung(listStr.get(i));
-                list.add(anforderung1);
-            }
-            a.setAnforderungs(list);
-
-             */
             BestaetigungAutoanzeige confirm = new BestaetigungAutoanzeige(a);
 
 

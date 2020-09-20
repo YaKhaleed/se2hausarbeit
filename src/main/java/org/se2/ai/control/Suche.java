@@ -5,6 +5,10 @@ import org.se2.ai.model.dao.AutoanzeigeDAO;
 
 import java.util.List;
 
+/**
+ * @author qthi2s
+ */
+
 public class Suche implements SuchFunktion {
 
     private static Suche suche = null;

@@ -3,6 +3,10 @@ package org.se2.ai.model.dao;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * @author zmorin2s
+ */
+
 public class SucheTitel {
     private static final List<String> liste = SucheDAO.getInstance().getMarkeInTitel();
 

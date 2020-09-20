@@ -1,5 +1,8 @@
 package org.se2.ai.model.entities;
 
+/**
+ * @author qthi2s
+ */
 
 public class Kunde extends Benutzer {
 

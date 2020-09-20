@@ -14,7 +14,9 @@ import org.se2.services.util.Roles;
 
 import java.time.LocalDate;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 
 public class ReservierungsWindow extends Window {

@@ -12,6 +12,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * @author zmorin2s
+ */
+
+/**
  * Hash passwords for storage, and test passwords against password tokens.
  * <p>
  * Instances of this class can be used concurrently by multiple threads.

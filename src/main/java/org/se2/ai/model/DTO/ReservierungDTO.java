@@ -7,6 +7,10 @@ import java.time.LocalDate;
 
 import java.util.Objects;
 
+/**
+ * @author qthis
+ */
+
 public class ReservierungDTO implements BenoetigteDTO, Cloneable {
 
 

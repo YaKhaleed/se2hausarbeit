@@ -10,12 +10,14 @@ import org.se2.ai.model.factories.ReservierungsFactory;
 
 import java.util.List;
 
+/**
+ * @author zmorin2s
+ */
+
 public class ReservierungKunde extends VerticalLayout {
     public ReservierungKunde(Kunde k) {
         VerticalLayout content = new VerticalLayout();
-        Label news = new Label("<b> News </b>", ContentMode.HTML);
 
-        content.addComponent(news);
 
         List<ReservierungDTO> list = new ReservierungsFactory().getListReservierungKunde(k);
         int n;
@@ -23,12 +25,12 @@ public class ReservierungKunde extends VerticalLayout {
         else n = 3;
         for (int i = 0; i < n; i++) {
             ReservierungDTO b = list.get(i);
-            Label a = new Label("Ihre Bewerbung auf die Stellenanzeige '" + b.getAutoanzeige().getTitel() +
+            Label a = new Label("Ihre Reservierung für das Auto '" + b.getAutoanzeige().getTitel() +
                     "' wurde " + b.getStatus());
             content.addComponent(a);
         }
-        Label bewerbung = new Label("<b> Aktueller Stand deiner Bewerbungen </b>", ContentMode.HTML);
-        content.addComponent(bewerbung);
+        Label reservierung = new Label("<b> Aktueller Stand deiner Reservierung </b>", ContentMode.HTML);
+        content.addComponent(reservierung);
         for (int i = 0; i < list.size(); i++) {
             ReservierungDTO b = list.get(i);
             Label a = new Label((i + 1) + ". " +

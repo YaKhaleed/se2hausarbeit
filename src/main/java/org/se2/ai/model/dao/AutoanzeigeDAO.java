@@ -1,7 +1,6 @@
 package org.se2.ai.model.dao;
 
 import org.se2.ai.control.exceptions.DatabaseException;
-import org.se2.ai.model.DTO.AnforderungAutoanzeige;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.model.entities.Benutzer;
@@ -130,10 +129,13 @@ public class AutoanzeigeDAO extends AbstractDAO {
 
             //Nachtragliches Setzen der BuchungsID
             setAutoanzeigeID(v);
+            /*
             List<AnforderungAutoanzeige> list = v.getAutoanforderung();
+
             for (int i = 0; i < list.size(); i++) {
                 AnforderungDAO.getInstance().createAnforderung(v.getAutoanzeigenID(), list.get(i).getAutoAnforderung());
             }
+            */
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(AutoanzeigeDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -194,7 +196,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
     }
 
 
-    //Prüfen, ob nötig ist
+
     private List<AutoanzeigeDTO> hilfe(String sql) {
         ResultSet rs = null;
         List<AutoanzeigeDTO> liste = new ArrayList<>();
