@@ -4,7 +4,6 @@ import com.vaadin.data.Binder;
 import com.vaadin.server.VaadinSession;
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.DTO.VertrieblerDTO;
-import org.se2.ai.model.dao.AdresseDAO;
 import org.se2.ai.model.dao.AutoanzeigeDAO;
 import org.se2.ai.model.dao.BenutzerDAO;
 import org.se2.ai.model.dao.VertrieblerDAO;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class ProfilVertrieblerControl {
 
-    Binder<AdresseDAO.Adresse> adresseBinder = new Binder<>();
+
     Binder<Vertriebler> vertrieblerBinder = new Binder<>();
     Benutzer benutzer = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
 
@@ -30,9 +29,8 @@ public class ProfilVertrieblerControl {
 
     public boolean updateVertrieblerprofil(VertrieblerDTO v) {
         boolean ergebnis = VertrieblerDAO.getInstance().updateVertriebler(v);
-        boolean ergebnis2 = AdresseDAO.getInstance().updateAdresse(v.getAdresse());
-        boolean ergebnis3 = BenutzerDAO.getInstance().updateStammdaten(v, benutzer.getAnrede(), benutzer);
-        return ergebnis && ergebnis2 && ergebnis3;
+        boolean ergebnis2 = BenutzerDAO.getInstance().updateStammdaten(v, benutzer.getAnrede(), benutzer);
+        return ergebnis && ergebnis2 ;
     }
 
 

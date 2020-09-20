@@ -1,7 +1,6 @@
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\Reservierungsanzeige.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\KundeDTO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\entities\Vertriebler.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\AdresseDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\BestaetigungAutoanzeige.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\entities\Benutzer.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\util\Roles.java
@@ -26,7 +25,6 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\Aut
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\TextFieldForRegWeiter.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\InfoReservierung.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\LoggedinSeite.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\AnforderungAutoanzeige.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\SucheTitel.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\AutoanzeigeControl.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\exceptions\ValidationError.java
@@ -42,7 +40,6 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\excep
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\SucheProxy.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\Startseite.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\PanelStartseite.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\Adresse.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\ReservierungDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\services\db\JDBCConnection.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\SucheDAO.java
@@ -85,5 +82,4 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\RegWeit
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\exceptions\SQLException.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\AutoanzeigeDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\factories\BenötigeFactory.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\AnforderungDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\ComponentAutoanzeige.java

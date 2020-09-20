@@ -1,8 +1,7 @@
 package org.se2.gui.components;
 
 import org.se2.ai.control.exceptions.DatabaseException;
-import org.se2.ai.model.dao.AnforderungDAO;
-//import org.se2.ai.model.DTO.Anforderung;
+
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.FileResource;

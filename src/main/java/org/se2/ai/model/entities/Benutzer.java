@@ -1,6 +1,6 @@
 package org.se2.ai.model.entities;
 
-import org.se2.ai.model.dao.AdresseDAO;
+
 
 /**
  * @author qthi2s
@@ -14,7 +14,6 @@ public class Benutzer {
     private String telefonnummer = null;
     private int Id;
     private String anrede;
-    private AdresseDAO.Adresse adresse;
     private String rolle;
 
     public String getRolle() {
@@ -23,22 +22,6 @@ public class Benutzer {
 
     public void setRolle(String rolle) {
         this.rolle = rolle;
-    }
-
-    public AdresseDAO.Adresse getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse (AdresseDAO.Adresse adresse){
-        this.adresse=adresse;
-    }
-
-    public int getAdressID(){
-    return adressID;
-    }
-
-    public void setAdressID(int adressID){
-        this.adressID= adressID;
     }
 
     public String getEmail(){

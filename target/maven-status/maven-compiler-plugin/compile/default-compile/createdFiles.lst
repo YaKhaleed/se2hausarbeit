@@ -5,7 +5,6 @@ org\se2\gui\view\Register.class
 org\se2\ai\control\SucheProxy.class
 org\se2\gui\view\LoggedinSeite.class
 org\se2\gui\windows\InfoReservierung.class
-org\se2\ai\model\dao\AnforderungDAO.class
 org\se2\ai\model\DTO\KundeDTO.class
 org\se2\gui\view\RegWeiterKunde.class
 org\se2\services\util\Password.class
@@ -15,7 +14,6 @@ org\se2\ai\model\entities\Benutzer.class
 org\se2\ai\control\ProfilKundeControl.class
 org\se2\ai\control\RegistrationControl.class
 org\se2\gui\view\RegisterseitefuerVertriebler.class
-org\se2\ai\model\dao\AdresseDAO.class
 org\se2\ai\control\KontoControl.class
 org\se2\ai\model\dao\KundeDAO.class
 org\se2\ai\control\SuchFunktion.class
@@ -66,7 +64,6 @@ org\se2\ai\model\DTO\ReservierungDTO.class
 org\se2\services\db\JDBCConnection.class
 org\se2\gui\components\KontoVerwalten.class
 org\se2\ai\control\exceptions\UserExistsException.class
-org\se2\ai\model\DTO\AnforderungAutoanzeige.class
 org\se2\ai\model\entities\Vertriebler.class
 org\se2\ai\model\dao\ToogleFeatureDAO.class
 org\se2\gui\windows\ReservierungsWindow.class
@@ -75,6 +72,5 @@ org\se2\ai\model\factories\AutoanzeigeFactory.class
 org\se2\ai\control\LoginControl.class
 org\se2\ai\model\DTO\BenoetigteDTO.class
 org\se2\gui\windows\BestaetigungReservierung.class
-org\se2\ai\model\DTO\Adresse.class
 org\se2\ai\model\DTO\VertrieblerDTO.class
 org\se2\ai\model\dao\SucheDAO.class

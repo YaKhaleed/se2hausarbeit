@@ -123,7 +123,7 @@ public class AutoanzeigeDAO extends AbstractDAO {
             statement.setString(2, v.getBeschreibung());
             statement.setString(3, v.getStatus());
             statement.setDate(4, Date.valueOf(v.getDatum()));
-            statement.setInt(5, v.getVertrieblerID());
+            //statement.setInt(5, v.getVertrieblerID());
             statement.setString(6, v.getOrt());
             statement.executeUpdate();
 
