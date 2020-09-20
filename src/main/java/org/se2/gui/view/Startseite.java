@@ -11,14 +11,14 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- * @author WINDOWS
+ * @author zmorin2s
  */
 public class Startseite extends VerticalLayout implements View {
     public static final String CLASSNAME = "STARTSEITE";
 
     public void setUp() {
 
-//GesamtgrÃ¶ÃŸe des Bildschirms auf komplette GrÃ¶ÃŸe beziehen
+//Gesamtgröße des Bildschirms auf komplette Größe beziehen
         this.setSizeFull();
         PanelStartseite panel = new PanelStartseite();
         panel.setHeight("50px");

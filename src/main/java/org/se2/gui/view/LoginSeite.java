@@ -21,16 +21,19 @@ import java.io.File;
 import static org.se2.services.util.Roles.KUNDE;
 import static org.se2.services.util.Roles.VERTRIEBLER;
 
+/**
+ * @author qthi2s
+ */
 
 public class LoginSeite extends VerticalLayout implements View {
     public static final String CLASSNAME = "LOGINSEITE";
-    //GeschÃ¼tztes Leerzeichen "No Break Space"
+    //Geschätztes Leerzeichen "No Break Space"
     private static final String BLANK_SPACE = "&nbsp";
 
 
     public void setUp() {
 
-//GesamtgrÃ¶ÃŸe des Bildschirms auf komplette GrÃ¶ÃŸe beziehen
+//Gesamtgröße des Bildschirms auf komplette Größe beziehen
 
 
 //Textfeld Login
@@ -43,7 +46,6 @@ public class LoginSeite extends VerticalLayout implements View {
         passwordField.setPlaceholder("Passwort ");
 
 
-// add image
 
 
 
@@ -53,7 +55,7 @@ public class LoginSeite extends VerticalLayout implements View {
         Panel panel = new Panel();
         panel.addStyleName("login");
 
-//Vertikales Layout + HinzufÃ¼gen der Textfelder
+//Vertikales Layout + Hinzufügen der Textfelder
         GridLayout layout = new GridLayout(4, 12);
 
         //BUTTON-ANMELDEN
@@ -70,12 +72,10 @@ public class LoginSeite extends VerticalLayout implements View {
         buttonReg.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.REGISTER));
         layout.addComponent(buttonAn, 0, 0);
         layout.setComponentAlignment(buttonAn, Alignment.MIDDLE_CENTER);
-        //layout.addComponent(logo, 1, 0, 2, 0);
-        //layout.setComponentAlignment(logo, Alignment.MIDDLE_CENTER);
         layout.addComponent(buttonReg, 3, 0);
         layout.setComponentAlignment(buttonReg, Alignment.MIDDLE_CENTER);
 
-        Label label = new Label("Willkommen zurÃ¼ck!", ContentMode.PREFORMATTED);
+        Label label = new Label("Willkommen zurück!", ContentMode.PREFORMATTED);
         label.setPrimaryStyleName(CLASSNAME + "-willkommen");
 
         layout.addComponent(label, 0, 1, 3, 1);

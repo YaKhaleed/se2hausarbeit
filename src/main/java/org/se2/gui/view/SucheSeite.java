@@ -25,6 +25,9 @@ import com.vaadin.ui.*;
 import java.io.File;
 import java.util.List;
 
+/**
+ * @author zmorin2s
+ */
 
 public class SucheSeite extends VerticalLayout implements View {
 
@@ -37,25 +40,14 @@ public class SucheSeite extends VerticalLayout implements View {
         setMargin(true);
         HorizontalLayout horizon = new HorizontalLayout();
 
-        Button button = new Button("Jobs finden", VaadinIcons.SEARCH);
+        Button button = new Button("Autos finden", VaadinIcons.SEARCH);
         button.setClickShortcut(ShortcutAction.KeyCode.ENTER);
 
         ComboBox<String> search = new ComboBox<>();
-        search.setPlaceholder("Jobtitel, Unternehmen, ... ");
+        search.setPlaceholder("BMW, AUDI, VW, ... ");
         search.setWidth("500px");
        SucheTitel service = new SucheTitel();
         search.setDataProvider(service::fetch, service::count);
-
-        /*
-        ComboBox<String> searchort = new ComboBox<>();
-
-        searchort.setPlaceholder("Ort, Umkreis ");
-        searchort.setWidth("500px");
-        OrtService ortService = new OrtService();
-        searchort.setDataProvider(ortService::fetch, ortService::count);
-        */
-
-
 
 
         horizon.addComponents(search, button);
@@ -69,14 +61,10 @@ public class SucheSeite extends VerticalLayout implements View {
         // Event Listener fÃ¼r den Suchen Button
         button.addClickListener(e -> {
             Panel sucheLayout = new Panel();
-            //String ort = searchort.getValue();
             String titel = search.getValue();
             if (titel != null) {
-
                     liste = Suche.getInstance().getAutoanzeigeListe(titel);
-
-                //else liste = Suche.getInstance().getStellenanzeigeByJob(titel);
-            } //else liste = Suche.getInstance().getStellenanzeigeByLocation(ort);
+            }
 
 
             show.removeAllComponents();
@@ -89,9 +77,6 @@ public class SucheSeite extends VerticalLayout implements View {
         });
 
 
-        // Grid und Buchen Button richtig anordnen
-
-
     }
 
     public Panel printergebnis(List<AutoanzeigeDTO> liste) {
@@ -100,12 +85,6 @@ public class SucheSeite extends VerticalLayout implements View {
         if (!liste.isEmpty()) {
             for (AutoanzeigeDTO suche : liste) {
                 HorizontalLayout article = new HorizontalLayout();
-                String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-                FileResource resource = new FileResource(new File(basepath +
-                        "/Image/Unknown_profil.png"));
-                Image profilbild = new Image("", resource);
-                article.addComponent(profilbild);
-                article.setComponentAlignment(profilbild, Alignment.MIDDLE_LEFT);
                 VerticalLayout titelbeschreibung = new VerticalLayout();
                 HorizontalLayout info = new HorizontalLayout();
                 Label stitel = new Label(suche.getTitel(), ContentMode.TEXT);
@@ -122,10 +101,13 @@ public class SucheSeite extends VerticalLayout implements View {
                 info.setComponentAlignment(sdatum, Alignment.TOP_CENTER);
                 sdatum.setWidth("100px");
 
+                /*
                 Label sort = new Label(suche.getOrt(), ContentMode.PREFORMATTED);
                 info.addComponent(sort);
                 info.setComponentAlignment(sort, Alignment.TOP_CENTER);
                 sort.setWidth("175px");
+
+                 */
 
                 Label sstatus = new Label(suche.getStatus(), ContentMode.PREFORMATTED);
                 info.addComponent(sstatus);

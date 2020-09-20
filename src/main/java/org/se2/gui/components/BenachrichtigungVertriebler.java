@@ -1,13 +1,16 @@
 package org.se2.gui.components;
-/*
+
+import org.se2.ai.control.ProfilVertrieblerControl;
 import org.se2.ai.control.ToogleRouter;
 import org.se2.ai.control.exceptions.DatabaseException;
+import org.se2.ai.model.DTO.AutoanzeigeDTO;
+import org.se2.ai.model.dao.AutoanzeigeDAO;
 import org.se2.ai.model.dao.VertrieblerDAO;
 import org.se2.ai.model.DTO.ReservierungDTO;
 import org.se2.ai.model.entities.Vertriebler;
 import org.se2.ai.model.entities.Benutzer;
-import org.se2.gui.windows.InforBewerber;
-import org.se2.gui.windows.ProfilStudent;
+//import org.se2.gui.windows.InforBewerber;
+//import org.se2.gui.windows.ProfilStudent;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
@@ -20,7 +23,9 @@ import java.util.logging.Logger;
 public class BenachrichtigungVertriebler extends VerticalLayout {
     public BenachrichtigungVertriebler(Benutzer user) {
         VerticalLayout content = new VerticalLayout();
+        /*
         try {
+
             if (ToogleRouter.isEnabled("bewerbung")) {
                 Label titelbewerbung = new Label("<b> Ihre eingegangenen Bewerbungen </b>", ContentMode.HTML);
                 content.addComponent(titelbewerbung);
@@ -57,30 +62,31 @@ public class BenachrichtigungVertriebler extends VerticalLayout {
         } catch (DatabaseException e) {
             Logger.getLogger(BenachrichtigungVertriebler.class.getName()).log(Level.SEVERE, e.getReason(), e);
         }
+        */
 
 
-        Label titelstellenanzeige = new Label("<b> Ihre Stellenanzeigen </b>", ContentMode.HTML);
-        content.addComponent(titelstellenanzeige);
+        Label titelautoanzeige = new Label("<b> Ihre Autoanzeige </b>", ContentMode.HTML);
+        content.addComponent(titelautoanzeige);
 
-        if (!user.getRole().equals("admin")) {
+        if (!user.getRolle().equals("admin")) {
 
-            List<StellenanzeigeDTO> jobangebot = new ProfilArbeitgeberControl().getStellenanzeige(ArbeitgeberDAO.getInstance().getArbeitgeber(user.getEmail()).getUnternehmen());
-            for (int i = 0; i < jobangebot.size(); i++) {
-                HorizontalLayout joblayout = new HorizontalLayout();
-                Label job = new Label((i + 1) + "." + jobangebot.get(i).getTitel() + " - " + jobangebot.get(i).getStatus());
-                Button jobangebotbearbeiten = new Button(VaadinIcons.PENCIL);
+            List<AutoanzeigeDTO> anzeige = new ProfilVertrieblerControl().getAutoanzeige(VertrieblerDAO.getInstance().getVertriebler(user.getEmail()).getName());
+            for (int i = 0; i < anzeige.size(); i++) {
+                HorizontalLayout anzeigelayout = new HorizontalLayout();
+                Label job = new Label((i + 1) + "." + anzeige.get(i).getTitel() + " - " + anzeige.get(i).getStatus());
+                Button reservierung = new Button(VaadinIcons.PENCIL);
 
                 int finalI = i;
-                jobangebotbearbeiten.addClickListener(clickEvent -> {
-                    StellenanzeigeDTO stellenanzeigeDTO = StellenanzeigeDAO.getInstance().getStellenanzeige(jobangebot.get(finalI).getTitel(), jobangebot.get(finalI).getBeschreibung(), jobangebot.get(finalI).getOrt(), jobangebot.get(finalI).getStatus());
-                    UI.getCurrent().addWindow(new Jobangebotbearbeiten(stellenanzeigeDTO));
+                reservierung.addClickListener(clickEvent -> {
+                    AutoanzeigeDTO stellenanzeigeDTO = AutoanzeigeDAO.getInstance().getAutoanzeige(anzeige.get(finalI).getTitel());
+                    //UI.getCurrent().addWindow(new Jobangebotbearbeiten(stellenanzeigeDTO));
                 });
-                joblayout.addComponent(job);
-                joblayout.addComponent(jobangebotbearbeiten);
-                content.addComponent(joblayout);
+                anzeigelayout.addComponent(job);
+                anzeigelayout.addComponent(reservierung);
+                content.addComponent(anzeigelayout);
             }
         }
         this.addComponent(content);
     }
 }
-*/
+

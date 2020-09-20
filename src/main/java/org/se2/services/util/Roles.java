@@ -1,5 +1,9 @@
 package org.se2.services.util;
 
+/**
+ * @author zmorin2s
+ */
+
 public class Roles {
 
     public static final String KUNDE = "Kunde";

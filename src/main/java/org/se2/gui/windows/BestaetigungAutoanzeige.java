@@ -4,7 +4,9 @@ import com.vaadin.ui.*;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.ai.control.AutoanzeigeControl;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 public class BestaetigungAutoanzeige extends Window {
 

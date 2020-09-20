@@ -2,7 +2,6 @@ package org.se2.ai.control;
 
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.model.DTO.KundeDTO;
-import org.se2.ai.model.dao.AdresseDAO;
 import org.se2.ai.model.dao.BenutzerDAO;
 import org.se2.ai.model.DTO.VertrieblerDTO;
 import org.se2.ai.model.dao.KundeDAO;
@@ -42,7 +41,7 @@ public class RegistrationControl {
     public void registerVertriebler(VertrieblerDTO v, String anrede) {
         VertrieblerDAO.getInstance().insertVertriebler(v);
         BenutzerDAO.getInstance().updateStammdaten(v, anrede, user);
-        //AdresseDAO.getInstance().addAdresse(v.getAdresse(), user.getId());
+
     }
 
     /**
@@ -54,7 +53,6 @@ public class RegistrationControl {
 
         try {
             KundeDAO.getInstance().newKunde(kunde);
-            //AdresseDAO.getInstance().addAdresse(kunde.getAdresse(), user.getId());
             BenutzerDAO.getInstance().updateStammdaten(kunde, kunde.getAnrede(), user);
         } catch (Exception e) {
             Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, e.getMessage(), e);
@@ -73,7 +71,7 @@ public class RegistrationControl {
             mail.setFrom("moinsen@test.com");
             mail.addTo(email);
             mail.setSubject("Willkommen im CarLook Portal");
-            mail.setHtmlMsg("Hallo! Sie haben Ihr Konto erfolgreich erstellt!<br>Ab jetzt steht Ihnen das Portal zur Verfuegung.");
+            mail.setHtmlMsg("Hallo! Sie haben Ihr Konto erfolgreich erstellt!<br>Ab jetzt steht Ihnen das Portal zur Verfügung.");
             mail.send();
         } catch (EmailException e) {
             Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, "Failed to send an email", e);

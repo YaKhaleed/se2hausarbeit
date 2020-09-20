@@ -2,6 +2,10 @@ package org.se2.ai.model.DTO;
 
 import java.time.LocalDate;
 
+/**
+ * @author qthis
+ */
+
 public class AutoanzeigeAnfrage {
 
     private String titel;

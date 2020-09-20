@@ -37,7 +37,7 @@ public class KundeDAO extends AbstractDAO {
 
     public void newKunde(KundeDTO kunde) {
         ResultSet nextKey = null;
-        String sql = "INSERT INTO mmuel72s.kunde(vorname, nachname, benutzer_id) VALUES(?,?,?);";
+        String sql = "INSERT INTO mmuel72s.kunde(nachname, vorname, benutzer_id) VALUES(?,?,?)";
         try (PreparedStatement stmt = this.getPreparedStatement(sql)) {
             stmt.setString(1, kunde.getVorname());
             stmt.setString(2, kunde.getNachname());

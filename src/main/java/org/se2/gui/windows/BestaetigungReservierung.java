@@ -6,7 +6,9 @@ import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import org.se2.ai.model.DTO.ReservierungDTO;
 import org.se2.ai.model.entities.Kunde;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 
 public class BestaetigungReservierung extends Window {

@@ -7,6 +7,10 @@ import com.vaadin.ui.UI;
 
 import java.util.Objects;
 
+/**
+ * @author zmorin2s
+ */
+
 public class VertrieblerView extends LoggedinSeite {
     /**
      * Check if user is a student

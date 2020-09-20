@@ -6,16 +6,14 @@ import org.se2.ai.model.dao.KundeDAO;
 
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.ai.model.entities.Kunde;
-//import org.se2.services.util.ImageUploader;
-import com.vaadin.server.FileResource;
-import com.vaadin.server.VaadinService;
+
 import com.vaadin.ui.*;
 
-import java.io.File;
 
 
 public class ProfilKundeVerwalten extends ProfilVerwalten {
     static final String PX_700 = "700px";
+    public static final String CLASSNAME = "ProfilKundeVerwalten";
 
     public ProfilKundeVerwalten(Benutzer user) throws DatabaseException {
         super(user);
@@ -38,9 +36,6 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         vartical1.addComponent(name);
         vartical1.setComponentAlignment(name, Alignment.MIDDLE_CENTER);
 
-        HorizontalLayout horizon2 = new HorizontalLayout();
-        horizon2.setHeight("75px");
-        horizon2.setWidth(PX_700);
 
 
         horizon1.addComponent(vartical1);
@@ -48,6 +43,7 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
 
         VerticalLayout vertical2 = new VerticalLayout();
         vertical2.setHeight("525px");
+
 
 
         horizon1.addComponent(vertical2);
@@ -60,8 +56,8 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         speichern.addClickListener(clickEvent -> {
         });
         speichern.addClickListener(event -> {
-            ProfilKundeControl psc = new ProfilKundeControl();
-            String kundenName = name.getValue(); // split into vor/nachname
+            //ProfilKundeControl psc = new ProfilKundeControl();
+            //String studentName = name.getValue(); // split into vor/nachname
 
         });
         this.addComponent(speichern);

@@ -12,6 +12,10 @@ import org.se2.services.util.Views;
 
 import java.io.File;
 
+/**
+ * @author qthi2s
+ */
+
 public class PanelStartseite extends HorizontalLayout {
     public static final String CLASSNAME = "PanelSTART";
     static final String TOPPANELBUTTON = "panelbutton";

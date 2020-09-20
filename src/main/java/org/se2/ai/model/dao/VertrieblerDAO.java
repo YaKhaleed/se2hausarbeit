@@ -54,7 +54,6 @@ public class VertrieblerDAO extends AbstractDAO {
 
     }
 
-    //Methode bearbeiten! Datenbankkonform sein
 
     public Vertriebler getVertriebler(int benutzerid) {
         ResultSet set = null;
@@ -68,10 +67,7 @@ public class VertrieblerDAO extends AbstractDAO {
             if (set.next()) {
                 Vertriebler a = new Vertriebler();
                 a.setVertrieblerID(set.getInt(1));
-                //a.setUnternehmen(set.getString(2));
                 a.setId(benutzerid);
-                //a.setLogo(set.getByte(4));
-                //a.setBeschreibung(set.getString(5));
                 return a;
             }
         } catch (SQLException | DatabaseException ex) {
@@ -98,7 +94,6 @@ public class VertrieblerDAO extends AbstractDAO {
                 a.setVertrieblerID(set.getInt(1));
                 a.setName(set.getString(2));
                 a.setId(set.getInt(4));
-                //a.setBeschreibung(set.getString(5));
                 a.setTelefonnummer(set.getString(7));
                 a.setAnrede(set.getString(8));
                 a.setEmail(email);

@@ -23,6 +23,10 @@ import static org.se2.gui.view.Register.FEHLER;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * @author qthi2s
+ */
+
 public class RegisterSeiteMain extends Panel{
     public static final String CLASSNAME = "Registerseite";
     private String register;

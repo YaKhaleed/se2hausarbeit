@@ -32,60 +32,53 @@ public class DashboardKunde extends KundeView {
         this.addComponent(new TopPanel(user));
 
         HorizontalLayout horizon = new HorizontalLayout();
-        final ComboBox<String> jobsearch = new ComboBox<>();
-        jobsearch.setPlaceholder("Suche nach Automarken deiner Wahl!");
-        jobsearch.setWidth("800px");
+        final ComboBox<String> autosuche = new ComboBox<>();
+        autosuche.setPlaceholder("Suche nach Automarken deiner Wahl!");
+        autosuche.setWidth("800px");
         SucheTitel searchService = new SucheTitel();
-        jobsearch.setDataProvider(searchService::fetch, searchService::count);
-        horizon.addComponent(jobsearch);
-        horizon.setComponentAlignment(jobsearch, Alignment.MIDDLE_LEFT);
+        autosuche.setDataProvider(searchService::fetch, searchService::count);
+        horizon.addComponent(autosuche);
+        horizon.setComponentAlignment(autosuche, Alignment.MIDDLE_LEFT);
 
         final Button buttonsearch = new Button("Autos finden!");
         buttonsearch.setWidth("200px");
         horizon.addComponent(buttonsearch);
         horizon.setComponentAlignment(buttonsearch, Alignment.MIDDLE_RIGHT);
-        if (jobsearch.getValue() == null) {
+        if (autosuche.getValue() == null) {
             this.addComponent(horizon);
             this.setComponentAlignment(horizon, Alignment.MIDDLE_CENTER);
-            // Create the accordion
-            final Accordion accordion = new Accordion();
-            final Layout tab1 = new VerticalLayout();
-            Label news = new Label("News");
-            if (ToogleRouter.isEnabled("Reservierung")) {
-                Label n = new Label("Es sind viele Stellenanzeigen vorhanden. Reservieren Sie jetzt!!");
-                tab1.addComponent(n);
-            }
-            tab1.addComponent(news);
+            // Create the tabsheet
+            final TabSheet tabsheet = new TabSheet();
 
-            accordion.addTab(tab1, "Dashboard");
-            final Layout tab2 = new ProfilKundeVerwalten(user);
-            accordion.addTab(tab2, "Profil verwalten");
-            Layout tab3 = new VerticalLayout();
+
+            final VerticalLayout tab2 = new ProfilKundeVerwalten(user);
+            tabsheet.addTab(tab2, "Profil verwalten");
+            VerticalLayout tab3 = new VerticalLayout();
 
 
 
-            if (ToogleRouter.isEnabled("bewerbung")) {
+            if (ToogleRouter.isEnabled("reservierung")) {
                 Kunde current = KundeDAO.getInstance().getKunde(user.getEmail());
                 tab3 = new ReservierungKunde(current);
             }
 
 
 
-            accordion.addTab(tab3, "Bewerbungen");
+            tabsheet.addTab(tab3, "Reservierungen");
 
 
-            final Layout tab4 = new KontoVerwalten(user);
-            accordion.addTab(tab4, "Konto");
+            final VerticalLayout tab4 = new KontoVerwalten(user);
+            tabsheet.addTab(tab4, "Konto");
             buttonsearch.addClickListener(clickEvent -> {
-                this.removeComponent(accordion);
-                List<AutoanzeigeDTO> liste = SucheProxy.getInstance().getAutoanzeigeListe(jobsearch.getValue());
+                this.removeComponent(tabsheet);
+                List<AutoanzeigeDTO> liste = SucheProxy.getInstance().getAutoanzeigeListe(autosuche.getValue());
                 Panel ergebnisse = new SucheSeite().printergebnis(liste);
                 this.addComponent(ergebnisse);
             });
 
-            accordion.setWidth("1200px");
-            this.addComponent(accordion);
-            this.setComponentAlignment(accordion, Alignment.MIDDLE_CENTER);
+            tabsheet.setWidth("1200px");
+            horizon.addComponent(tabsheet);
+            horizon.setComponentAlignment(tabsheet, Alignment.MIDDLE_CENTER);
         }
     }
 

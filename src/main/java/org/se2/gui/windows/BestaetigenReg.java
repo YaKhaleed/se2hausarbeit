@@ -2,7 +2,10 @@ package org.se2.gui.windows;
 
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.ui.*;
-//author qthi2s
+
+/**
+ * @author qthi2s
+ */
 
 public class BestaetigenReg extends Window {
 

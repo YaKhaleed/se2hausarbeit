@@ -1,5 +1,9 @@
 package org.se2.services.util;
 
+/**
+ * @author zmorin2s
+ */
+
 public class Views {
     public static final String MAIN = "suche";
     public static final String LOGIN = "login";

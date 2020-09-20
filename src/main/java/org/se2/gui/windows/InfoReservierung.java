@@ -6,7 +6,9 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 import org.se2.ai.model.DTO.ReservierungDTO;
 
-//author qthi2s
+/**
+ * @author qthi2s
+ */
 
 public class InfoReservierung extends Window {
 

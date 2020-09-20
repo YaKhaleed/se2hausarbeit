@@ -1,9 +1,11 @@
 package org.se2.ai.model.entities;
 
 import java.time.LocalDate;
-import java.util.List;
 
-import org.se2.ai.model.DTO.AnforderungAutoanzeige;
+
+/**
+ * @author qthi2s
+ */
 
 public class Autoanzeige {
 
@@ -15,8 +17,6 @@ public class Autoanzeige {
     private LocalDate datum;
     private String ort;
     private int vertrieblerID;
-    private List<AnforderungAutoanzeige> Autoanforderung;
-
 
 
     public void setAutoanzeigenID(int stellenanzeigenID) {
@@ -79,14 +79,4 @@ public class Autoanzeige {
         this.vertrieblerID=vertrieblerID;
     }
 
-    public int getVertrieblerID(){
-        return vertrieblerID;
-    }
-    public List<AnforderungAutoanzeige> getAutoanforderung() {
-        return Autoanforderung;
-    }
-
-    public void setAutoanforderung(List<AnforderungAutoanzeige> anforderungs) {
-        this.Autoanforderung = anforderungs;
-    }
 }

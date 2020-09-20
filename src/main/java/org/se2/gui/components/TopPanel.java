@@ -12,6 +12,9 @@ import com.vaadin.ui.themes.ValoTheme;
 
 import java.io.File;
 
+/**
+ * @author qthi2s
+ */
 
 public class TopPanel extends HorizontalLayout {
     static final String TOPPANELBUTTON = "toppanelbutton";
@@ -21,14 +24,11 @@ public class TopPanel extends HorizontalLayout {
 
         this.setSizeFull();
 
-        String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        //FileResource resource = new FileResource(new File();
-        //Image logo = new Image("", resource);
+
 
         GridLayout gridTop = new GridLayout(8, 1);
         gridTop.setSizeFull();
 
-       // gridTop.addComponent(logo, 0, 0);
         Button buttonFuerKunde = new Button("Für Kunden");
 
         buttonFuerKunde.addStyleName(ValoTheme.BUTTON_LINK);

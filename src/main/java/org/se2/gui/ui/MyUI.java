@@ -23,6 +23,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * @author qthi2s
+ */
+
+/**
  * This UI is the application entry point. A UI may either represent a browser window
  * (or tab) or some part of an HTML page where a Vaadin application is embedded.
  * <p>
