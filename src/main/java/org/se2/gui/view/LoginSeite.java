@@ -44,11 +44,8 @@ public class LoginSeite extends VerticalLayout implements View {
 
 
 // add image
-        String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
 
-        FileResource resource = new FileResource(new File(basepath +
-                "/Image/stealthyalda1.png"));
-        Image logo = new Image("", resource);
+
 
         GridLayout mainGrid = new GridLayout(6, 6);
         mainGrid.setSizeFull();
@@ -73,8 +70,8 @@ public class LoginSeite extends VerticalLayout implements View {
         buttonReg.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.REGISTER));
         layout.addComponent(buttonAn, 0, 0);
         layout.setComponentAlignment(buttonAn, Alignment.MIDDLE_CENTER);
-        layout.addComponent(logo, 1, 0, 2, 0);
-        layout.setComponentAlignment(logo, Alignment.MIDDLE_CENTER);
+        //layout.addComponent(logo, 1, 0, 2, 0);
+        //layout.setComponentAlignment(logo, Alignment.MIDDLE_CENTER);
         layout.addComponent(buttonReg, 3, 0);
         layout.setComponentAlignment(buttonReg, Alignment.MIDDLE_CENTER);
 

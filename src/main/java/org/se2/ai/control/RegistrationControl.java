@@ -73,7 +73,7 @@ public class RegistrationControl {
             mail.setFrom("moinsen@test.com");
             mail.addTo(email);
             mail.setSubject("Willkommen im CarLook Portal");
-            mail.setHtmlMsg("Hallo! Sie haben Ihr Konto erfolgreich erstellt!<br>Ab jetzt steht Ihnen das Portal zur VerfÃ¼gung.");
+            mail.setHtmlMsg("Hallo! Sie haben Ihr Konto erfolgreich erstellt!<br>Ab jetzt steht Ihnen das Portal zur Verfuegung.");
             mail.send();
         } catch (EmailException e) {
             Logger.getLogger(RegistrationControl.class.getName()).log(Level.SEVERE, "Failed to send an email", e);

@@ -23,11 +23,11 @@ public class ReservierungKunde extends VerticalLayout {
         else n = 3;
         for (int i = 0; i < n; i++) {
             ReservierungDTO b = list.get(i);
-            Label a = new Label("Ihre Bewerbung auf die Stellenanzeige '" + b.getAutoanzeige().getTitel() +
+            Label a = new Label("Ihre Reservierung auf die Stellenanzeige '" + b.getAutoanzeige().getTitel() +
                     "' wurde " + b.getStatus());
             content.addComponent(a);
         }
-        Label bewerbung = new Label("<b> Aktueller Stand deiner Bewerbungen </b>", ContentMode.HTML);
+        Label bewerbung = new Label("<b> Aktueller Stand deiner Reservierung </b>", ContentMode.HTML);
         content.addComponent(bewerbung);
         for (int i = 0; i < list.size(); i++) {
             ReservierungDTO b = list.get(i);

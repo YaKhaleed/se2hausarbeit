@@ -44,16 +44,6 @@ public class Startseite extends VerticalLayout implements View {
         label2.setStyleName("startseite");
         layout.addComponent(label2, 1, 0);
         layout.setComponentAlignment(label2, Alignment.MIDDLE_CENTER);
-        //BUTTON-LOS
-        /*
-        Button button = new Button("Los");
-        button.setPrimaryStyleName(CLASSNAME + "-los");
-
-        button.addClickListener(event -> UI.getCurrent().getNavigator().navigateTo(Views.LOGIN));
-        layout.addComponent(button, 1, 1);
-        layout.setComponentAlignment(button, Alignment.TOP_CENTER);
-
-         */
 
         this.addComponent(layout);
 

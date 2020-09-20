@@ -66,7 +66,7 @@ public class RegWeiterKunde extends Register {
         haupt.addComponent(hl2);
 
         /// start edits
-        /*
+
         HorizontalLayout streetNr = new HorizontalLayout();
         streetNr.setSpacing(true);
         streetNr.setWidth(WIDTH_515_PX);
@@ -96,7 +96,7 @@ public class RegWeiterKunde extends Register {
 
         final TextFieldForRegWeiter telefon = new TextFieldForRegWeiter("Telefon", WIDTH);
         haupt.addComponent(telefon);
-        */
+
 
 
         final Label label2 = new Label("&nbsp;", ContentMode.HTML);
@@ -106,24 +106,24 @@ public class RegWeiterKunde extends Register {
         ubermitteln.setCaption("Übermitteln");
         ubermitteln.setWidth(WIDTH);
 
-        /*
+
         binder.forField(strasse).asRequired("Sie müssen eine Gültige Strassenname eingeben")
                 .withValidator(new StringLengthValidator("Eingebene Straße nicht gültig", 3, 30))
-                .bind(Benutzer::getRolle, Benutzer::setRole);
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
 
         binder.forField(plz).asRequired("Sie müssen eine Gültige PLZ eingeben")
                 .withValidator(new StringLengthValidator("Eingebene PLZ nicht gültig", 4, 5))
                 .withValidator(new RegexpValidator("PLZ darf nur Zahlen enthalten", "^[0-9]*$"))
-                .bind(Benutzer::getRole, Benutzer::setRole);
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
 
         binder.forField(nummer).asRequired("Sie müssen eine Gültige Hausnummer eingeben")
                 .withValidator(new StringLengthValidator("Eingebene Hausnummer nicht gültig", 1, 4))
-                .bind(Benutzer::getRole, Benutzer::setRole);
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
 
         binder.forField(ort).asRequired("Sie müssen ein Ort eingeben")
                 .withValidator(new StringLengthValidator("Ort ist nicht gültig", 3, 30))
-                .bind(Benutzer::getRole, Benutzer::setRole);
-                */
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
+
         binder.forField(vorname).asRequired("Sie müssen Ihre Vorname(n) eingeben")
                 .withValidator(new StringLengthValidator("Vorname(n) zu kurz", 3, 30))
                 .bind(Benutzer::getRolle, Benutzer::setRolle);
@@ -131,11 +131,11 @@ public class RegWeiterKunde extends Register {
                 .withValidator(new StringLengthValidator("Nachname(n) zu kurz", 3, 30))
                 .bind(Benutzer::getRolle, Benutzer::setRolle);
 
-        /*
+
         binder.forField(telefon).asRequired("Sie müssen eine Telefonnummer eingeben")
                 .withValidator(new RegexpValidator("Telefonnummer darf nur Zahlen enthalten", "^[0-9]*$"))
-                .bind(Benutzer::getRole, Benutzer::setRole);
-                */
+                .bind(Benutzer::getRolle, Benutzer::setRolle);
+
 
         ubermitteln.addClickListener(event -> {
             binder.validate();
@@ -145,11 +145,11 @@ public class RegWeiterKunde extends Register {
                 //String anrede = userAnrede.getValue();
                 String uservorname = vorname.getValue();
                 String username = nachname.getValue();
-                //String userstrasse = strasse.getValue();
-                //String hausnummer = nummer.getValue();
-                //String userort = ort.getValue();
-                //int userplz = Integer.parseInt(plz.getValue());
-                //String usertelefon = telefon.getValue();
+                String userstrasse = strasse.getValue();
+                String hausnummer = nummer.getValue();
+                String userort = ort.getValue();
+                int userplz = Integer.parseInt(plz.getValue());
+                String usertelefon = telefon.getValue();
                 // instance of control
                 RegistrationControl r = new RegistrationControl();
                 KundeDTO kunde = new KundeDTO();
@@ -157,8 +157,8 @@ public class RegWeiterKunde extends Register {
                     //kunde.setAnrede(anrede);
                     kunde.setVorname(uservorname);
                     kunde.setNachname(username);
-                    //kunde.setTelefonnummer(usertelefon);
-                    //kunde.setAdresse(new Adresse(userstrasse, userplz, hausnummer, userort));
+                    kunde.setTelefonnummer(usertelefon);
+                    kunde.setAdresse(new Adresse(userstrasse, userplz, hausnummer, userort));
                     r.registerKunde(kunde);
                 } catch (Exception e) {
                     Logger.getLogger(RegWeiterKunde.class.getName()).log(Level.SEVERE, e.getMessage(), e);

@@ -31,32 +31,6 @@ public class AnforderungDAO extends AbstractDAO {
      * @return list of Stellenanzeigen
      * @throws DatabaseException if something goes horribly wrong
      */
-    /*
-    public List<Anforderung> getAnforderungForStellenanzeige(int stellenanzeigeid) throws DatabaseException {
-        ResultSet rs = null;
-        List<Anforderung> liste = new ArrayList<>();
-        Anforderung anforderung = null;
-        try (PreparedStatement stmt = getPreparedStatement(
-                "SELECT anforderung FROM stealthyalda.anforderung WHERE stealthyalda.anforderung.stellenanzeige_id = ?")) {
-            stmt.setInt(1, stellenanzeigeid);
-            rs = stmt.executeQuery();
-
-            while (rs.next()) {
-                anforderung = new Anforderung();
-                anforderung.setAnforderung(rs.getString(1));
-                liste.add(anforderung);
-            }
-        } catch (SQLException throwables) {
-            logEntry(this.getClass().getName(), Level.SEVERE, throwables.getMessage());
-            throw new DatabaseException("Fehler im SQL Befehl! Bitte den Programmierer benachrichtigen.");
-        } finally {
-            closeResultset(rs);
-        }
-
-        return liste;
-    }
-
-     */
 
     public boolean createAnforderung(int arbeitgeberId, String anforderung) {
         String sql = "insert into mmuel72s.anforderung values(?,?);";

@@ -51,8 +51,8 @@ public class DashboardKunde extends KundeView {
             final Accordion accordion = new Accordion();
             final Layout tab1 = new VerticalLayout();
             Label news = new Label("News");
-            if (ToogleRouter.isEnabled("bewerbung")) {
-                Label n = new Label("Es sind viele Stellenanzeigen vorhanden. Bewerben Sie sich jetzt.");
+            if (ToogleRouter.isEnabled("Reservierung")) {
+                Label n = new Label("Es sind viele Stellenanzeigen vorhanden. Reservieren Sie jetzt!!");
                 tab1.addComponent(n);
             }
             tab1.addComponent(news);

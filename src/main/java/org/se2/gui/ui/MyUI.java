@@ -30,7 +30,7 @@ import java.util.logging.Logger;
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @Theme("mytheme")
-@Title("Stealthy_Alda")
+@Title("CarLook")
 @PreserveOnRefresh
 public class MyUI extends UI {
 

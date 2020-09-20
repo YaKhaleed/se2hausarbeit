@@ -21,16 +21,9 @@ public class PanelStartseite extends HorizontalLayout {
 
         this.setSizeFull();
         Benutzer user = (Benutzer) VaadinSession.getCurrent().getAttribute(Roles.CURRENTUSER);
-        //String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        //FileResource resource = new FileResource(new File(basepath +
-        //        "/Image/stealthyalda.png"));
-        //Image logo = new Image("", resource);
+
         GridLayout gridTop = new GridLayout(8, 1);
         gridTop.setSizeFull();
-       // logo.setPrimaryStyleName(CLASSNAME + "-logo");
-
-
-        //gridTop.addComponent(logo, 0, 0);
 
         //Kunde-Anmeldung/Registrierung
         Button buttonFuerKunden = new Button("Für Kunden");

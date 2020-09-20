@@ -30,13 +30,7 @@ public class ReservierungsFactory implements BenötigeFactory{
         return liste;
     }
 
-    /*
-    public List<ReservierungDTO> getListBewerbungForArbeitgeber(Vertriebler v) {
-        liste = ReservierungDAO.getInstance().getReservierungFromKunde(v);
-        return liste;
-    }
 
-     */
 }
 
 

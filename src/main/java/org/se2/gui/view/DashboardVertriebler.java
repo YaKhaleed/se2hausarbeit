@@ -35,8 +35,8 @@ public class DashboardVertriebler extends VerticalLayout implements View {
         //SearchArbeitgeberServiceOhneBewerbung service = new SearchArbeitgeberServiceOhneBewerbung(a);
         ComboBox<String> search = new ComboBox<>();
         try {
-            if (ToogleRouter.isEnabled("bewerbung")) {
-                search.setPlaceholder("Bewerber ");
+            if (ToogleRouter.isEnabled("reservierung")) {
+                search.setPlaceholder("Reservierer ");
                 search.setWidth("400px");
                 //SearchArbeitgeberServiceMitBewerbung servicea = new SearchArbeitgeberServiceMitBewerbung(a);
                // search.setDataProvider(servicea::fetch, servicea::count);
@@ -82,9 +82,9 @@ public class DashboardVertriebler extends VerticalLayout implements View {
                 UI.getCurrent().getNavigator().navigateTo(Views.AUTOANZEIGEERSTELLEN);
             });
             tab1.addComponent(top);
-            if (ToogleRouter.isEnabled("bewerbung")) {
+            if (ToogleRouter.isEnabled("reservieren")) {
 
-                Label n = new Label("Neue Bewerbungen sind eingegangen");
+                Label n = new Label("Neue Reservierungen sind eingegangen");
                 tab1.addComponent(n);
 
             }
