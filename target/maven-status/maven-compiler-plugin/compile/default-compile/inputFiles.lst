@@ -23,7 +23,6 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\R
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\entities\Autoanzeige.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\AutoanzeigeDTO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\TextFieldForRegWeiter.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\windows\InfoReservierung.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\LoggedinSeite.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\SucheTitel.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\AutoanzeigeControl.java
@@ -61,7 +60,6 @@ C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\KundeVi
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\DTO\RolleDTO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\components\ButtonComponent.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\ui\MyUI.java
-C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\gui\view\ReservierungSeite.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\factories\ReservierungsFactory.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\model\dao\BenutzerDAO.java
 C:\Users\Zgjim\IdeaProjects\se2hausarbeit\src\main\java\org\se2\ai\control\KontoControl.java

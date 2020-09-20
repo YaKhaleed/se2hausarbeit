@@ -126,54 +126,6 @@ public class ReservierungDAO extends AbstractDAO{
 
     }
 
-    //nötig?
-    /*
-    public List<ReservierungDTO> getBewerbungFromArbeitgeber(Arbeitgeber a) {
-
-        String sql = "SELECT s.nachname, s.vorname, a.titel, b.datum, s.student_id, s.benutzer_id, b.anschreiben," +
-                "b.erfahrung, b.zeugnisse, b.bewerbung_id\n" +
-                "FROM stealthyalda.bewerbung b\n" +
-                "JOIN stealthyalda.stellenanzeige a ON b.stellenanzeige_id = a.stellenanzeige_id\n" +
-                "JOIN stealthyalda.student s ON b.student_id = s.student_id\n" +
-                "JOIN stealthyalda.arbeitgeber u ON u.arbeitgeber_id = a.arbeitgeber_id\n" +
-                "WHERE u.arbeitgeber_id = ?\n" +
-                "AND b.status = 'gesendet'\n" +
-                "ORDER BY b.bewerbung_id";
-        ResultSet rs = null;
-        List<BewerbungCollAtHBRSDTO> liste = new ArrayList<>();
-        try {
-            // use prepared stmt
-            PreparedStatement statement = JDBCConnection.getInstance().getPreparedStatement(sql);
-            statement.setInt(1, a.getArbeitgeberId());
-            rs = statement.executeQuery();
-            assert (rs != null);
-            while (rs.next()) {
-                BewerbungCollAtHBRSDTO bewerbung = new BewerbungCollAtHBRSDTO();
-                Student s = new Student();
-                StellenanzeigeDTO st = new StellenanzeigeDTO();
-                s.setNachname(rs.getString(1));
-                s.setVorname(rs.getString(2));
-                st.setTitel(rs.getString(3));
-                s.setStudentId(rs.getInt(5));
-                s.setId(rs.getInt(6));
-                bewerbung.setAnschreiben(rs.getString(7));
-                bewerbung.setErfahrung(rs.getString(8));
-                bewerbung.setZertifikat(rs.getString(9));
-                bewerbung.setId(rs.getInt(10));
-                bewerbung.setDatum(rs.getDate(4).toLocalDate());
-                bewerbung.setStudent(s);
-                bewerbung.setStellenanzeige(st);
-                liste.add(bewerbung);
-            }
-        } catch (SQLException | DatabaseException e) {
-            Logger.getLogger(JDBCConnection.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-            closeResultset(rs);
-        }
-        return liste;
-
-    }
-    */
 
     public boolean updateStatusBewerbung(ReservierungDTO reservierung) {
         String sqlArbeitgeber = "UPDATE mmuel72s.reservierung " +

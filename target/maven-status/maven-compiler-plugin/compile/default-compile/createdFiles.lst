@@ -4,7 +4,6 @@ org\se2\ai\model\dao\AbstractDAO.class
 org\se2\gui\view\Register.class
 org\se2\ai\control\SucheProxy.class
 org\se2\gui\view\LoggedinSeite.class
-org\se2\gui\windows\InfoReservierung.class
 org\se2\ai\model\DTO\KundeDTO.class
 org\se2\gui\view\RegWeiterKunde.class
 org\se2\services\util\Password.class

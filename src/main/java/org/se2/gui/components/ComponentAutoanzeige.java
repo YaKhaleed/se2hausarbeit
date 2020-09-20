@@ -1,17 +1,9 @@
 package org.se2.gui.components;
 
-import org.se2.ai.control.exceptions.DatabaseException;
-
 import org.se2.ai.model.DTO.AutoanzeigeDTO;
 import com.vaadin.icons.VaadinIcons;
-import com.vaadin.server.FileResource;
-import com.vaadin.server.VaadinService;
 import com.vaadin.ui.*;
 
-import java.io.File;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author zmorin2s

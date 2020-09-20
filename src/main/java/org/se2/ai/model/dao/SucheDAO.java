@@ -30,54 +30,6 @@ public class SucheDAO extends AbstractDAO {
         return dao;
     }
 
-    /*
-    private List<String> hilfe2(String sql1, String sql2) {
-        ResultSet set = null;
-        ResultSet set2 = null;
-        List<String> liste = new ArrayList<>();
-        try {
-            Statement statement = this.getStatement();
-            set = statement.executeQuery(sql1);
-            while (true) {
-                assert set != null;
-                if (!set.next()) break;
-                liste.add(set.getString(1));
-            }
-            set2 = statement.executeQuery(sql2);
-            while (true) {
-                assert set2 != null;
-                if (!set2.next()) break;
-                liste.add(set2.getString(1));
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(SucheDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                JDBCConnection.getInstance().closeConnection();
-            } catch (DatabaseException e) {
-                Logger.getLogger(SucheDAO.class.getName()).log(Level.SEVERE, null, e);
-
-            }
-            org.se2.ai.model.dao.AbstractDAO.closeResultset(set);
-            org.se2.ai.model.dao.AbstractDAO.closeResultset(set2);
-        }
-
-
-        return liste;
-
-    }
-
-
-    public List<String> getJobtitelOrArbeitgeber() {
-        String sql1 = "SELECT titel FROM stealthyalda.stellenanzeige ";
-        String sql2 = "select distinct a.unternehmen\n" +
-                "from stealthyalda.arbeitgeber a\n" +
-                "join stealthyalda.stellenanzeige s\n" +
-                "on s.arbeitgeber_id = a.arbeitgeber_id";
-
-        return hilfe2(sql1, sql2);
-
-    }*/
 
     public List<String> getMarkeInTitel() {
 

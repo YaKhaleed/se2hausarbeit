@@ -9,6 +9,9 @@ import org.se2.ai.model.entities.Kunde;
 
 import com.vaadin.ui.*;
 
+/**
+ @author zmorin2s
+ */
 
 
 public class ProfilKundeVerwalten extends ProfilVerwalten {
@@ -18,7 +21,7 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
     public ProfilKundeVerwalten(Benutzer user) throws DatabaseException {
         super(user);
         boolean isadmin = user.getRolle().equals("admin");
-        //email == benutzer_id vllt ncoh ändern
+        //email == benutzer_id vllt noch ändern
         Kunde current = KundeDAO.getInstance().getKunde(user.getEmail());
         ProfilKundeControl c = new ProfilKundeControl();
         HorizontalLayout horizon1 = new HorizontalLayout();
@@ -56,8 +59,8 @@ public class ProfilKundeVerwalten extends ProfilVerwalten {
         speichern.addClickListener(clickEvent -> {
         });
         speichern.addClickListener(event -> {
-            //ProfilKundeControl psc = new ProfilKundeControl();
-            //String studentName = name.getValue(); // split into vor/nachname
+            ProfilKundeControl psc = new ProfilKundeControl();
+
 
         });
         this.addComponent(speichern);

@@ -56,7 +56,7 @@ public class Benutzer {
         this.telefonnummer = telefonnummer;
     }
 
-    //Benutzerid = email
+
     public int getId(){
         return Id;
     }
