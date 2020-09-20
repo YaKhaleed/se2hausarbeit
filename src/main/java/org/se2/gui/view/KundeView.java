@@ -11,9 +11,7 @@ import java.util.Objects;
  */
 
 public class KundeView extends LoggedinSeite {
-    /**
-     * Check if user is a student
-     */
+
     public KundeView() {
         if (!Objects.equals(user.getRolle(), Roles.KUNDE)) {
             UI.getCurrent().getNavigator().navigateTo(Views.MAIN);

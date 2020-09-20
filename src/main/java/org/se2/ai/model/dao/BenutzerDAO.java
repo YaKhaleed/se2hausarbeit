@@ -92,12 +92,9 @@ public class BenutzerDAO extends AbstractDAO {
         final String USER_LOGIN_STATEMENT = "SELECT email, passwort, rolle, anrede, telefonnummer, benutzer_id FROM mmuel72s.benutzer WHERE email = ?";
 
         try {
-            // use prepared statements to mitigate sql injection
             PreparedStatement preparedStatement = JDBCConnection.getInstance().getPreparedStatement(USER_LOGIN_STATEMENT);
-            // remember, the int references the index of the item, starting 1
             preparedStatement.setString(1, email);
 
-            // query!
             set = preparedStatement.executeQuery();
             Logger.getLogger(AbstractDAO.class.getName()).log(Level.INFO, null, set);
         } catch (SQLException e) {
@@ -109,23 +106,19 @@ public class BenutzerDAO extends AbstractDAO {
             if (set.next()) {
                 dbPasswordHash = set.getString(2);
             } else {
-                //Error Handling
                 throw new NoSuchUserOrPassword();
             }
         } catch (SQLException e) {
             Logger.getLogger(AbstractDAO.class.getName()).log(Level.SEVERE, null, e);
             throw new DatabaseException(EXCEPTION);
         }
-        // user vorhanden. Jetzt Passwort hashes vergleichen
         /**
          *
          * */
         Benutzer benutzer = null;
 
         PasswordAuthentication authenticator = new PasswordAuthentication();
-        // remember, convert to char[] as the string method is deprecated
         char[] c = password.toCharArray();
-        // check if hashes match
 
         try {
             if (authenticator.authenticate(c, dbPasswordHash)) {

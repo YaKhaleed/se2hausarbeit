@@ -1,5 +1,9 @@
 package org.se2.ai.control;
 
+/**
+ * @author qthi2s
+ */
+
 import com.vaadin.ui.UI;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.control.exceptions.NoSuchUserOrPassword;

@@ -15,11 +15,6 @@ public class LoggedinSeite extends VerticalLayout implements View {
 
     protected transient Benutzer user = (Benutzer) UI.getCurrent().getSession().getAttribute(Roles.CURRENTUSER);
 
-    /**
-     * Check if we have a logged in user
-     *
-     * @return boolean
-     */
     public boolean isLoggedIn() {
         if (user == null) {
             UI.getCurrent().getNavigator().navigateTo(Views.LOGIN);

@@ -12,9 +12,8 @@ import java.util.Objects;
  */
 
 public class VertrieblerView extends LoggedinSeite {
-    /**
-     * Check if user is a student
-     */
+
+
     public VertrieblerView() {
         if (!Objects.equals(user.getRolle(), Roles.KUNDE)) {
             UI.getCurrent().getNavigator().navigateTo(Views.AUTOANZEIGEERSTELLEN);

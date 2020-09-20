@@ -20,7 +20,6 @@ public class KontoLoeschenWindow extends Window {
         super(); //Set Window caption
         center();
 
-        //Some basic content for the window
         VerticalLayout content = new VerticalLayout();
         Label top = new Label("Sind Sie sicher, dass Sie Ihr Konto löschen wollen?");
         content.addComponent(top);
