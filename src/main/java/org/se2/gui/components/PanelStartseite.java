@@ -1,7 +1,5 @@
 package org.se2.gui.components;
 
-import com.vaadin.server.FileResource;
-import com.vaadin.server.VaadinService;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
@@ -10,7 +8,6 @@ import org.se2.ai.model.entities.Benutzer;
 import org.se2.services.util.Roles;
 import org.se2.services.util.Views;
 
-import java.io.File;
 
 /**
  * @author qthi2s

@@ -127,15 +127,8 @@ public class AutoanzeigeDAO extends AbstractDAO {
             statement.setString(6, v.getOrt());
             statement.executeUpdate();
 
-            //Nachtragliches Setzen der BuchungsID
             setAutoanzeigeID(v);
-            /*
-            List<AnforderungAutoanzeige> list = v.getAutoanforderung();
 
-            for (int i = 0; i < list.size(); i++) {
-                AnforderungDAO.getInstance().createAnforderung(v.getAutoanzeigenID(), list.get(i).getAutoAnforderung());
-            }
-            */
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(AutoanzeigeDAO.class.getName()).log(Level.SEVERE, null, ex);

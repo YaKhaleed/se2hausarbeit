@@ -1,6 +1,6 @@
 package org.se2.gui.view;
 
-//import org.se2.ai.model.DTO.Anforderung;
+
 import org.se2.ai.model.entities.Benutzer;
 import org.se2.ai.model.entities.Autoanzeige;
 import org.se2.gui.components.TopPanel;
@@ -14,9 +14,6 @@ import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author zmorin2s
@@ -47,20 +44,6 @@ public class AutoanzeigeErstellen extends VerticalLayout implements View {
         TextArea beschreibung = new TextArea("Beschreibung");
         beschreibung.setWidth(WIDTH);
         mainlayout.addComponent(beschreibung);
-
-        /*
-        TextField ort = new TextField("Ort");
-        ort.setWidth(WIDTH);
-        mainlayout.addComponent(ort);
-
-         */
-
-        /*
-        TextArea anforderung = new TextArea("Anforderung");
-        anforderung.setWidth(WIDTH);
-        mainlayout.addComponent(anforderung);
-
-         */
 
         HorizontalLayout datestatus = new HorizontalLayout();
         datestatus.setWidth(WIDTH);

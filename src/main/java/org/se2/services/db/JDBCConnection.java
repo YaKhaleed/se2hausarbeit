@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class JDBCConnection {
     private static JDBCConnection connection = null;
     //:5432
-    private final String url = "jdbc:postgresql://dumbo.inf.h-brs.de:5432/wrast2s";
+    private final String url = "jdbc:postgresql://dumbo.inf.h-brs.de:5432/qthi2s";
     private Connection conn;
 
 
@@ -44,7 +44,7 @@ public class JDBCConnection {
     public void openConnection() throws DatabaseException{
         try{
             Properties props = new Properties();
-            props.setProperty("user", "wrast2s");
+            props.setProperty("user", "qthi2s");
             props.setProperty("password", Password.getPasswort());
 
             this.conn = DriverManager.getConnection(this.url, props);

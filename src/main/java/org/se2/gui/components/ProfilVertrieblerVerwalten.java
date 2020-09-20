@@ -99,11 +99,9 @@ public class ProfilVertrieblerVerwalten extends ProfilVerwalten {
             ProfilVertrieblerControl pc = new ProfilVertrieblerControl();
             String vertrieblerName = name.getValue();
             String beschreibungKurz = beschreibungDesVertrieblersName.getValue();
-            //String telefonNummer = kontakte.getValue();
 
 
             VertrieblerDTO vertriebler = new VertrieblerDTO();
-            //company.setBeschreibung(beschreibungKurz);
             vertriebler.setName(vertrieblerName);
             vertriebler.setVertrieblerID(current.getVertrieblerID());
 
