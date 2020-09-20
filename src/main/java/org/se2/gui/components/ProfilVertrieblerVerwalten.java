@@ -31,7 +31,7 @@ public class ProfilVertrieblerVerwalten extends ProfilVerwalten {
 
         //Statt Unternehmen, mit Autoanzeige arbeiten
         TextField name = new TextField();
-        name.setPlaceholder("Name des Unternehmens");
+        name.setPlaceholder("Name");
         if (!isAdmin) {
             String nameVertriebler = current.getName();
             if (nameVertriebler.length() != 0) name.setValue(nameVertriebler);

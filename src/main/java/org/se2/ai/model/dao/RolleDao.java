@@ -34,7 +34,6 @@ public class RolleDao extends AbstractDAO{
 
     public List<RolleDTO> getRolesForUser(Benutzer benutzer) throws SQLException, DatabaseException {
         ResultSet rs = null;
-        // labs
 
         try {
             PreparedStatement preparedStatement = this.getPreparedStatement("SELECT role from mmuel72s.benutzer where mmuel72s.benuter.benutzer_id =  = ?;");
@@ -47,7 +46,6 @@ public class RolleDao extends AbstractDAO{
             logEntry(this.getClass().getName(), Level.SEVERE, throwables.getMessage());
             throw new DatabaseException("Fehler im SQL Befehl! Bitte den Programmierer benachrichtigen.");
         }
-        // labs
 
 
         List<RolleDTO> liste = new ArrayList<>();
