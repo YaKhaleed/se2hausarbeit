@@ -1,5 +1,10 @@
 package se2hausarbeit.ai.controll;
 
+/**
+ * @author qthi2s
+ */
+
+
 import org.junit.Test;
 import org.se2.ai.control.LoginControl;
 import org.se2.ai.control.exceptions.DatabaseException;

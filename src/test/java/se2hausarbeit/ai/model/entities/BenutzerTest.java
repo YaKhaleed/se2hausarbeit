@@ -1,5 +1,10 @@
 package se2hausarbeit.ai.model.entities;
 
+/**
+ * @author qthi2s
+ */
+
+
 import org.junit.Before;
 import org.junit.Test;
 import org.se2.ai.model.entities.Benutzer;

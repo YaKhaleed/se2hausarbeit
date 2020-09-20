@@ -28,7 +28,6 @@ public class AutoanzeigeDTO extends Autoanzeige {
 
         return Vertriebler;
     }
-//nochmal drübergehen
     public void setVertrieblerName(String Vertriebler) {
         this.Vertriebler = Vertriebler;
     }

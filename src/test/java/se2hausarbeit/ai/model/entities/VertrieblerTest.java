@@ -1,5 +1,10 @@
 package se2hausarbeit.ai.model.entities;
 
+/**
+ * @author qthi2s
+ */
+
+
 import org.junit.Before;
 import org.junit.Test;
 import org.se2.ai.model.entities.Vertriebler;
@@ -16,7 +21,6 @@ public class VertrieblerTest {
     private final String name = "=Müller";
     private final String vorname = "Hans";
     private final int vertrieblerID = 2;
-    private byte profilbild;
 
 
     @Before
@@ -25,7 +29,6 @@ public class VertrieblerTest {
         vertriebler.setName(name);
         vertriebler.setVorname(vorname);
         vertriebler.setVertrieblerID(vertrieblerID);
-        vertriebler.setProfilbild(profilbild);
 
     }
 
@@ -36,7 +39,6 @@ public class VertrieblerTest {
         assertNotNull(vertriebler.getVertrieblerID());
         assertEquals(name, vertriebler.getName());
         assertEquals(vorname, vertriebler.getVorname());
-        assertEquals(profilbild, vertriebler.getProfilbild());
 
     }
 

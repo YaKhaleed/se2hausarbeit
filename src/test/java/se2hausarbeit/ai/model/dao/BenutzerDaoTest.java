@@ -1,5 +1,10 @@
 package se2hausarbeit.ai.model.dao;
 
+/**
+ * @author qthi2s
+ */
+
+
 import org.junit.Test;
 import org.se2.ai.control.exceptions.DatabaseException;
 import org.se2.ai.control.exceptions.NoSuchUserOrPassword;

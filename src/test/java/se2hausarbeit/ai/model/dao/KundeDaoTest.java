@@ -17,7 +17,7 @@ public class KundeDaoTest {
     }
 
     @Test
-    public void newStudent() {
+    public void newKunde() {
         KundeDAO kdao = mock(KundeDAO.class);
         KundeDTO k = new KundeDTO();
         k.setId(30);
@@ -27,13 +27,13 @@ public class KundeDaoTest {
     }
 
     @Test
-    public void getStudent() {
+    public void getKunde() {
         KundeDAO kdao = mock(KundeDAO.class);
         assertDoesNotThrow(() -> kdao.getKunde(35));
     }
 
     @Test
-    public void testGetStudent() {
+    public void testGetKunde() {
         KundeDAO kdao = mock(KundeDAO.class);
         KundeDTO k = new KundeDTO();
         k.setId(37);
